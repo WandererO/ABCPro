@@ -28,7 +28,7 @@ class MPLoginController: BaseHiddenNaviController {
         }).disposed(by: disposeBag)
         return put
     }()
-    
+    ///
     lazy var psswdInput : MPTextField = {
         let put = MPTextField()
         put.placeText = "Password"
