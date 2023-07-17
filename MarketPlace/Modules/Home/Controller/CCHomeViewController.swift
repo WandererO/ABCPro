@@ -21,6 +21,8 @@ extension CCHomeViewController{
         super.viewDidLoad()
         
         
+        
+        print("ssbsshhshs")
     }
     override func viewWillDisappear(_ animated: Bool) {
 //        MPSocketManager.share.websocketUnSub(topic: .marketUpdate)
