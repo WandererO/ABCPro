@@ -16,18 +16,19 @@ class BaseTabBarController: UITabBarController {
     let titles = ["Home","Mobile topup","QR Services","Internal transfer","Quick transfer247"]
         
     let homeVC = CCHomeViewController()
+    let topUpVC = MPMobileTopUpController()
     let contractVC = MPContractMainController()
     let otcVC = MPQuickController()
     let walletsVC = MPWalletController()
     let marketVC = CCMaketQuotationController()
     lazy var baseHomeNav = BaseNavigationController.init(rootViewController: homeVC)
-    lazy var baseContractNav = BaseNavigationController.init(rootViewController: contractVC)
+    lazy var topUpNav = BaseNavigationController.init(rootViewController: topUpVC)
     lazy var baseOTCNav = BaseNavigationController.init(rootViewController: otcVC)
     lazy var baseWalletsNav = BaseNavigationController.init(rootViewController: walletsVC)
     lazy var baseMarketNav = BaseNavigationController.init(rootViewController: marketVC)
 
     var selectButton = UIButton()
-    lazy var tmpViewControllers = [baseHomeNav,baseMarketNav,baseContractNav,baseOTCNav,baseWalletsNav]
+    lazy var tmpViewControllers = [baseHomeNav,topUpNav,baseMarketNav,baseOTCNav,baseWalletsNav]
     override func viewDidLoad() {
         super.viewDidLoad()
 //        initControllers()
@@ -217,9 +218,16 @@ extension BaseTabBarController : UITabBarControllerDelegate {
               let vc = nav.viewControllers.first else { return false }
         
         if vc.className == MPContractMainController.className{
-            let pushVc = UIViewController()
+            let pushVc = MPContractMainController()
             pushVc.view.backgroundColor = kRedColor 
             selectNav.pushViewController(pushVc, animated: true)
+            return false
+        }
+        
+        if vc.className == MPMobileTopUpController.className {
+            let pushVC = MPMobileTopUpController()
+//            pushVC.view.backgroundColor = .green
+            selectNav.pushViewController(pushVC, animated: true)
             return false
         }
  
