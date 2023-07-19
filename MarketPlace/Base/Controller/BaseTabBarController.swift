@@ -211,6 +211,22 @@ extension BaseTabBarController : UITabBarControllerDelegate {
 //            }
 //            return false
 //        }
+        
+        guard let nav = viewController as? BaseNavigationController,
+              let selectNav = tabBarController.selectedViewController as? BaseNavigationController,
+              let vc = nav.viewControllers.first else { return false }
+        
+        if vc.className == MPContractMainController.className{
+            let pushVc = UIViewController()
+            pushVc.view.backgroundColor = kRedColor 
+            selectNav.pushViewController(pushVc, animated: true)
+            return false
+        }
+ 
+        
+        
+        
+        
         return true
     }
     

@@ -125,6 +125,7 @@
 		98AFF7FB280EC6E70035387C /* NetWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AFF7FA280EC6E70035387C /* NetWorkModel.swift */; };
 		98B074D52811386A007B7015 /* NetWorkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B074D42811386A007B7015 /* NetWorkApi.swift */; };
 		A9554F5628C3C22700D1CBA4 /* UIlabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9554F5528C3C22700D1CBA4 /* UIlabel+Extension.swift */; };
+		C2E75A332A67E355005A0BF5 /* NSObject+Extend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E75A322A67E355005A0BF5 /* NSObject+Extend.swift */; };
 		DB565BFA288949AE0083910D /* ScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB565BF9288949AE0083910D /* ScanController.swift */; };
 		DB978B93286D3F0200838050 /* BasePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB978B92286D3F0200838050 /* BasePresentViewController.swift */; };
 		DBB544AD2862B0AD0026FDD6 /* HPAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB544AB2862B0AD0026FDD6 /* HPAlertController.swift */; };
@@ -301,6 +302,7 @@
 		98AFF7FA280EC6E70035387C /* NetWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkModel.swift; sourceTree = "<group>"; };
 		98B074D42811386A007B7015 /* NetWorkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkApi.swift; sourceTree = "<group>"; };
 		A9554F5528C3C22700D1CBA4 /* UIlabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIlabel+Extension.swift"; sourceTree = "<group>"; };
+		C2E75A322A67E355005A0BF5 /* NSObject+Extend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extend.swift"; sourceTree = "<group>"; };
 		DB565BF9288949AE0083910D /* ScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanController.swift; sourceTree = "<group>"; };
 		DB978B92286D3F0200838050 /* BasePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresentViewController.swift; sourceTree = "<group>"; };
 		DBB544AB2862B0AD0026FDD6 /* HPAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPAlertController.swift; sourceTree = "<group>"; };
@@ -911,6 +913,7 @@
 		98AFF7DE280EA0960035387C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C2E75A322A67E355005A0BF5 /* NSObject+Extend.swift */,
 				988F8616282BAAA9008D9EED /* Date+Category.swift */,
 				F740F303281800C7006EEF33 /* UIImageView+KFExt.swift */,
 				F7C287792814DC4B0077FA71 /* Array+Safe.swift */,
@@ -1394,6 +1397,7 @@
 				F740F304281800C7006EEF33 /* UIImageView+KFExt.swift in Sources */,
 				F7361C20280EA749001DA340 /* BaseCollectionView.swift in Sources */,
 				981A25612834F0E200DB858E /* DateManager.swift in Sources */,
+				C2E75A332A67E355005A0BF5 /* NSObject+Extend.swift in Sources */,
 				F7CFF0502812CBC10063615D /* TipManager.swift in Sources */,
 				0487E3722A67C88100A79D6C /* MPHomeHeaderView.swift in Sources */,
 				988F8617282BAAA9008D9EED /* Date+Category.swift in Sources */,
