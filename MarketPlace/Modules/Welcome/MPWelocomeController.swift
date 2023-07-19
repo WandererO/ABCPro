@@ -45,8 +45,8 @@ class MPWelocomeController: BaseHiddenNaviController {
     }
 
     @IBAction func loginClick(_ sender: Any) {
-        let vc = MPLoginController()
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let vc = MPLoginController()
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 

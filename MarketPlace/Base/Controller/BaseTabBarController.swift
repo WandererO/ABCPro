@@ -10,10 +10,10 @@ import UIKit
 class BaseTabBarController: UITabBarController {
     
     
-    let tabbarNormalArray = ["bar_home_dark","bar_market_dark","bar_treaty_dark","bar_otc_dark","bar_property_dark"]
-    let tabbarSeletedArray = ["bar_home_light","bar_market_light","bar_treaty_light","bar_otc_light","bar_property_light"]
+    let tabbarNormalArray = ["tab_home_unselect_Normal","tabBar_topup_ic_Normal","tabBar_qr_ic_Normal","tabBar_transIn_ic_Normal","tabBar_trans247_ic_Normal"]
+    let tabbarSeletedArray = ["tabBar_home_ic_Normal","loyalty_topup_ic_Normal","bar_treaty_light","group_Normal","bar_property_light"]
 
-    let titles = ["首页","行情","合约","C2C","资产"]
+    let titles = ["Home","Mobile topup","QR Services","Internal transfer","Quick transfer247"]
         
     let homeVC = CCHomeViewController()
     let contractVC = MPContractMainController()
@@ -33,27 +33,27 @@ class BaseTabBarController: UITabBarController {
 //        initControllers()
         self.delegate = self
         
-        self.tabBar.backgroundImage = UIImage(named: "bottom-bar-bg")
+//        self.tabBar.backgroundImage = UIImage(named: "bottom-bar-bg")
         
         self.loadTabbar(vcs: tmpViewControllers)
 
         self.configyrationLatestVersion()
-        NotificationCenter.default.addObserver(self, selector: #selector(goToHomePage), name: loginSuccessNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(goToQuickBuy), name: C2CQuickBuyNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(goToContract), name: PushToContractNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(goToMarket), name: PushToMarketNotification, object: nil)
-        
-        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: LocalLanguageChangeNotification.rawValue), object: nil,  queue: nil) { (notification) in
-                        
-            for index in 0..<self.tmpViewControllers.count {
-                let nav = self.tmpViewControllers[index]
-                if let vc = nav.viewControllers.last {
-                    vc.tabBarItem.title = self.titles[index].localString()
-                }
-            }
-            self.tabBar.selectedItem?.title = "首页".localString()//LanguageManager.localValue("首页")
-                        
-        }
+//        NotificationCenter.default.addObserver(self, selector: #selector(goToHomePage), name: loginSuccessNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(goToQuickBuy), name: C2CQuickBuyNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(goToContract), name: PushToContractNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(goToMarket), name: PushToMarketNotification, object: nil)
+//
+//        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: LocalLanguageChangeNotification.rawValue), object: nil,  queue: nil) { (notification) in
+//
+//            for index in 0..<self.tmpViewControllers.count {
+//                let nav = self.tmpViewControllers[index]
+//                if let vc = nav.viewControllers.last {
+//                    vc.tabBarItem.title = self.titles[index].localString()
+//                }
+//            }
+//            self.tabBar.selectedItem?.title = "首页".localString()//LanguageManager.localValue("首页")
+//
+//        }
 
     }
     
@@ -120,7 +120,7 @@ class BaseTabBarController: UITabBarController {
 //        self.tabBar.isTranslucent = true // tabbar不透明
         // 直接用颜色
 //        self.tabBar.barTintColor = .init(white: 1, alpha: 1)
-//        UITabBar.appearance().backgroundColor = .red //.init(white: 1, alpha: 1)
+        UITabBar.appearance().backgroundColor = .red //.init(white: 1, alpha: 1)
 ////        UITabBar.appearance().backgroundImage = UIImage()
 //        UITabBar.appearance().backgroundImage = UIImage(named: "fifa_tabbar")
         
@@ -159,8 +159,8 @@ extension BaseTabBarController {
     /// 版本适配
     func configyrationLatestVersion() {
         if #available(iOS 13.0, *) {
-            self.tabBar.tintColor = UIColor.hexColor("5171FF")
-            self.tabBar.unselectedItemTintColor = UIColor.hexColor("999999")
+//            self.tabBar.tintColor = RGBCOLOR(r: 24, g: 39, b: 44)//UIColor.hexColor("5171FF")
+//            self.tabBar.unselectedItemTintColor = UIColor.hexColor("999999")
             //MARK: fifa
 //            self.tabBar.tintColor = .hexColor("FFC619")
 //            self.tabBar.unselectedItemTintColor = .white
@@ -175,7 +175,7 @@ extension BaseTabBarController {
 //            if let image = UIImage(named: "fifa_tabbar") {
 //
 //                let color = UIColor(patternImage: image)
-            UITabBar.appearance().backgroundColor = .white
+            UITabBar.appearance().backgroundColor = RGBCOLOR(r: 24, g: 39, b: 44)
             
 //            let line = UIView()
 //            line.backgroundColor = kLineColor

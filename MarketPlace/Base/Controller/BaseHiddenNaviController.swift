@@ -23,6 +23,19 @@ class BaseHiddenNaviController: BaseViewController {
     let topView = UIView()
     let topViewLeftBtn = ZQButton()
     let topViewRightBtn = ZQButton()
+    let topRightTwoBtn = ZQButton()
+    
+    var backgroundImage:UIImage? {
+        didSet{
+            self.headerBackgroundImage.isHidden = false
+            self.headerBackgroundImage.image = backgroundImage
+        }
+    }
+    lazy var headerBackgroundImage : UIImageView = {
+        let img = UIImageView()
+        img.isHidden = true
+        return img
+    }()
     
     lazy var headerImage : UIImageView = {
         let img = UIImageView()
@@ -132,13 +145,17 @@ class BaseHiddenNaviController: BaseViewController {
         
         self.view.addSubview(headerView)
         headerView.addSubview(topView)
-        
         headerView.backgroundColor = kMainBackgroundColor
         headerView.snp.makeConstraints { make in
             
             make.left.right.equalToSuperview()
             make.top.equalToSuperview()
             make.height.equalTo(48 + STATUSBAR_HIGH)
+        }
+        
+        headerView.addSubview(headerBackgroundImage)
+        headerBackgroundImage.snp.makeConstraints { make in
+            make.left.top.right.bottom.equalToSuperview()
         }
 
         topView.snp.makeConstraints { make in
@@ -166,11 +183,11 @@ class BaseHiddenNaviController: BaseViewController {
             make.centerY.equalToSuperview()
         }
 
-        topViewLeftBtn.setImage(UIImage(named: "ic_arrow_back_16"), for: .normal)
+        topViewLeftBtn.setImage(UIImage(named: ""), for: .normal)
         topView.addSubview(topViewLeftBtn)
         topViewLeftBtn.snp.makeConstraints { make in
             
-            make.left.equalToSuperview()
+            make.left.equalTo(15)
             make.height.width.equalTo(54)
             make.centerY.equalToSuperview()
         }
@@ -194,6 +211,16 @@ class BaseHiddenNaviController: BaseViewController {
             
             self?.topRightBtnClick()
         }.disposed(by:disposeBag )
+        
+        
+        topView.addSubview(topRightTwoBtn)
+        topRightTwoBtn.isHidden = true
+        topRightTwoBtn.snp.makeConstraints { make in
+            make.right.equalTo(topViewRightBtn.snp.left)
+            make.centerY.equalToSuperview()
+            make.height.width.equalTo(54)
+        }
+        
     }
     
     

@@ -10,6 +10,8 @@
 		04121E8E29D28ADD00CCC12B /* MPSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04121E8D29D28ADD00CCC12B /* MPSocketManager.swift */; };
 		04396D1229B5CFC900FCFB23 /* ButtonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04396D1129B5CFC900FCFB23 /* ButtonViews.swift */; };
 		04396D1429B5E4CE00FCFB23 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04396D1329B5E4CE00FCFB23 /* Views.swift */; };
+		0441C9622A66C3D6007E1715 /* MPLoginnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441C9602A66C3D6007E1715 /* MPLoginnController.swift */; };
+		0441C9632A66C3D6007E1715 /* MPLoginnController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0441C9612A66C3D6007E1715 /* MPLoginnController.xib */; };
 		0448050629CB23200064ADD7 /* EWMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448050329CB23200064ADD7 /* EWMenuTableViewCell.swift */; };
 		0448050729CB23200064ADD7 /* EWPopMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448050429CB23200064ADD7 /* EWPopMenu.swift */; };
 		0448050829CB23200064ADD7 /* EWPopMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448050529CB23200064ADD7 /* EWPopMenuView.swift */; };
@@ -26,6 +28,11 @@
 		0477651F29C952300069B4F3 /* MPBottomSheetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0477651D29C952300069B4F3 /* MPBottomSheetCell.swift */; };
 		0477652029C952300069B4F3 /* MPBottomSheetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0477651E29C952300069B4F3 /* MPBottomSheetCell.xib */; };
 		047FB87829AF6AC000B652F5 /* InputViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FB87729AF6AC000B652F5 /* InputViews.swift */; };
+		0487E36F2A67AAC900A79D6C /* MPPasswdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E36D2A67AAC900A79D6C /* MPPasswdController.swift */; };
+		0487E3702A67AAC900A79D6C /* MPPasswdController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0487E36E2A67AAC900A79D6C /* MPPasswdController.xib */; };
+		0487E3722A67C88100A79D6C /* MPHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E3712A67C88100A79D6C /* MPHomeHeaderView.swift */; };
+		0487E3752A67CC7900A79D6C /* MPHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E3732A67CC7900A79D6C /* MPHomeCell.swift */; };
+		0487E3762A67CC7900A79D6C /* MPHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0487E3742A67CC7900A79D6C /* MPHomeCell.xib */; };
 		04968D1729F7C7DA00E18E6A /* MPSelectPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04968D1629F7C7D900E18E6A /* MPSelectPopView.swift */; };
 		049A39962A42F82300103737 /* MPAppGuideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A39952A42F82300103737 /* MPAppGuideCell.swift */; };
 		049A39982A42FEC500103737 /* MPAppLuanchGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A39972A42FEC500103737 /* MPAppLuanchGuideController.swift */; };
@@ -38,7 +45,6 @@
 		049CC8DE2A5BFE5D00C12E44 /* LXFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049CC8DD2A5BFE5D00C12E44 /* LXFit.swift */; };
 		049D9D5A2A35A2310037CCBC /* MPSelectTopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D9D592A35A2310037CCBC /* MPSelectTopTableView.swift */; };
 		049D9D5C2A35A4BD0037CCBC /* MPSelectTopPopTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D9D5B2A35A4BD0037CCBC /* MPSelectTopPopTableController.swift */; };
-		04A0F61E2A63B9D800F286EF /* MPLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0F61D2A63B9D800F286EF /* MPLoginController.swift */; };
 		04A0F6202A63C4B200F286EF /* EWTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0F61F2A63C4B200F286EF /* EWTextField.swift */; };
 		04A31C4D29E6909100C8E2E7 /* MPUsercenterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A31C4C29E6909100C8E2E7 /* MPUsercenterViewModel.swift */; };
 		04A31C4F29E690A500C8E2E7 /* MPUsercenterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A31C4E29E690A500C8E2E7 /* MPUsercenterModel.swift */; };
@@ -171,6 +177,8 @@
 		04121E8D29D28ADD00CCC12B /* MPSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSocketManager.swift; sourceTree = "<group>"; };
 		04396D1129B5CFC900FCFB23 /* ButtonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViews.swift; sourceTree = "<group>"; };
 		04396D1329B5E4CE00FCFB23 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
+		0441C9602A66C3D6007E1715 /* MPLoginnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPLoginnController.swift; sourceTree = "<group>"; };
+		0441C9612A66C3D6007E1715 /* MPLoginnController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPLoginnController.xib; sourceTree = "<group>"; };
 		0448050329CB23200064ADD7 /* EWMenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWMenuTableViewCell.swift; sourceTree = "<group>"; };
 		0448050429CB23200064ADD7 /* EWPopMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWPopMenu.swift; sourceTree = "<group>"; };
 		0448050529CB23200064ADD7 /* EWPopMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWPopMenuView.swift; sourceTree = "<group>"; };
@@ -193,6 +201,11 @@
 		0477651D29C952300069B4F3 /* MPBottomSheetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPBottomSheetCell.swift; sourceTree = "<group>"; };
 		0477651E29C952300069B4F3 /* MPBottomSheetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPBottomSheetCell.xib; sourceTree = "<group>"; };
 		047FB87729AF6AC000B652F5 /* InputViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViews.swift; sourceTree = "<group>"; };
+		0487E36D2A67AAC900A79D6C /* MPPasswdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPPasswdController.swift; sourceTree = "<group>"; };
+		0487E36E2A67AAC900A79D6C /* MPPasswdController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPPasswdController.xib; sourceTree = "<group>"; };
+		0487E3712A67C88100A79D6C /* MPHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomeHeaderView.swift; sourceTree = "<group>"; };
+		0487E3732A67CC7900A79D6C /* MPHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomeCell.swift; sourceTree = "<group>"; };
+		0487E3742A67CC7900A79D6C /* MPHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPHomeCell.xib; sourceTree = "<group>"; };
 		04968D1629F7C7D900E18E6A /* MPSelectPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSelectPopView.swift; sourceTree = "<group>"; };
 		049A39952A42F82300103737 /* MPAppGuideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPAppGuideCell.swift; sourceTree = "<group>"; };
 		049A39972A42FEC500103737 /* MPAppLuanchGuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPAppLuanchGuideController.swift; sourceTree = "<group>"; };
@@ -205,7 +218,6 @@
 		049CC8DD2A5BFE5D00C12E44 /* LXFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXFit.swift; sourceTree = "<group>"; };
 		049D9D592A35A2310037CCBC /* MPSelectTopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSelectTopTableView.swift; sourceTree = "<group>"; };
 		049D9D5B2A35A4BD0037CCBC /* MPSelectTopPopTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSelectTopPopTableController.swift; sourceTree = "<group>"; };
-		04A0F61D2A63B9D800F286EF /* MPLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPLoginController.swift; sourceTree = "<group>"; };
 		04A0F61F2A63C4B200F286EF /* EWTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWTextField.swift; sourceTree = "<group>"; };
 		04A31C4C29E6909100C8E2E7 /* MPUsercenterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPUsercenterViewModel.swift; sourceTree = "<group>"; };
 		04A31C4E29E690A500C8E2E7 /* MPUsercenterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPUsercenterModel.swift; sourceTree = "<group>"; };
@@ -730,6 +742,9 @@
 		587317F3285260CA00D5F867 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0487E3712A67C88100A79D6C /* MPHomeHeaderView.swift */,
+				0487E3732A67CC7900A79D6C /* MPHomeCell.swift */,
+				0487E3742A67CC7900A79D6C /* MPHomeCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -787,8 +802,11 @@
 		96FFAB5B285ECD5D004D321D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				04A0F61D2A63B9D800F286EF /* MPLoginController.swift */,
 				587317F028525C1700D5F867 /* CCLoginController.swift */,
+				0441C9602A66C3D6007E1715 /* MPLoginnController.swift */,
+				0441C9612A66C3D6007E1715 /* MPLoginnController.xib */,
+				0487E36D2A67AAC900A79D6C /* MPPasswdController.swift */,
+				0487E36E2A67AAC900A79D6C /* MPPasswdController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1167,18 +1185,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2260931D299F4BE400B284DB /* iconfont.ttf in Resources */,
+				0487E3762A67CC7900A79D6C /* MPHomeCell.xib in Resources */,
 				22609321299F4BE400B284DB /* iconfont.woff2 in Resources */,
 				98AFF799280E97A10035387C /* LaunchScreen.storyboard in Resources */,
 				049CC8D82A5BFC4600C12E44 /* LXQRCode.bundle in Resources */,
 				98AFF796280E97A10035387C /* Assets.xcassets in Resources */,
 				2260931C299F4BE400B284DB /* iconfont.js in Resources */,
 				220F5BE12A21D4AE000C02BD /* Color.xcassets in Resources */,
+				0487E3702A67AAC900A79D6C /* MPPasswdController.xib in Resources */,
 				22DDAEF02A35E41B00A1FF3C /* MPCollectionSelectCell.xib in Resources */,
 				229912262A2CDF98006CDDFA /* MPBaseCell.xib in Resources */,
 				2260931E299F4BE400B284DB /* iconfont.css in Resources */,
 				2260931F299F4BE400B284DB /* iconfont.woff in Resources */,
 				0477652029C952300069B4F3 /* MPBottomSheetCell.xib in Resources */,
 				044C33E92A627DA9003B5B97 /* MPWelocomeController.xib in Resources */,
+				0441C9632A66C3D6007E1715 /* MPLoginnController.xib in Resources */,
 				2260931B299F4BE400B284DB /* demo_index.html in Resources */,
 				98AFF794280E979F0035387C /* Main.storyboard in Resources */,
 				2260931A299F4BE400B284DB /* demo.css in Resources */,
@@ -1287,12 +1308,14 @@
 				96FFAB4D285E1F6F004D321D /* Snapkit+Extension.swift in Sources */,
 				F762CACF2812975500354E9E /* Environment.swift in Sources */,
 				F7361C07280EA47A001DA340 /* NormalConstant.swift in Sources */,
+				0441C9622A66C3D6007E1715 /* MPLoginnController.swift in Sources */,
 				045BC11E29BF0F9100806DE3 /* MPQuickController.swift in Sources */,
 				049D9D5A2A35A2310037CCBC /* MPSelectTopTableView.swift in Sources */,
 				0448050829CB23200064ADD7 /* EWPopMenuView.swift in Sources */,
 				F7361C1E280EA70F001DA340 /* BaseTableView.swift in Sources */,
 				228A39EB29DC28370039FBC0 /* MPSocketModel.swift in Sources */,
 				587317E42850F75C00D5F867 /* CCHomeViewController.swift in Sources */,
+				0487E36F2A67AAC900A79D6C /* MPPasswdController.swift in Sources */,
 				F7D1CE14282B9B9200057F93 /* BiometriaManager.swift in Sources */,
 				F77F9C8628110977005BEEDF /* UIImage+Extension.swift in Sources */,
 				0477651929C950330069B4F3 /* NBBottomSheetController.swift in Sources */,
@@ -1333,7 +1356,6 @@
 				962CFFC5287A9700001D6A0D /* CCLoginModel.swift in Sources */,
 				F798E9F82829242A00C26CF6 /* HudManager.swift in Sources */,
 				983A1F5D28324B240098FD78 /* Float+Extension.swift in Sources */,
-				04A0F61E2A63B9D800F286EF /* MPLoginController.swift in Sources */,
 				F77F9C992811608B005BEEDF /* NSAttributedString+Extension.swift in Sources */,
 				0477651729C950330069B4F3 /* NBBottomSheetPresentationController.swift in Sources */,
 				04C4142429D40B0800E78FE2 /* MPMarketInfoViewModel.swift in Sources */,
@@ -1350,6 +1372,7 @@
 				049CC8D72A5BFC4600C12E44 /* LXQRCode.swift in Sources */,
 				F798E9F42828EB1B00C26CF6 /* UIButton+Extension.swift in Sources */,
 				585D0DC828561E1A00993291 /* FSPageViewTransformer.swift in Sources */,
+				0487E3752A67CC7900A79D6C /* MPHomeCell.swift in Sources */,
 				049CC8DB2A5BFC4600C12E44 /* LXQRCodeConst.swift in Sources */,
 				585D0DCA28561E1A00993291 /* FSPagerViewLayoutAttributes.swift in Sources */,
 				96FFAB3F285DCF25004D321D /* BaseHiddenNaviController.swift in Sources */,
@@ -1372,6 +1395,7 @@
 				F7361C20280EA749001DA340 /* BaseCollectionView.swift in Sources */,
 				981A25612834F0E200DB858E /* DateManager.swift in Sources */,
 				F7CFF0502812CBC10063615D /* TipManager.swift in Sources */,
+				0487E3722A67C88100A79D6C /* MPHomeHeaderView.swift in Sources */,
 				988F8617282BAAA9008D9EED /* Date+Category.swift in Sources */,
 				585D0DCD28561E1A00993291 /* FSPagerViewObjcCompat.m in Sources */,
 				044C33E82A627DA9003B5B97 /* MPWelocomeController.swift in Sources */,

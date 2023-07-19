@@ -54,12 +54,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = kGreyTextColor
         
 //        let tabbr = BaseTabBarController()
-        let tabbr = MPWelocomeController()
+        let tabbr = MPLoginnController()
         lazy var baseWelcomeVC = BaseNavigationController.init(rootViewController: tabbr)
         self.window?.rootViewController = baseWelcomeVC
         window?.makeKeyAndVisible()
 //        tabbr.configyrationLatestVersion()
         
+        
+        ///登录成功通知
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: loginSuccessNotification.rawValue), object: nil,  queue: nil) { (notification) in
+                        
+            let tabbr = BaseTabBarController()
+            self.window?.rootViewController = tabbr
+            self.window?.makeKeyAndVisible()
+        }
         
     }
     

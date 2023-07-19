@@ -25,21 +25,21 @@ class MPTextField:UITextField, UITextFieldDelegate {
     lazy var placeholderLab : UILabel = {
        let lab = UILabel()
         //13 58 161
-        lab.textColor = RGBCOLOR(r: 13, g: 58, b: 161)
-        lab.font = FONT_R(size: 20)
+        lab.textColor = .white//RGBCOLOR(r: 13, g: 58, b: 161)
+        lab.font = FONT_M(size: 16)
         lab.text = "Username"
         return lab
     }()
     lazy var linView : UIView = {
         let v = UIView()
-        v.backgroundColor = RGBCOLOR(r: 226, g: 231, b: 241)
+        v.backgroundColor = RGBCOLOR(r: 189, g: 189, b: 189)
         return v
     }()
     
     lazy var operBtn : ZQButton = {
         let btn = ZQButton()
-        btn.setImage(UIImage(named: "eye-close"), for: .normal)
-        btn.setImage(UIImage(named: "eye-open"), for: .selected)
+        btn.setImage(UIImage(named: "eye_show_ic_Normal"), for: .selected)
+        btn.setImage(UIImage(named: "eye_hide_ic_Normal"), for: .normal)
         btn.rx.tap.subscribe(onNext: { [weak self] _ in
             guard let self = self else{return}
             btn.isSelected = !btn.isSelected
@@ -65,15 +65,16 @@ class MPTextField:UITextField, UITextFieldDelegate {
         
         self.addSubview(linView)
         linView.snp.makeConstraints { make in
-            make.left.right.bottom.equalToSuperview()
-            make.height.equalTo(1)
+            make.right.bottom.equalToSuperview()
+            make.height.equalTo(2)
+            make.left.equalTo(-10)
         }
         
         self.addSubview(operBtn)
         operBtn.snp.makeConstraints { make in
             make.right.equalToSuperview()
             make.centerY.equalToSuperview().offset(5)
-            make.width.height.equalTo(28)
+            make.width.height.equalTo(24)
         }
         
     }
@@ -86,8 +87,8 @@ class MPTextField:UITextField, UITextFieldDelegate {
                 make.bottom.equalTo(self.snp.top)
 //                make.height.equalTo(30)
             }
-            self.placeholderLab.font = FONT_R(size: 16)
-            self.placeholderLab.textColor = RGBCOLOR(r: 107, g: 135, b: 197)
+            self.placeholderLab.font = FONT_R(size: 14)
+//            self.placeholderLab.textColor = RGBCOLOR(r: 107, g: 135, b: 197)
         }
     }
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
@@ -101,8 +102,8 @@ class MPTextField:UITextField, UITextFieldDelegate {
 //                make.height.equalTo(30)
                 make.centerY.equalToSuperview()
             }
-            self.placeholderLab.textColor = RGBCOLOR(r: 13, g: 58, b: 161)
-            self.placeholderLab.font = FONT_R(size: 20)
+//            self.placeholderLab.textColor = RGBCOLOR(r: 13, g: 58, b: 161)
+            self.placeholderLab.font = FONT_R(size: 16)
         }
     }
     
