@@ -33,6 +33,7 @@
 		0487E3722A67C88100A79D6C /* MPHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E3712A67C88100A79D6C /* MPHomeHeaderView.swift */; };
 		0487E3752A67CC7900A79D6C /* MPHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E3732A67CC7900A79D6C /* MPHomeCell.swift */; };
 		0487E3762A67CC7900A79D6C /* MPHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0487E3742A67CC7900A79D6C /* MPHomeCell.xib */; };
+		0487E3782A67DB9300A79D6C /* MPCustomTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E3772A67DB9300A79D6C /* MPCustomTabbarView.swift */; };
 		04968D1729F7C7DA00E18E6A /* MPSelectPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04968D1629F7C7D900E18E6A /* MPSelectPopView.swift */; };
 		049A39962A42F82300103737 /* MPAppGuideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A39952A42F82300103737 /* MPAppGuideCell.swift */; };
 		049A39982A42FEC500103737 /* MPAppLuanchGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A39972A42FEC500103737 /* MPAppLuanchGuideController.swift */; };
@@ -206,6 +207,7 @@
 		0487E3712A67C88100A79D6C /* MPHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomeHeaderView.swift; sourceTree = "<group>"; };
 		0487E3732A67CC7900A79D6C /* MPHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomeCell.swift; sourceTree = "<group>"; };
 		0487E3742A67CC7900A79D6C /* MPHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPHomeCell.xib; sourceTree = "<group>"; };
+		0487E3772A67DB9300A79D6C /* MPCustomTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPCustomTabbarView.swift; sourceTree = "<group>"; };
 		04968D1629F7C7D900E18E6A /* MPSelectPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSelectPopView.swift; sourceTree = "<group>"; };
 		049A39952A42F82300103737 /* MPAppGuideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPAppGuideCell.swift; sourceTree = "<group>"; };
 		049A39972A42FEC500103737 /* MPAppLuanchGuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPAppLuanchGuideController.swift; sourceTree = "<group>"; };
@@ -745,6 +747,7 @@
 				0487E3712A67C88100A79D6C /* MPHomeHeaderView.swift */,
 				0487E3732A67CC7900A79D6C /* MPHomeCell.swift */,
 				0487E3742A67CC7900A79D6C /* MPHomeCell.xib */,
+				0487E3772A67DB9300A79D6C /* MPCustomTabbarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1345,6 +1348,7 @@
 				0448050629CB23200064ADD7 /* EWMenuTableViewCell.swift in Sources */,
 				04396D1229B5CFC900FCFB23 /* ButtonViews.swift in Sources */,
 				98AFF7FB280EC6E70035387C /* NetWorkModel.swift in Sources */,
+				0487E3782A67DB9300A79D6C /* MPCustomTabbarView.swift in Sources */,
 				98AFF78D280E979F0035387C /* AppDelegate.swift in Sources */,
 				F71E165F280FF99A007F01D2 /* BaseModel.swift in Sources */,
 				22DDAEEF2A35E41B00A1FF3C /* MPCollectionSelectCell.swift in Sources */,
