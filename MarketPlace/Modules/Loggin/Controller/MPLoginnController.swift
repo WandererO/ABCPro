@@ -17,7 +17,7 @@ class MPLoginnController: BaseHiddenNaviController {
         put.placeText = "Username"
         put.operBtn.isHidden = true
         put.font = FONT_M(size: 16)
-        put.textColor = RGBCOLOR(r: 82, g: 152, b: 59)
+        put.textColor = RGBCOLOR(r: 82, g: 152, b: 59) 
         put.rx.controlEvent([.editingChanged]).asObservable().subscribe(onNext: {[weak self] _ in
             guard let self = self else{return}
 //            if put.text?.isEmpty == false && self.psswdInput.text?.isEmpty == false {
