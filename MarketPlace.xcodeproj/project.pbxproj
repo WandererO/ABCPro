@@ -30,7 +30,6 @@
 		047FB87829AF6AC000B652F5 /* InputViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047FB87729AF6AC000B652F5 /* InputViews.swift */; };
 		0487E36F2A67AAC900A79D6C /* MPPasswdController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E36D2A67AAC900A79D6C /* MPPasswdController.swift */; };
 		0487E3702A67AAC900A79D6C /* MPPasswdController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0487E36E2A67AAC900A79D6C /* MPPasswdController.xib */; };
-		0487E3722A67C88100A79D6C /* MPHomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E3712A67C88100A79D6C /* MPHomeHeaderView.swift */; };
 		0487E3752A67CC7900A79D6C /* MPHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E3732A67CC7900A79D6C /* MPHomeCell.swift */; };
 		0487E3762A67CC7900A79D6C /* MPHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0487E3742A67CC7900A79D6C /* MPHomeCell.xib */; };
 		0487E3782A67DB9300A79D6C /* MPCustomTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E3772A67DB9300A79D6C /* MPCustomTabbarView.swift */; };
@@ -131,6 +130,14 @@
 		98B074D52811386A007B7015 /* NetWorkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B074D42811386A007B7015 /* NetWorkApi.swift */; };
 		A9554F5628C3C22700D1CBA4 /* UIlabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9554F5528C3C22700D1CBA4 /* UIlabel+Extension.swift */; };
 		C2E75A332A67E355005A0BF5 /* NSObject+Extend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E75A322A67E355005A0BF5 /* NSObject+Extend.swift */; };
+		C2E75A352A681962005A0BF5 /* UIViewController+Extend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E75A342A681962005A0BF5 /* UIViewController+Extend.swift */; };
+		C2E75A372A681A6D005A0BF5 /* MPHomesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E75A362A681A6D005A0BF5 /* MPHomesHeaderView.swift */; };
+		C2E75A392A681A75005A0BF5 /* MPHomesHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E75A382A681A75005A0BF5 /* MPHomesHeaderView.xib */; };
+		C2F5E3032A682B9F0076747F /* MPHomeToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5E3022A682B9F0076747F /* MPHomeToolsView.swift */; };
+		C2F5E3052A682BAD0076747F /* MPHomeToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F5E3042A682BAD0076747F /* MPHomeToolsView.xib */; };
+		C2F5E3072A682D120076747F /* Cell+QS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5E3062A682D120076747F /* Cell+QS.swift */; };
+		C2F5E30A2A682D330076747F /* HomeTooleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F5E3082A682D320076747F /* HomeTooleCell.swift */; };
+		C2F5E30B2A682D330076747F /* HomeTooleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F5E3092A682D330076747F /* HomeTooleCell.xib */; };
 		DB565BFA288949AE0083910D /* ScanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB565BF9288949AE0083910D /* ScanController.swift */; };
 		DB978B93286D3F0200838050 /* BasePresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB978B92286D3F0200838050 /* BasePresentViewController.swift */; };
 		DBB544AD2862B0AD0026FDD6 /* HPAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB544AB2862B0AD0026FDD6 /* HPAlertController.swift */; };
@@ -209,7 +216,6 @@
 		047FB87729AF6AC000B652F5 /* InputViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViews.swift; sourceTree = "<group>"; };
 		0487E36D2A67AAC900A79D6C /* MPPasswdController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPPasswdController.swift; sourceTree = "<group>"; };
 		0487E36E2A67AAC900A79D6C /* MPPasswdController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPPasswdController.xib; sourceTree = "<group>"; };
-		0487E3712A67C88100A79D6C /* MPHomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomeHeaderView.swift; sourceTree = "<group>"; };
 		0487E3732A67CC7900A79D6C /* MPHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomeCell.swift; sourceTree = "<group>"; };
 		0487E3742A67CC7900A79D6C /* MPHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPHomeCell.xib; sourceTree = "<group>"; };
 		0487E3772A67DB9300A79D6C /* MPCustomTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPCustomTabbarView.swift; sourceTree = "<group>"; };
@@ -313,6 +319,14 @@
 		98B074D42811386A007B7015 /* NetWorkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkApi.swift; sourceTree = "<group>"; };
 		A9554F5528C3C22700D1CBA4 /* UIlabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIlabel+Extension.swift"; sourceTree = "<group>"; };
 		C2E75A322A67E355005A0BF5 /* NSObject+Extend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extend.swift"; sourceTree = "<group>"; };
+		C2E75A342A681962005A0BF5 /* UIViewController+Extend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extend.swift"; sourceTree = "<group>"; };
+		C2E75A362A681A6D005A0BF5 /* MPHomesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomesHeaderView.swift; sourceTree = "<group>"; };
+		C2E75A382A681A75005A0BF5 /* MPHomesHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPHomesHeaderView.xib; sourceTree = "<group>"; };
+		C2F5E3022A682B9F0076747F /* MPHomeToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomeToolsView.swift; sourceTree = "<group>"; };
+		C2F5E3042A682BAD0076747F /* MPHomeToolsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPHomeToolsView.xib; sourceTree = "<group>"; };
+		C2F5E3062A682D120076747F /* Cell+QS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cell+QS.swift"; sourceTree = "<group>"; };
+		C2F5E3082A682D320076747F /* HomeTooleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTooleCell.swift; sourceTree = "<group>"; };
+		C2F5E3092A682D330076747F /* HomeTooleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTooleCell.xib; sourceTree = "<group>"; };
 		DB565BF9288949AE0083910D /* ScanController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanController.swift; sourceTree = "<group>"; };
 		DB978B92286D3F0200838050 /* BasePresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresentViewController.swift; sourceTree = "<group>"; };
 		DBB544AB2862B0AD0026FDD6 /* HPAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HPAlertController.swift; sourceTree = "<group>"; };
@@ -781,10 +795,15 @@
 		587317F3285260CA00D5F867 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0487E3712A67C88100A79D6C /* MPHomeHeaderView.swift */,
 				0487E3732A67CC7900A79D6C /* MPHomeCell.swift */,
 				0487E3742A67CC7900A79D6C /* MPHomeCell.xib */,
 				0487E3772A67DB9300A79D6C /* MPCustomTabbarView.swift */,
+				C2E75A362A681A6D005A0BF5 /* MPHomesHeaderView.swift */,
+				C2E75A382A681A75005A0BF5 /* MPHomesHeaderView.xib */,
+				C2F5E3022A682B9F0076747F /* MPHomeToolsView.swift */,
+				C2F5E3042A682BAD0076747F /* MPHomeToolsView.xib */,
+				C2F5E3082A682D320076747F /* HomeTooleCell.swift */,
+				C2F5E3092A682D330076747F /* HomeTooleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -952,11 +971,13 @@
 		98AFF7DE280EA0960035387C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C2F5E3062A682D120076747F /* Cell+QS.swift */,
 				C2E75A322A67E355005A0BF5 /* NSObject+Extend.swift */,
 				988F8616282BAAA9008D9EED /* Date+Category.swift */,
 				F740F303281800C7006EEF33 /* UIImageView+KFExt.swift */,
 				F7C287792814DC4B0077FA71 /* Array+Safe.swift */,
 				98AFF7DF280EA0A70035387C /* UIColor+Extension.swift */,
+				C2E75A342A681962005A0BF5 /* UIViewController+Extend.swift */,
 				98AFF7EA280EA9C70035387C /* String+Extension.swift */,
 				9834CC58280FE7DC00A4A2C9 /* UIView+Extension.swift */,
 				F77F9C8528110977005BEEDF /* UIImage+Extension.swift */,
@@ -1238,12 +1259,15 @@
 				22DDAEF02A35E41B00A1FF3C /* MPCollectionSelectCell.xib in Resources */,
 				229912262A2CDF98006CDDFA /* MPBaseCell.xib in Resources */,
 				2260931E299F4BE400B284DB /* iconfont.css in Resources */,
+				C2E75A392A681A75005A0BF5 /* MPHomesHeaderView.xib in Resources */,
 				2260931F299F4BE400B284DB /* iconfont.woff in Resources */,
 				0477652029C952300069B4F3 /* MPBottomSheetCell.xib in Resources */,
 				044C33E92A627DA9003B5B97 /* MPWelocomeController.xib in Resources */,
 				0441C9632A66C3D6007E1715 /* MPLoginnController.xib in Resources */,
 				0487E37F2A68379100A79D6C /* MPMobileTopUpController.xib in Resources */,
+				C2F5E30B2A682D330076747F /* HomeTooleCell.xib in Resources */,
 				2260931B299F4BE400B284DB /* demo_index.html in Resources */,
+				C2F5E3052A682BAD0076747F /* MPHomeToolsView.xib in Resources */,
 				98AFF794280E979F0035387C /* Main.storyboard in Resources */,
 				2260931A299F4BE400B284DB /* demo.css in Resources */,
 				22609320299F4BE400B284DB /* iconfont.json in Resources */,
@@ -1350,6 +1374,7 @@
 				585D0DC928561E1A00993291 /* FSPagerViewCell.swift in Sources */,
 				F79E5282282618D300032CAE /* NSObject+Ext.swift in Sources */,
 				96FFAB4D285E1F6F004D321D /* Snapkit+Extension.swift in Sources */,
+				C2E75A372A681A6D005A0BF5 /* MPHomesHeaderView.swift in Sources */,
 				F762CACF2812975500354E9E /* Environment.swift in Sources */,
 				F7361C07280EA47A001DA340 /* NormalConstant.swift in Sources */,
 				0441C9622A66C3D6007E1715 /* MPLoginnController.swift in Sources */,
@@ -1395,6 +1420,7 @@
 				22DDAEEF2A35E41B00A1FF3C /* MPCollectionSelectCell.swift in Sources */,
 				04C8D14429B9EAAE00A95937 /* MPWalletController.swift in Sources */,
 				049CC8DE2A5BFE5D00C12E44 /* LXFit.swift in Sources */,
+				C2F5E3032A682B9F0076747F /* MPHomeToolsView.swift in Sources */,
 				98A7DC1B2819626000D9989C /* QRcode.swift in Sources */,
 				F79F08CA28252A8100B9777F /* CacheDataManager.swift in Sources */,
 				0448050729CB23200064ADD7 /* EWPopMenu.swift in Sources */,
@@ -1402,6 +1428,7 @@
 				F798E9F82829242A00C26CF6 /* HudManager.swift in Sources */,
 				983A1F5D28324B240098FD78 /* Float+Extension.swift in Sources */,
 				F77F9C992811608B005BEEDF /* NSAttributedString+Extension.swift in Sources */,
+				C2E75A352A681962005A0BF5 /* UIViewController+Extend.swift in Sources */,
 				0477651729C950330069B4F3 /* NBBottomSheetPresentationController.swift in Sources */,
 				04C4142429D40B0800E78FE2 /* MPMarketInfoViewModel.swift in Sources */,
 				F78EF184281BC527001BC933 /* BaseScrollView.swift in Sources */,
@@ -1411,10 +1438,12 @@
 				9880B463281A667300508DB7 /* TipsExtensions.swift in Sources */,
 				F7BF0990284454B0001AA9CF /* BaseTabBarController.swift in Sources */,
 				989923DB2848618200390D57 /* HSWindowAdapter.swift in Sources */,
+				C2F5E30A2A682D330076747F /* HomeTooleCell.swift in Sources */,
 				F77F9C8E281146A6005BEEDF /* BaseViewController.swift in Sources */,
 				585D0DC728561E1A00993291 /* FSPagerView.swift in Sources */,
 				A9554F5628C3C22700D1CBA4 /* UIlabel+Extension.swift in Sources */,
 				049CC8D72A5BFC4600C12E44 /* LXQRCode.swift in Sources */,
+				C2F5E3072A682D120076747F /* Cell+QS.swift in Sources */,
 				F798E9F42828EB1B00C26CF6 /* UIButton+Extension.swift in Sources */,
 				585D0DC828561E1A00993291 /* FSPageViewTransformer.swift in Sources */,
 				0487E3752A67CC7900A79D6C /* MPHomeCell.swift in Sources */,

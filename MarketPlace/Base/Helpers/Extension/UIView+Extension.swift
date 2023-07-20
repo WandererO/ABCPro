@@ -88,7 +88,16 @@ extension UIView {
             return vc as! UIViewController
 
         }
-
+    
+    /// xib快捷初始化
+    class func fromNib() -> Self {
+        return Bundle.main.loadNibNamed(self.className, owner: nil, options: nil)?.first as! Self
+    }
+    
+    class func cellFromNib() -> UINib {
+        return UINib.init(nibName: self.className, bundle: nil)
+    }
+    
 
 }
 
@@ -529,5 +538,5 @@ extension UITextView: UITextViewDelegate {
         
         self.delegate = self
     }
-    
+ 
 }

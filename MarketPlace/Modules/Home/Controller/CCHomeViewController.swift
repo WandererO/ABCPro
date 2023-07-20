@@ -14,26 +14,24 @@ import SafariServices
 
 class CCHomeViewController: BaseHiddenNaviController {
     
-    let tableHeader = MPHomeHeaderView()
+//    let tableHeader = MPHomeHeaderView()
+    let tableHeader = MPHomesHeaderView.fromNib()
     lazy var tableView : BaseTableView = {
         
         let table = BaseTableView(frame: CGRect.zero, style: .plain)
+      
         table.tableHeaderView = tableHeader
-        table.tableHeaderView?.height = 300//tableViewHeader.headerHight //SCREEN_HEIGHT - 100 - SafeAreaBottom - TABBAR_HEIGHT//630
+//        table.tableHeaderView?.height = 300//tableViewHeader.headerHight
         table.showsVerticalScrollIndicator = false
         table.backgroundColor = kMainBackgroundColor
         table.dataSource = self
         table.delegate = self
         table.separatorStyle = .none
         table.register(UINib(nibName: "MPHomeCell", bundle: nil), forCellReuseIdentifier: "MPHomeCell")
-//        table.register(UINib(nibName: "MPHome24hExchangeCell", bundle: nil), forCellReuseIdentifier: "MPHome24hExchangeCell")
         table.autoresizingMask  = .flexibleHeight
-
-//        table.nomalMJHeaderRefresh{ [weak self] in
-//            guard let self = self else {return}
-//
-//            self.reloadData()
-//        }
+        if #available(iOS 15.0, *) {
+            table.sectionHeaderTopPadding = 0
+        }
         return table
     }()
 
@@ -41,9 +39,28 @@ class CCHomeViewController: BaseHiddenNaviController {
 extension CCHomeViewController{
     
     
+    override func viewDidLayoutSubviews() {
+           super.viewDidLayoutSubviews()
+            
+           reloadHeaderView()
+           
+       }
+    
+    func reloadHeaderView(){
+        if let header = tableView.tableHeaderView {
+            /// 前提是xib中设置好约束  设置tableView.tableHeaderView高度
+            let height = tableView.tableHeaderView?.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
+            var frame = tableView.tableHeaderView?.frame
+            frame?.size.height = height!
+            print(height ?? 0)
+            
+            tableView.tableHeaderView?.frame = frame!
+            tableView.tableHeaderView = header
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        //home_header1_ic_light_Normal、home_navbar_logo_Normal、login_notify_ic_Normal\ic_home_search_Normal
+       
         self.imgae = UIImage(named:"home_navbar_logo_Normal")
         self.headerView.backgroundColor = RGBCOLOR(r: 89, g: 160, b: 59)
         
