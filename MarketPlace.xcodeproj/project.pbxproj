@@ -129,6 +129,10 @@
 		98AFF7FB280EC6E70035387C /* NetWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AFF7FA280EC6E70035387C /* NetWorkModel.swift */; };
 		98B074D52811386A007B7015 /* NetWorkApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98B074D42811386A007B7015 /* NetWorkApi.swift */; };
 		A9554F5628C3C22700D1CBA4 /* UIlabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9554F5528C3C22700D1CBA4 /* UIlabel+Extension.swift */; };
+		C2E5348E2A69037C00CEEC00 /* MPHomeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5348D2A69037C00CEEC00 /* MPHomeSectionView.swift */; };
+		C2E534902A69038200CEEC00 /* MPHomeSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E5348F2A69038200CEEC00 /* MPHomeSectionView.xib */; };
+		C2E534932A6921E400CEEC00 /* MPHomeSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E534912A6921E400CEEC00 /* MPHomeSectionCell.swift */; };
+		C2E534942A6921E400CEEC00 /* MPHomeSectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E534922A6921E400CEEC00 /* MPHomeSectionCell.xib */; };
 		C2E75A332A67E355005A0BF5 /* NSObject+Extend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E75A322A67E355005A0BF5 /* NSObject+Extend.swift */; };
 		C2E75A352A681962005A0BF5 /* UIViewController+Extend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E75A342A681962005A0BF5 /* UIViewController+Extend.swift */; };
 		C2E75A372A681A6D005A0BF5 /* MPHomesHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E75A362A681A6D005A0BF5 /* MPHomesHeaderView.swift */; };
@@ -318,6 +322,10 @@
 		98AFF7FA280EC6E70035387C /* NetWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkModel.swift; sourceTree = "<group>"; };
 		98B074D42811386A007B7015 /* NetWorkApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkApi.swift; sourceTree = "<group>"; };
 		A9554F5528C3C22700D1CBA4 /* UIlabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIlabel+Extension.swift"; sourceTree = "<group>"; };
+		C2E5348D2A69037C00CEEC00 /* MPHomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomeSectionView.swift; sourceTree = "<group>"; };
+		C2E5348F2A69038200CEEC00 /* MPHomeSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPHomeSectionView.xib; sourceTree = "<group>"; };
+		C2E534912A6921E400CEEC00 /* MPHomeSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomeSectionCell.swift; sourceTree = "<group>"; };
+		C2E534922A6921E400CEEC00 /* MPHomeSectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPHomeSectionCell.xib; sourceTree = "<group>"; };
 		C2E75A322A67E355005A0BF5 /* NSObject+Extend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extend.swift"; sourceTree = "<group>"; };
 		C2E75A342A681962005A0BF5 /* UIViewController+Extend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extend.swift"; sourceTree = "<group>"; };
 		C2E75A362A681A6D005A0BF5 /* MPHomesHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomesHeaderView.swift; sourceTree = "<group>"; };
@@ -804,6 +812,10 @@
 				C2F5E3042A682BAD0076747F /* MPHomeToolsView.xib */,
 				C2F5E3082A682D320076747F /* HomeTooleCell.swift */,
 				C2F5E3092A682D330076747F /* HomeTooleCell.xib */,
+				C2E534912A6921E400CEEC00 /* MPHomeSectionCell.swift */,
+				C2E534922A6921E400CEEC00 /* MPHomeSectionCell.xib */,
+				C2E5348D2A69037C00CEEC00 /* MPHomeSectionView.swift */,
+				C2E5348F2A69038200CEEC00 /* MPHomeSectionView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1253,8 +1265,10 @@
 				98AFF799280E97A10035387C /* LaunchScreen.storyboard in Resources */,
 				049CC8D82A5BFC4600C12E44 /* LXQRCode.bundle in Resources */,
 				98AFF796280E97A10035387C /* Assets.xcassets in Resources */,
+				C2E534942A6921E400CEEC00 /* MPHomeSectionCell.xib in Resources */,
 				2260931C299F4BE400B284DB /* iconfont.js in Resources */,
 				220F5BE12A21D4AE000C02BD /* Color.xcassets in Resources */,
+				C2E534902A69038200CEEC00 /* MPHomeSectionView.xib in Resources */,
 				0487E3702A67AAC900A79D6C /* MPPasswdController.xib in Resources */,
 				22DDAEF02A35E41B00A1FF3C /* MPCollectionSelectCell.xib in Resources */,
 				229912262A2CDF98006CDDFA /* MPBaseCell.xib in Resources */,
@@ -1363,6 +1377,7 @@
 				2248075029F0060F00226026 /* MPContractModel.swift in Sources */,
 				98AFF7D5280E9BC60035387C /* MainController.swift in Sources */,
 				98AFF791280E979F0035387C /* ViewController.swift in Sources */,
+				C2E5348E2A69037C00CEEC00 /* MPHomeSectionView.swift in Sources */,
 				96FFAB52285E318F004D321D /* CodeTextField.swift in Sources */,
 				04A31C4D29E6909100C8E2E7 /* MPUsercenterViewModel.swift in Sources */,
 				F74A5BEF2816C0B30096AD24 /* UserManager.swift in Sources */,
@@ -1420,6 +1435,7 @@
 				22DDAEEF2A35E41B00A1FF3C /* MPCollectionSelectCell.swift in Sources */,
 				04C8D14429B9EAAE00A95937 /* MPWalletController.swift in Sources */,
 				049CC8DE2A5BFE5D00C12E44 /* LXFit.swift in Sources */,
+				C2E534932A6921E400CEEC00 /* MPHomeSectionCell.swift in Sources */,
 				C2F5E3032A682B9F0076747F /* MPHomeToolsView.swift in Sources */,
 				98A7DC1B2819626000D9989C /* QRcode.swift in Sources */,
 				F79F08CA28252A8100B9777F /* CacheDataManager.swift in Sources */,
@@ -1471,7 +1487,6 @@
 				981A25612834F0E200DB858E /* DateManager.swift in Sources */,
 				C2E75A332A67E355005A0BF5 /* NSObject+Extend.swift in Sources */,
 				F7CFF0502812CBC10063615D /* TipManager.swift in Sources */,
-				0487E3722A67C88100A79D6C /* MPHomeHeaderView.swift in Sources */,
 				0487E37E2A68379100A79D6C /* MPMobileTopUpController.swift in Sources */,
 				988F8617282BAAA9008D9EED /* Date+Category.swift in Sources */,
 				585D0DCD28561E1A00993291 /* FSPagerViewObjcCompat.m in Sources */,
@@ -1669,7 +1684,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = P299XF6XF4;
+				DEVELOPMENT_TEAM = 77ZCM44ZVT;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarketPlace/Info.plist;

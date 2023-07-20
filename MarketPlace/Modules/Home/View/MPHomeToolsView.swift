@@ -14,17 +14,20 @@ class MPHomeToolsView: UIView,UICollectionViewDelegate,UICollectionViewDataSourc
     @IBOutlet weak var collecView: UICollectionView!
     
     
+    let titles = ["VCB Fanily","Promotions","VCB Rewards","Lock card","Settings"]
+    let images = ["fav_family_ic_Normal","fav_promote_Normal","fav_loyalty_ic_Normal","fav_lockcard_ic_Normal","fav_setting_ic_Normal"]
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let itemWidth : CGFloat =  CGFloat(SCREEN_WIDTH - 4*30 - 20)/5
+        let itemWidth : CGFloat =  CGFloat(SCREEN_WIDTH - 4*20 - 20)/5
         let flow = UICollectionViewFlowLayout()
-        flow.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
+        //字体显示不下
+//        flow.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
         flow.itemSize = CGSize(width: itemWidth, height: itemWidth + 20)
-        flow.minimumLineSpacing = 30
+        flow.minimumLineSpacing = 20
         flow.minimumInteritemSpacing = 0
         flow.scrollDirection = .horizontal
-        self.collecView.backgroundColor = .red
+        self.collecView.backgroundColor = .clear
         self.collecView.delegate = self
         self.collecView.dataSource = self
         self.collecView.collectionViewLayout = flow
@@ -40,21 +43,22 @@ class MPHomeToolsView: UIView,UICollectionViewDelegate,UICollectionViewDataSourc
     }
   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return titles.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withType: HomeTooleCell.self, for: indexPath)
-        cell.backgroundColor = UIColor.random
-        let text = "ABC" + "\(indexPath.row)"
+        cell.backgroundColor = UIColor.clear
+        let text = titles[indexPath.item]
         
-        cell.locaImage.image = UIImage(named: "fav_lockcard_ic_Normal")
+        cell.locaImage.image = UIImage(named: images[indexPath.item])
         cell.nameLable.text = text
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
         
     }
     

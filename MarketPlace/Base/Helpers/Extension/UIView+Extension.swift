@@ -97,8 +97,102 @@ extension UIView {
     class func cellFromNib() -> UINib {
         return UINib.init(nibName: self.className, bundle: nil)
     }
+    @IBInspectable
+    var IB_cornerRadius: CGFloat {
+        get {
+            return layer.cornerRadius
+        }
+        set {
+            layer.cornerRadius = newValue
+            layer.masksToBounds = newValue > 0
+        }
+    }
     
-
+    @IBInspectable
+    var IB_borderWidth: CGFloat {
+        get {
+            return layer.borderWidth
+        }
+        set {
+            layer.borderWidth = newValue
+        }
+    }
+    
+    @IBInspectable
+    var IB_borderColor: UIColor? {
+        get {
+            if let color = layer.borderColor {
+                return UIColor(cgColor: color)
+            }
+            return nil
+        }
+        set {
+            if let color = newValue {
+                layer.borderColor = color.cgColor
+            } else {
+                layer.borderColor = nil
+            }
+        }
+    }
+    
+    @IBInspectable
+    var IB_shadowRadius: CGFloat {
+        get {
+            return layer.shadowRadius
+        }
+        set {
+            layer.shadowRadius = newValue
+        }
+    }
+    
+    @IBInspectable
+    var IB_shadowOpacity: Float {
+        get {
+            return layer.shadowOpacity
+        }
+        set {
+            layer.shadowOpacity = newValue
+        }
+    }
+    
+    @IBInspectable
+    var IB_shadowOffset: CGSize {
+        get {
+            return layer.shadowOffset
+        }
+        set {
+            layer.shadowOffset = newValue
+        }
+    }
+    
+    @IBInspectable
+    var IB_shadowColor: UIColor? {
+        get {
+            if let color = layer.shadowColor {
+                return UIColor(cgColor: color)
+            }
+            return nil
+        }
+        set {
+            if let color = newValue {
+                layer.shadowColor = color.cgColor
+            } else {
+                layer.shadowColor = nil
+            }
+        }
+    }
+    
+    /// 设置渐变色
+    func configGradient(colors: [CGColor], startPoint: CGPoint, endPoint: CGPoint,bounds: CGRect) {
+        let bgLayer = CAGradientLayer()
+        bgLayer.colors = colors
+        bgLayer.locations = [0, 1]
+        bgLayer.frame = bounds
+        bgLayer.startPoint = startPoint
+        bgLayer.endPoint = endPoint
+        bgLayer.cornerRadius = self.layer.cornerRadius
+        self.layer.insertSublayer(bgLayer, at: 0)
+    }
 }
 
 // MARK: - 坐标

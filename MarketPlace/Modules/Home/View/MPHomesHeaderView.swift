@@ -22,7 +22,7 @@ class MPHomesHeaderView: UIView{
     @IBOutlet weak var toolsHeight: NSLayoutConstraint!
     
     //工具item 高度
-    let toolHeight = (SCREEN_WIDTH - 4*30 - 20)/5
+    let toolHeight = (SCREEN_WIDTH - 4*20 - 20)/5
     //轮播图高度
     let bannerHeight = (SCREEN_WIDTH * 0.4)
     
@@ -38,6 +38,12 @@ class MPHomesHeaderView: UIView{
     @IBOutlet weak var balanceLable: UILabel!
     
     
+    @IBOutlet weak var bttomLeftBtn: UIButton!
+    
+    @IBOutlet weak var bttomRightBtn: UIButton!
+    
+    @IBOutlet weak var secondView: UIView!
+    @IBOutlet weak var firstVie: UIView!
     
     
     override func awakeFromNib() {
@@ -52,19 +58,39 @@ class MPHomesHeaderView: UIView{
         self.pageView.isInfinite = true
         self.pageView.automaticSlidingInterval = 3
         self.pageView.interitemSpacing = 5
-        
+        self.pageView.cornerRadius = 8
         
         
         
         toolsHeight.constant = toolHeight + 20
         pageViewHeight.constant = bannerHeight
         let tools  =  MPHomeToolsView.fromNib()
-        
+        tools.backgroundColor = .clear
         toolsVIew.addSubview(tools)
         tools.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
-         
+        
+        
+        headIMage.IB_cornerRadius = 35
+        headBottomImage.IB_cornerRadius = 10
+ 
+        
+        bttomLeftBtn.IB_cornerRadius = 10
+        bttomRightBtn.IB_cornerRadius = 10
+        secondView.IB_cornerRadius = 10
+        firstVie.IB_cornerRadius = 10
+        
+ 
+        firstVie.configGradient(colors: [UIColor(17, 34, 42, 0).withAlphaComponent(1).cgColor,
+                                         UIColor.white.withAlphaComponent(5).cgColor],
+                                startPoint: CGPoint(x: 0.5, y: 0), endPoint: CGPoint(x: 0.5, y: 1),bounds: CGRect(x: 0, y: 0, width: SCREEN_WIDTH*0.5, height: 50))
+        
+        
+       secondView.configGradient(colors: [UIColor(17, 34, 42, 0).withAlphaComponent(1).cgColor,
+                                                UIColor.white.withAlphaComponent(5).cgColor],
+                                 startPoint: CGPoint(x: 0.5, y: 0), endPoint: CGPoint(x: 0.5, y: 1),bounds: CGRect(x: 0, y: 0, width: SCREEN_WIDTH*0.5, height: 50))
+               
        
     }
     

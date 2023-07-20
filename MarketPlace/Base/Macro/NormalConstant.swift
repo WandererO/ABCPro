@@ -153,6 +153,7 @@ let kFifaMainColor : UIColor = .hexColor("FFC619")
 let kCareMainColor : UIColor = .hexColor("00BF70")
 
 
+
 func comparePriceToGetColor(oldPrice:String , newPrice : String) -> UIColor?{
     
     if let oldPirce = Double(oldPrice) , let newPrice = Double(newPrice){

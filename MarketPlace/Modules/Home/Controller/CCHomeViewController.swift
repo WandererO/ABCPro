@@ -14,19 +14,31 @@ import SafariServices
 
 class CCHomeViewController: BaseHiddenNaviController {
     
-//    let tableHeader = MPHomeHeaderView()
+    let dataSource = [
+        
+                       [["text":"internal transfer","img":"home_transferin_ic_Normal"],["text":"Quick transfer 247","img":"home_transferfast_ic_Normal"],["text":"Overseas remittance","img":"icTransfermoneyInternational_Normal"],["text":"External transfer","img":"home_transferout_ic_Normal"],["text":"Cash transfer","img":"home_transferreceivevcb_ic_Normal"],["text":"Lucky gift","img":"home_gift_ic_Normal"],["text":"Tranfer transaction status","img":"home_statusmoneyoder_ic_Normal"],["text":"Money service at VNPOST","img":"home_vnpost_ic_Normal"]],
+                       
+                       [["text":"","img":""],["text":"","img":""],["text":"","img":""],["text":"","img":""]],
+                        
+                        [["text":"","img":""],["text":"","img":""],["text":"","img":""],["text":"","img":""]],
+                         
+                       [["text":"","img":""],["text":"","img":""],["text":"","img":""],["text":"","img":""]],
+                        
+                        
+                   ]
+                         
     let tableHeader = MPHomesHeaderView.fromNib()
     lazy var tableView : BaseTableView = {
-        
-        let table = BaseTableView(frame: CGRect.zero, style: .plain)
-      
+        let table = BaseTableView(frame: CGRect.zero, style: .grouped)
+        tableHeader.backgroundColor = .clear
         table.tableHeaderView = tableHeader
-//        table.tableHeaderView?.height = 300//tableViewHeader.headerHight
         table.showsVerticalScrollIndicator = false
-        table.backgroundColor = kMainBackgroundColor
+        //tableView 背景色
+        table.backgroundColor =  UIColor(17, 34, 42, 0).withAlphaComponent(0.8)
         table.dataSource = self
         table.delegate = self
         table.separatorStyle = .none
+        table.separatorColor = .clear
         table.register(UINib(nibName: "MPHomeCell", bundle: nil), forCellReuseIdentifier: "MPHomeCell")
         table.autoresizingMask  = .flexibleHeight
         if #available(iOS 15.0, *) {
@@ -75,10 +87,27 @@ extension CCHomeViewController{
     }
     
     func setUI(){
+        
+        let homeBgImage = UIImageView(frame: .zero)
+        homeBgImage.image = UIImage(named: "homebg_1_Normal")
+        homeBgImage.contentMode = .scaleAspectFill
+        self.view.addSubview(homeBgImage)
+        
         self.view.addSubview(tableView)
+        
+        
+       
+        
         tableView.snp.makeConstraints { make in
             make.left.bottom.right.equalToSuperview()
             make.top.equalTo(88)
+        }
+        
+        
+        homeBgImage.snp.makeConstraints { make in
+            make.left.bottom.right.equalToSuperview()
+            make.top.equalTo(100)
+            
         }
     }
     
@@ -92,43 +121,56 @@ extension CCHomeViewController{
 }
 
 extension CCHomeViewController : UITableViewDataSource , UITableViewDelegate{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.dataSource.count
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 5
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        
+        //需要动态返回高度，根据数组里面的count 计算有几行 * 高度
+        let arr = dataSource[indexPath.section]
+        let itemHeight : CGFloat = (SCREEN_WIDTH/3)
+        let columnCount = Int(ceilf(Float(arr.count) * 1.0 / 3))
+        let allHeight  = CGFloat(columnCount) * itemHeight
+        print(allHeight)
+        return indexPath.section == 2 ? 150 + allHeight: allHeight
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-//        if exchangeRate == false {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MPHomeCell", for: indexPath) as! MPHomeCell
+ 
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MPHomeCell", for: indexPath) as! MPHomeCell
             cell.selectionStyle = .none
-//            cell.model = self.marketViewModel.marketListModels[indexPath.row]
-            return cell
-//        }else{
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "MPHome24hExchangeCell", for: indexPath) as! MPHome24hExchangeCell
-//            cell.selectionStyle = .none
-//            cell.model = self.marketViewModel.marketListModels[indexPath.row]
-//            return cell
-//        }
+        cell.backgroundColor = UIColor.clear
+        cell.dataSource = self.dataSource[indexPath.section]
+        //模拟banner显示
+        cell.topImageBanner.isHidden = indexPath.section != 2
+        cell.bannerHieght.constant = indexPath.section == 2 ? 150 : 0
         
+         return cell
+  
     }
     
     
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//
-//        return self.sectionView
-//    }
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+
+        
+        let setionView = MPHomeSectionView.fromNib()
+        setionView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 30)
+        setionView.titleName.text = "这是第\(section)行"
+        return setionView
+    }
      
-//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//
-//        return 80
-//    }
-//
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+
+        return 30
+    }
+
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
