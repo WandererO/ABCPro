@@ -11,6 +11,7 @@ class HomeTooleCell: UICollectionViewCell {
 
     @IBOutlet weak var locaImage: UIImageView!
     
+    @IBOutlet weak var imageTop: NSLayoutConstraint!
     
     @IBOutlet weak var nameLable: UILabel!
     override func awakeFromNib() {

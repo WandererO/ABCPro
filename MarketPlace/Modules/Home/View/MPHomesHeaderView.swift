@@ -59,9 +59,7 @@ class MPHomesHeaderView: UIView{
         self.pageView.automaticSlidingInterval = 3
         self.pageView.interitemSpacing = 5
         self.pageView.cornerRadius = 8
-        
-        
-        
+         
         toolsHeight.constant = toolHeight + 20
         pageViewHeight.constant = bannerHeight
         let tools  =  MPHomeToolsView.fromNib()
@@ -123,10 +121,7 @@ extension MPHomesHeaderView : FSPagerViewDelegate , FSPagerViewDataSource{
     public func pagerView(_ pagerView: FSPagerView, cellForItemAt index: Int) -> FSPagerViewCell {
         let cell = pagerView.dequeueReusableCell(withReuseIdentifier: "cell", at: index)
         let imageStr = pagerData[index]
-        cell.imageView?.image = UIImage(named: imageStr)
-//        let model = self.bannerDatas[index]
-        
-//        cell.imageView?.kf.setImage(with: model.imgUrl)
+        cell.imageView?.image = UIImage(named: imageStr) 
         cell.imageView?.contentMode = .scaleAspectFill
         cell.imageView?.clipsToBounds = true
         return cell

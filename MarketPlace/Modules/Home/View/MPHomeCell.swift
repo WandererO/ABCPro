@@ -80,8 +80,8 @@ class MPHomeCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
         
+        print("点击了\(indexPath.row)个")
     }
     
     

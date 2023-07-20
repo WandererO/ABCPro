@@ -8,7 +8,8 @@
 import UIKit
 
 class MPHomeSectionView: UIView {
-
+    @IBOutlet weak var bottomV: UIView!
+    
     @IBOutlet weak var titleName: UILabel!
   
 

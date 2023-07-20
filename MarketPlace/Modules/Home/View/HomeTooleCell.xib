@@ -46,6 +46,7 @@
             </constraints>
             <size key="customSize" width="92" height="89"/>
             <connections>
+                <outlet property="imageTop" destination="b2J-aZ-H7R" id="aVN-CN-OFo"/>
                 <outlet property="locaImage" destination="ZMJ-fb-gu0" id="lYu-7m-9p4"/>
                 <outlet property="nameLable" destination="jdh-nz-mN9" id="wx4-kc-mvj"/>
             </connections>

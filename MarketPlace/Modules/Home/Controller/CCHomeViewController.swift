@@ -16,17 +16,97 @@ class CCHomeViewController: BaseHiddenNaviController {
     
     let dataSource = [
         
-                       [["text":"internal transfer","img":"home_transferin_ic_Normal"],["text":"Quick transfer 247","img":"home_transferfast_ic_Normal"],["text":"Overseas remittance","img":"icTransfermoneyInternational_Normal"],["text":"External transfer","img":"home_transferout_ic_Normal"],["text":"Cash transfer","img":"home_transferreceivevcb_ic_Normal"],["text":"Lucky gift","img":"home_gift_ic_Normal"],["text":"Tranfer transaction status","img":"home_statusmoneyoder_ic_Normal"],["text":"Money service at VNPOST","img":"home_vnpost_ic_Normal"]],
+                       [["text":"internal transfer","img":"home_transferin_ic_Normal"],
+                        ["text":"Quick transfer 247","img":"home_transferfast_ic_Normal"],
+                        ["text":"Overseas remittance","img":"icTransfermoneyInternational_Normal"],
+                        ["text":"External transfer","img":"home_transferout_ic_Normal"],
+                        ["text":"Cash transfer","img":"home_transferreceivevcb_ic_Normal"],
+                        ["text":"Lucky gift","img":"home_gift_ic_Normal"],
+                        ["text":"Tranfer transaction status","img":"home_statusmoneyoder_ic_Normal"],
+                        ["text":"Money service at VNPOST","img":"home_vnpost_ic_Normal"]],
                        
-                       [["text":"","img":""],["text":"","img":""],["text":"","img":""],["text":"","img":""]],
+                       
+                       [["text":"Electricity","img":""],
+                        ["text":"Water","img":""],
+                        ["text":"Post-paid mobile bill","img":""],
+                        ["text":"Internet ADSL","img":""],
+                        ["text":"Medical fees payment","img":""],
+                        ["text":"Tuition fee","img":""],
+                        ["text":"Logistic fee","img":""],
+                        ["text":"VCB-Auto debit","img":""],
+                        ["text":"Others","img":""]],
                         
-                        [["text":"","img":""],["text":"","img":""],["text":"","img":""],["text":"","img":""]],
+                       
+                       
+                        [["text":"Top up","img":""],
+                         ["text":"E-wallet topip","img":""],
+                         ["text":"Topup agents","img":""],
+                         ["text":"Topup traffic account","img":""],
+                         ["text":"Auto Topup","img":""]],
                          
-                       [["text":"","img":""],["text":"","img":""],["text":"","img":""],["text":"","img":""]],
+                       
+                       
+                       [["text":"Card list/Statement","img":""],
+                        ["text":"Debit card renewal","img":""],
+                        ["text":"Card issuance/conversion","img":""],
+                        ["text":"Credit card payment","img":""],
+                        ["text":"Instllment payment","img":""],
+                        ["text":"Other card service","img":""]],
+                       
+                       
+                       [["text":"Loan origination","img":""],
+                        ["text":"Loan repayment","img":""],
+                        ["text":"Loan settlement","img":""]],
+                       
+                       
+                       [["text":"Online sabings","img":""],
+                        ["text":"Flexible savings","img":""],
+                        ["text":"Cumulative fixed deposit","img":""],
+                        ["text":"Savings account for children","img":""],
+                        ["text":"Automatic founds transfer","img":""]],
+                       
+                       
+                       [["text":"Insurance fee","img":""],
+                        ["text":"Bug insurance","img":""],
+                        ["text":"Insurance contrace management","img":""]],
+                       
+                       
+                       [["text":"Securities","img":""],
+                        ["text":"Fund Certificates","img":""] ],
+                       
+                       [["text":"Social insurance","img":""],
+                        ["text":"Port infrasyruceure fee payment","img":""],
+                        ["text":"Pay registration fees","img":""]],
+                       
                         
+                       
+                       [["text":"VnShop","img":""],
+                        ["text":"Book fight","img":""],
+                        ["text":"Book hotel","img":""],
+                        ["text":"Book Taxi","img":""],
+                        ["text":"Book bus ticket","img":""],
+                        ["text":"Book flowers","img":""],
+                        ["text":"Book train ticket","img":""],
+                        ["text":"Book movie ticket","img":""]],
+                       
+                       [["text":"Clamin request","img":""],
+                        ["text":"Setting Samart OTP","img":""],
+                        ["text":"Set up transfer limit","img":""],
+                        ["text":"VCB rewards","img":""],
+                        ["text":"Promotions","img":""],
+                        ["text":"Friend referral","img":""],
+                        ["text":"VCB Family","img":""],
+                        ["text":"Setup Account nickName","img":""],
+                        ["text":"VCB Booking","img":""],
+                        ["text":"Settings","img":""],
+                        ["text":"Other utilities","img":""]]
                         
                    ]
-                         
+    
+    let itemWidth : CGFloat =  CGFloat(SCREEN_WIDTH - 4*20 - 20)/5
+    let menuToolView = MPHomeToolsView.fromNib()
+    
+   
     let tableHeader = MPHomesHeaderView.fromNib()
     lazy var tableView : BaseTableView = {
         let table = BaseTableView(frame: CGRect.zero, style: .grouped)
@@ -88,15 +168,21 @@ extension CCHomeViewController{
     
     func setUI(){
         
+        
+        //添加底部背景图
         let homeBgImage = UIImageView(frame: .zero)
         homeBgImage.image = UIImage(named: "homebg_1_Normal")
         homeBgImage.contentMode = .scaleAspectFill
         self.view.addSubview(homeBgImage)
-        
         self.view.addSubview(tableView)
         
         
-       
+        //添加悬浮菜单
+        menuToolView.backgroundColor = RGBCOLOR(r: 12, g: 24, b: 30)
+        menuToolView.isHiddenTitle = true
+        menuToolView.isHidden = true
+        view.addSubview(menuToolView)
+         
         
         tableView.snp.makeConstraints { make in
             make.left.bottom.right.equalToSuperview()
@@ -109,6 +195,14 @@ extension CCHomeViewController{
             make.top.equalTo(100)
             
         }
+        
+        menuToolView.snp.makeConstraints { make in
+            make.top.equalTo(88)
+            make.left.right.equalTo(tableView)
+            make.height.equalTo(itemWidth+20)
+            
+        }
+        
     }
     
     
@@ -138,7 +232,7 @@ extension CCHomeViewController : UITableViewDataSource , UITableViewDelegate{
         let columnCount = Int(ceilf(Float(arr.count) * 1.0 / 3))
         let allHeight  = CGFloat(columnCount) * itemHeight
         print(allHeight)
-        return indexPath.section == 2 ? 150 + allHeight: allHeight
+        return indexPath.section ==  9 ? 120 + allHeight: allHeight
         
     }
     
@@ -148,9 +242,13 @@ extension CCHomeViewController : UITableViewDataSource , UITableViewDelegate{
             cell.selectionStyle = .none
         cell.backgroundColor = UIColor.clear
         cell.dataSource = self.dataSource[indexPath.section]
+        
+        
         //模拟banner显示
-        cell.topImageBanner.isHidden = indexPath.section != 2
-        cell.bannerHieght.constant = indexPath.section == 2 ? 150 : 0
+        cell.topImageBanner.isHidden = indexPath.section != 9
+        cell.bannerHieght.constant = indexPath.section == 9 ? 100 : 0
+        cell.topImageBanner.image = UIImage(named: "7_Normal")
+        cell.topImageBanner.IB_cornerRadius = 10
         
          return cell
   
@@ -161,19 +259,42 @@ extension CCHomeViewController : UITableViewDataSource , UITableViewDelegate{
 
         
         let setionView = MPHomeSectionView.fromNib()
-        setionView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 30)
-        setionView.titleName.text = "这是第\(section)行"
+        setionView.bottomV.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+        setionView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 23)
+        
+        let titleArray = ["Transfer","Bill payment","Topup","Card services","Credit","Savings","Insurance service","Investment","State budget","Shopping","Utilities"]
+        setionView.titleName.text = titleArray[section]
         return setionView
     }
      
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 
-        return 30
+        return 23
     }
-
+  
+    
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let viewss = UIView()
+//        viewss.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 10)
+//        viewss.backgroundColor = .clear
+//        return viewss
+//    }
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 10
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        
+        
+        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == tableView{
+            let y = scrollView.contentOffset.y
+            self.menuToolView.isHidden = y < 180 
+        }
     }
     
 }

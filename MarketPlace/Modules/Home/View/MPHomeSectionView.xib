@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -15,18 +16,18 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_header_ic_Normal" translatesAutoresizingMaskIntoConstraints="NO" id="jyI-4A-fUb">
-                    <rect key="frame" x="83.666666666666671" y="0.0" width="30" height="30"/>
+                    <rect key="frame" x="79.666666666666671" y="0.0" width="30" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="Fga-TF-yXV"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r0H-pv-Izc">
-                    <rect key="frame" x="0.0" y="0.0" width="83.666666666666671" height="30"/>
+                    <rect key="frame" x="0.0" y="0.0" width="79.666666666666671" height="30"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABCCCC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBt-uI-kaB">
-                            <rect key="frame" x="9.9999999999999964" y="6" width="63.666666666666657" height="18"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <rect key="frame" x="9.9999999999999964" y="6.6666666666666679" width="59.666666666666657" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
@@ -39,6 +40,13 @@
                         <constraint firstItem="HBt-uI-kaB" firstAttribute="centerY" secondItem="r0H-pv-Izc" secondAttribute="centerY" id="pm6-Qi-6i9"/>
                     </constraints>
                 </view>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xey-ft-RAT">
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="2"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="797-tl-rYC"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" red="0.32549019607843138" green="0.32549019607843138" blue="0.32549019607843138" alpha="0.0" colorSpace="calibratedRGB"/>
@@ -47,12 +55,16 @@
                 <constraint firstAttribute="bottom" secondItem="r0H-pv-Izc" secondAttribute="bottom" id="InQ-5b-oVj"/>
                 <constraint firstItem="r0H-pv-Izc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JfB-dy-oq4"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="jyI-4A-fUb" secondAttribute="bottom" id="NrZ-qc-me6"/>
+                <constraint firstItem="Xey-ft-RAT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="V2c-Vu-Rgd"/>
                 <constraint firstItem="jyI-4A-fUb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jgH-FX-t61"/>
                 <constraint firstItem="jyI-4A-fUb" firstAttribute="leading" secondItem="r0H-pv-Izc" secondAttribute="trailing" id="oIt-n6-iKN"/>
                 <constraint firstItem="jyI-4A-fUb" firstAttribute="centerY" secondItem="r0H-pv-Izc" secondAttribute="centerY" id="pcY-bE-sPq"/>
+                <constraint firstItem="Xey-ft-RAT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="usl-Wg-5vx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Xey-ft-RAT" secondAttribute="trailing" id="zZU-Dh-BTO"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="bottomV" destination="r0H-pv-Izc" id="uWa-eq-mft"/>
                 <outlet property="titleName" destination="HBt-uI-kaB" id="ZMe-2y-NnT"/>
             </connections>
             <point key="canvasLocation" x="60" y="20.616113744075829"/>
@@ -60,5 +72,8 @@
     </objects>
     <resources>
         <image name="home_header_ic_Normal" width="24" height="20"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
