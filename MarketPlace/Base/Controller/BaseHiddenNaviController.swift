@@ -166,7 +166,7 @@ class BaseHiddenNaviController: BaseViewController {
         }
 
         titleLab.removeFromSuperview()
-        titleLab.textColor = kBlackTextColor
+        titleLab.textColor = .white//kBlackTextColor
         titleLab.font = FONT_SB(size: 18)
         titleLab.textAlignment = .center
         topView.addSubview(titleLab)

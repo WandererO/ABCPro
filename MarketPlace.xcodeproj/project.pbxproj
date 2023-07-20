@@ -34,6 +34,10 @@
 		0487E3752A67CC7900A79D6C /* MPHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E3732A67CC7900A79D6C /* MPHomeCell.swift */; };
 		0487E3762A67CC7900A79D6C /* MPHomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0487E3742A67CC7900A79D6C /* MPHomeCell.xib */; };
 		0487E3782A67DB9300A79D6C /* MPCustomTabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E3772A67DB9300A79D6C /* MPCustomTabbarView.swift */; };
+		0487E37E2A68379100A79D6C /* MPMobileTopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E37C2A68379100A79D6C /* MPMobileTopUpController.swift */; };
+		0487E37F2A68379100A79D6C /* MPMobileTopUpController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0487E37D2A68379100A79D6C /* MPMobileTopUpController.xib */; };
+		0487E3822A6852FC00A79D6C /* MPTopupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0487E3802A6852FC00A79D6C /* MPTopupCell.swift */; };
+		0487E3832A6852FC00A79D6C /* MPTopupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0487E3812A6852FC00A79D6C /* MPTopupCell.xib */; };
 		04968D1729F7C7DA00E18E6A /* MPSelectPopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04968D1629F7C7D900E18E6A /* MPSelectPopView.swift */; };
 		049A39962A42F82300103737 /* MPAppGuideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A39952A42F82300103737 /* MPAppGuideCell.swift */; };
 		049A39982A42FEC500103737 /* MPAppLuanchGuideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049A39972A42FEC500103737 /* MPAppLuanchGuideController.swift */; };
@@ -209,6 +213,10 @@
 		0487E3732A67CC7900A79D6C /* MPHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomeCell.swift; sourceTree = "<group>"; };
 		0487E3742A67CC7900A79D6C /* MPHomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPHomeCell.xib; sourceTree = "<group>"; };
 		0487E3772A67DB9300A79D6C /* MPCustomTabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPCustomTabbarView.swift; sourceTree = "<group>"; };
+		0487E37C2A68379100A79D6C /* MPMobileTopUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPMobileTopUpController.swift; sourceTree = "<group>"; };
+		0487E37D2A68379100A79D6C /* MPMobileTopUpController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPMobileTopUpController.xib; sourceTree = "<group>"; };
+		0487E3802A6852FC00A79D6C /* MPTopupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPTopupCell.swift; sourceTree = "<group>"; };
+		0487E3812A6852FC00A79D6C /* MPTopupCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPTopupCell.xib; sourceTree = "<group>"; };
 		04968D1629F7C7D900E18E6A /* MPSelectPopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSelectPopView.swift; sourceTree = "<group>"; };
 		049A39952A42F82300103737 /* MPAppGuideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPAppGuideCell.swift; sourceTree = "<group>"; };
 		049A39972A42FEC500103737 /* MPAppLuanchGuideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPAppLuanchGuideController.swift; sourceTree = "<group>"; };
@@ -499,6 +507,33 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0487E3792A68375F00A79D6C /* TopUp */ = {
+			isa = PBXGroup;
+			children = (
+				0487E37A2A68375F00A79D6C /* Controll */,
+				0487E37B2A68375F00A79D6C /* View */,
+			);
+			path = TopUp;
+			sourceTree = "<group>";
+		};
+		0487E37A2A68375F00A79D6C /* Controll */ = {
+			isa = PBXGroup;
+			children = (
+				0487E37C2A68379100A79D6C /* MPMobileTopUpController.swift */,
+				0487E37D2A68379100A79D6C /* MPMobileTopUpController.xib */,
+			);
+			path = Controll;
+			sourceTree = "<group>";
+		};
+		0487E37B2A68375F00A79D6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0487E3802A6852FC00A79D6C /* MPTopupCell.swift */,
+				0487E3812A6852FC00A79D6C /* MPTopupCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		049CC8D12A5BFC4600C12E44 /* LXQRCodeManager */ = {
@@ -891,6 +926,7 @@
 		98AFF7D7280EA05F0035387C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				0487E3792A68375F00A79D6C /* TopUp */,
 				044C33E42A627D74003B5B97 /* Welcome */,
 				04FA597729C0134E008BC3F1 /* Market */,
 				045BC11A29BF0F5D00806DE3 /* C2C */,
@@ -1206,10 +1242,12 @@
 				0477652029C952300069B4F3 /* MPBottomSheetCell.xib in Resources */,
 				044C33E92A627DA9003B5B97 /* MPWelocomeController.xib in Resources */,
 				0441C9632A66C3D6007E1715 /* MPLoginnController.xib in Resources */,
+				0487E37F2A68379100A79D6C /* MPMobileTopUpController.xib in Resources */,
 				2260931B299F4BE400B284DB /* demo_index.html in Resources */,
 				98AFF794280E979F0035387C /* Main.storyboard in Resources */,
 				2260931A299F4BE400B284DB /* demo.css in Resources */,
 				22609320299F4BE400B284DB /* iconfont.json in Resources */,
+				0487E3832A6852FC00A79D6C /* MPTopupCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1400,10 +1438,12 @@
 				0477651B29C9503A0069B4F3 /* MPBottomPopUpTableController.swift in Sources */,
 				F740F304281800C7006EEF33 /* UIImageView+KFExt.swift in Sources */,
 				F7361C20280EA749001DA340 /* BaseCollectionView.swift in Sources */,
+				0487E3822A6852FC00A79D6C /* MPTopupCell.swift in Sources */,
 				981A25612834F0E200DB858E /* DateManager.swift in Sources */,
 				C2E75A332A67E355005A0BF5 /* NSObject+Extend.swift in Sources */,
 				F7CFF0502812CBC10063615D /* TipManager.swift in Sources */,
 				0487E3722A67C88100A79D6C /* MPHomeHeaderView.swift in Sources */,
+				0487E37E2A68379100A79D6C /* MPMobileTopUpController.swift in Sources */,
 				988F8617282BAAA9008D9EED /* Date+Category.swift in Sources */,
 				585D0DCD28561E1A00993291 /* FSPagerViewObjcCompat.m in Sources */,
 				044C33E82A627DA9003B5B97 /* MPWelocomeController.swift in Sources */,

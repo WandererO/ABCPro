@@ -134,7 +134,12 @@ let kCardColor : UIColor = .hexColor("#FFD887")
 let kAlipayColor : UIColor = .hexColor("#5171FF")
 let kWechatColor : UIColor = .hexColor("#2EBD85")
 
+let kInputTextColor : UIColor = RGBCOLOR(r: 82, g: 152, b: 59)
+
+
 let kBtnGreyBackgrondColor : UIColor = .hexColor("#F5F5F5")
+
+
 
 
 let kStatusGreenColor : UIColor = .hexColor("00BF70") // 一般用于完成
