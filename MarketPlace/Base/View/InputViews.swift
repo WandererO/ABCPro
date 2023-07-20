@@ -262,9 +262,10 @@ class InputView : UIView{
     
     lazy var bindBtn : ZQButton = {
         let btn = ZQButton()
-        btn.setTitle("去绑定", for: .normal)
-        btn.setTitleColor(.hexColor("5171FF"), for: .normal)
-        btn.titleLabel?.font = FONT_R(size: 14)
+        btn.setTitle("VND", for: .normal)
+//        accountLab.textColor = RGBCOLOR(r: 140, g: 151, b: 156)
+        btn.setTitleColor(RGBCOLOR(r: 140, g: 151, b: 156), for: .normal)
+        btn.titleLabel?.font = FONT_M(size: 14)
         btn.rx.tap.subscribe ({ [weak self] _ in
             guard let self = self else{return}
             self.BindToBlock?()
@@ -312,7 +313,7 @@ class InputView : UIView{
         
         let tf  = BaseTextField()
         let placeholderText = NSAttributedString(string: " ",
-                                                    attributes: [NSAttributedString.Key.foregroundColor: kInputPlaceHoderColor])
+                                                    attributes: [NSAttributedString.Key.foregroundColor: RGBCOLOR(r: 140, g: 151, b: 156)])
         tf.attributedPlaceholder = placeholderText
         tf.clearButtonMode = .whileEditing
         let clearButton : UIButton = tf.value(forKey: "_clearButton") as! UIButton
@@ -320,7 +321,7 @@ class InputView : UIView{
         tf.delegate = self
         tf.autocapitalizationType = .none
         
-        tf.font = FONT_R(size: 11)
+        tf.font = FONT_M(size: 14)
         return tf
     }()
     

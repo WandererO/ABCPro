@@ -17,18 +17,19 @@ class BaseTabBarController: UITabBarController {
         
     let homeVC = CCHomeViewController()
     let topUpVC = MPMobileTopUpController()
-    let contractVC = MPContractMainController()
-    let otcVC = MPQuickController()
-    let walletsVC = MPWalletController()
-    let marketVC = CCMaketQuotationController()
+    let QRVc = MPQRServicesController()
+    let internalVC = MPInternalTransferController()
+    let quickVC = MPQuickTransferController()
+    
+    
     lazy var baseHomeNav = BaseNavigationController.init(rootViewController: homeVC)
     lazy var topUpNav = BaseNavigationController.init(rootViewController: topUpVC)
-    lazy var baseOTCNav = BaseNavigationController.init(rootViewController: otcVC)
-    lazy var baseWalletsNav = BaseNavigationController.init(rootViewController: walletsVC)
-    lazy var baseMarketNav = BaseNavigationController.init(rootViewController: marketVC)
+    lazy var QRNav = BaseNavigationController.init(rootViewController: QRVc)
+    lazy var internalNav = BaseNavigationController.init(rootViewController: internalVC)
+    lazy var quickNav = BaseNavigationController.init(rootViewController: quickVC)
 
     var selectButton = UIButton()
-    lazy var tmpViewControllers = [baseHomeNav,topUpNav,baseMarketNav,baseOTCNav,baseWalletsNav]
+    lazy var tmpViewControllers = [baseHomeNav,topUpNav,QRNav,internalNav,quickNav]
     override func viewDidLoad() {
         super.viewDidLoad()
 //        initControllers()
@@ -121,14 +122,14 @@ class BaseTabBarController: UITabBarController {
 //        self.tabBar.isTranslucent = true // tabbar不透明
         // 直接用颜色
 //        self.tabBar.barTintColor = .init(white: 1, alpha: 1)
-        UITabBar.appearance().backgroundColor = .red //.init(white: 1, alpha: 1)
+//        UITabBar.appearance().backgroundColor = .red //.init(white: 1, alpha: 1)
 ////        UITabBar.appearance().backgroundImage = UIImage()
 //        UITabBar.appearance().backgroundImage = UIImage(named: "fifa_tabbar")
         
 //        let tmpViewControllers = [baseHomeNav,baseMarketsNav,baseTradeNav,baseFuturesNav,baseWalletsNav]
         //选中和非选中字体颜色
-//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.hexColor("2B2B33")], for: .normal)
-//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:kMainColor], for: .selected)
+//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.red], for: .normal)
+//        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:kInputTextColor], for: .selected)
         //MARK: fifa
 //        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.white], for: .normal)
 //        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.hexColor("FFC619") ], for: .selected)
@@ -160,16 +161,16 @@ extension BaseTabBarController {
     /// 版本适配
     func configyrationLatestVersion() {
         if #available(iOS 13.0, *) {
-//            self.tabBar.tintColor = RGBCOLOR(r: 24, g: 39, b: 44)//UIColor.hexColor("5171FF")
-//            self.tabBar.unselectedItemTintColor = UIColor.hexColor("999999")
+            self.tabBar.tintColor = kInputTextColor//UIColor.hexColor("5171FF")
+            self.tabBar.unselectedItemTintColor = RGBCOLOR(r: 135, g: 147, b: 152)
             //MARK: fifa
 //            self.tabBar.tintColor = .hexColor("FFC619")
 //            self.tabBar.unselectedItemTintColor = .white
 
 //            self.tabBar.tintColor = kMainColor // .hexColor("FFC619")
 //            self.tabBar.unselectedItemTintColor =
-//            UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.white], for: .normal)
-//            UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.hexColor("FFC619") ], for: .selected)
+//            UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor.red], for: .normal)
+//            UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.blue ], for: .selected)
 
 //            self.tabBar.backgroundColor =   .red //.init(white: 1, alpha: 0.9)//根据自己的情况设置
             
@@ -177,7 +178,6 @@ extension BaseTabBarController {
 //
 //                let color = UIColor(patternImage: image)
             UITabBar.appearance().backgroundColor = RGBCOLOR(r: 24, g: 39, b: 44)
-            
 //            let line = UIView()
 //            line.backgroundColor = kLineColor
 //            self.tabBar.addSubview(line)
@@ -188,13 +188,13 @@ extension BaseTabBarController {
 //            }
             
             
-            self.tabBar.layer.shadowColor = UIColor.hexColor("DBDDFD").cgColor
-            self.tabBar.layer.shadowOffset = CGSizeMake(0,-3)
-            self.tabBar.layer.shadowOpacity = 0.5
-            self.tabBar.layer.shadowRadius = 3
+//            self.tabBar.layer.shadowColor = UIColor.hexColor("DBDDFD").cgColor
+//            self.tabBar.layer.shadowOffset = CGSizeMake(0,-3)
+//            self.tabBar.layer.shadowOpacity = 0.5
+//            self.tabBar.layer.shadowRadius = 3
 //            }
             
-            UITabBar.appearance().backgroundImage = UIImage(named: "become_trader")
+//            UITabBar.appearance().backgroundImage = UIImage(named: "become_trader")
 
 //            let imaview = UIImageView(image: UIImage(named: "fifa_tabbar"))
 //            UITabBar.appearance().qmui_backgroundView = imaview
@@ -217,17 +217,27 @@ extension BaseTabBarController : UITabBarControllerDelegate {
               let selectNav = tabBarController.selectedViewController as? BaseNavigationController,
               let vc = nav.viewControllers.first else { return false }
         
-        if vc.className == MPContractMainController.className{
-            let pushVc = MPContractMainController()
-            pushVc.view.backgroundColor = kRedColor 
+        if vc.className == MPQRServicesController.className{
+            let pushVc = MPQRServicesController()
             selectNav.pushViewController(pushVc, animated: true)
             return false
         }
         
         if vc.className == MPMobileTopUpController.className {
             let pushVC = MPMobileTopUpController()
-//            pushVC.view.backgroundColor = .green
             selectNav.pushViewController(pushVC, animated: true)
+            return false
+        }
+        
+        if vc.className == MPInternalTransferController.className{
+            let pushVc = MPInternalTransferController()
+            selectNav.pushViewController(pushVc, animated: true)
+            return false
+        }
+        
+        if vc.className == MPQuickTransferController.className{
+            let pushVc = MPQuickTransferController()
+            selectNav.pushViewController(pushVc, animated: true)
             return false
         }
  

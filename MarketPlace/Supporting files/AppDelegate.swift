@@ -111,10 +111,10 @@ extension AppDelegate {
         func applicationDidBecomeActive(_ application: UIApplication) {
             //解决因为网络切换或链接不稳定问题，引起socket断连问题
             //如果app从无网络，到回复网络，需要执行重连
-            if !MPSocketManager.share.isConnected {
-                MPSocketManager.share.reConnectTime = 0
-                MPSocketManager.share.socketReconnect(time:0)
-            }
+//            if !MPSocketManager.share.isConnected {
+//                MPSocketManager.share.reConnectTime = 0
+//                MPSocketManager.share.socketReconnect(time:0)
+//            }
         }
 }
 
