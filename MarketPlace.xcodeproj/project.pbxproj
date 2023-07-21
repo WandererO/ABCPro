@@ -52,6 +52,7 @@
 		049D9D5A2A35A2310037CCBC /* MPSelectTopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D9D592A35A2310037CCBC /* MPSelectTopTableView.swift */; };
 		049D9D5C2A35A4BD0037CCBC /* MPSelectTopPopTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D9D5B2A35A4BD0037CCBC /* MPSelectTopPopTableController.swift */; };
 		04A0F6202A63C4B200F286EF /* EWTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0F61F2A63C4B200F286EF /* EWTextField.swift */; };
+		04A85F3D2A6A77A700CAAB2D /* MPBezierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A85F3C2A6A77A700CAAB2D /* MPBezierView.swift */; };
 		04BD7C3729D536B5009480B3 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD7C3629D536B5009480B3 /* BaseTextField.swift */; };
 		220F5BE12A21D4AE000C02BD /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220F5BE02A21D4AE000C02BD /* Color.xcassets */; };
 		2248075329F0D7FB00226026 /* StackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248075229F0D7FB00226026 /* StackView+Extension.swift */; };
@@ -234,6 +235,7 @@
 		049D9D592A35A2310037CCBC /* MPSelectTopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSelectTopTableView.swift; sourceTree = "<group>"; };
 		049D9D5B2A35A4BD0037CCBC /* MPSelectTopPopTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSelectTopPopTableController.swift; sourceTree = "<group>"; };
 		04A0F61F2A63C4B200F286EF /* EWTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWTextField.swift; sourceTree = "<group>"; };
+		04A85F3C2A6A77A700CAAB2D /* MPBezierView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPBezierView.swift; sourceTree = "<group>"; };
 		04BD7C3629D536B5009480B3 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		220F5BE02A21D4AE000C02BD /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		2248075229F0D7FB00226026 /* StackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StackView+Extension.swift"; sourceTree = "<group>"; };
@@ -940,6 +942,7 @@
 			children = (
 				0448050229CB23200064ADD7 /* Menu */,
 				047FB87729AF6AC000B652F5 /* InputViews.swift */,
+				04A85F3C2A6A77A700CAAB2D /* MPBezierView.swift */,
 				9677EC8D2870A5B200A023F2 /* LabelViews.swift */,
 				96FB6ABF288B050D00C59931 /* BottomSheetBaseView.swift */,
 				F7361C1F280EA749001DA340 /* BaseCollectionView.swift */,
@@ -1241,6 +1244,7 @@
 				F7361C07280EA47A001DA340 /* NormalConstant.swift in Sources */,
 				0441C9622A66C3D6007E1715 /* MPLoginnController.swift in Sources */,
 				049D9D5A2A35A2310037CCBC /* MPSelectTopTableView.swift in Sources */,
+				04A85F3D2A6A77A700CAAB2D /* MPBezierView.swift in Sources */,
 				0448050829CB23200064ADD7 /* EWPopMenuView.swift in Sources */,
 				F7361C1E280EA70F001DA340 /* BaseTableView.swift in Sources */,
 				228A39EB29DC28370039FBC0 /* MPSocketModel.swift in Sources */,
