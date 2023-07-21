@@ -97,7 +97,7 @@ class CCHomeViewController: BaseHiddenNaviController {
                         ["text":"VCB rewards","img":"ic_home_reward_Normal"],
                         ["text":"Promotions","img":"home_promotion_ic_Normal"],
                         ["text":"Friend referral","img":"home_ic_gioithieuban_Normal"],
-                        ["text":"VCB Family","img":""],
+                        ["text":"VCB Family","img":"home_ic_gioithieuban_Normal"],
                         ["text":"Setup Account nickName","img":"home_issuechipcard_ic_Normal"],
                         ["text":"VCB Booking","img":"home_appointment_ic_Normal"],
                         ["text":"Settings","img":"home_setting_ic_Normal"],
