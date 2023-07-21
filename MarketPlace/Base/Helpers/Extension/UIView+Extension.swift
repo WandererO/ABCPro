@@ -193,6 +193,24 @@ extension UIView {
         bgLayer.cornerRadius = self.layer.cornerRadius
         self.layer.insertSublayer(bgLayer, at: 0)
     }
+    
+    //设置渐变色背景
+    func setGradMainColor(size:CGSize = .zero){
+        let leftColor = RGBCOLOR(r: 89, g: 160, b: 59)
+        let rightColor =   RGBCOLOR(r: 18, g: 122, b: 40)
+         
+        var viewSize = size
+        
+        if viewSize.width == 0 {
+            //默认不传递
+            viewSize = self.bounds.size
+        }
+        print("====>\(viewSize.height)")
+         
+         self.configGradient(colors: [leftColor.cgColor,rightColor.cgColor], startPoint: CGPoint(x: 0, y: 0), endPoint: CGPoint(x: 1, y: 0), bounds: CGRect(x: 0, y: 0, width: viewSize.width, height:  viewSize.height ))
+         
+        
+    }
 }
 
 // MARK: - 坐标

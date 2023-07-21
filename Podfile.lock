@@ -4,6 +4,7 @@ PODS:
   - EmptyDataSet-Swift (5.0.0)
   - HandyJSON (5.0.2)
   - HSStockChart (1.3.0)
+  - HWPanModal (0.8.9)
   - IQKeyboardManagerSwift (6.5.11)
   - JXPageControl (0.1.5):
     - JXPageControl/Common (= 0.1.5)
@@ -68,6 +69,7 @@ DEPENDENCIES:
   - EmptyDataSet-Swift
   - HandyJSON
   - HSStockChart
+  - HWPanModal (= 0.8.9)
   - IQKeyboardManagerSwift
   - JXPageControl
   - JXPagingView/Paging
@@ -95,6 +97,7 @@ SPEC REPOS:
     - EmptyDataSet-Swift
     - HandyJSON
     - HSStockChart
+    - HWPanModal
     - IQKeyboardManagerSwift
     - JXPageControl
     - JXPagingView
@@ -130,6 +133,7 @@ SPEC CHECKSUMS:
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   HSStockChart: 2c6e0e3bcb2e5a345bf62c18d955bbc231d2f466
+  HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
   IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   JXPageControl: e9487b39e2e58fc17790833214f3b8e935bef98b
   JXPagingView: 90924b364a2ff7e94db534fad1fa50925ff69ee4
@@ -159,6 +163,6 @@ SPEC CHECKSUMS:
   ZendeskSDKStorage: cc4fcbfd50544d8fe26d5cfdc63f5c6455152e5e
   ZendeskSDKUIComponents: e2bc335781ae57c13fddb1512dc3c0c56403c0aa
 
-PODFILE CHECKSUM: 4f6fb84a85e0fad6b45990f15b53e68b4ee42e2d
+PODFILE CHECKSUM: 368782841361cf0409d51b75add471a47bdeefa1
 
 COCOAPODS: 1.11.3
