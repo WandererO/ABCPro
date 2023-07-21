@@ -80,6 +80,9 @@ pod 'ZendeskSDKMessaging'#客服
 pod 'JXPhotoBrowser', '~> 3.0'
 pod 'PinLayout'
 pod 'Reachability'
+# 底部弹出视图控制器拖拽手势
+pod 'HWPanModal', '0.8.9'
+
 #pod 'Chart'
 #post_install do |installer|
 #  #调用移除函数

@@ -2,7 +2,7 @@
 //  MPHomesHeaderView.swift
 //  MarketPlace
 //
-//  Created by 世文 on 2023/7/19.
+//  Created by By SW on 2023/7/19.
 //
 
 import UIKit
@@ -109,6 +109,16 @@ class MPHomesHeaderView: UIView{
         balanceLable.text = sender.isSelected ? "123456" : "******"
     }
     
+    @IBAction func transferAction(_ sender: Any) {
+        
+        
+        print("转账")
+        
+        let vc = MPAccountInfomationVC(nibName: "MPAccountInfomationVC", bundle: nil)
+        
+        CommonUtil.getCurrentVC()?.pushViewController(vc: vc)
+        
+    }
 }
 
 
@@ -147,4 +157,8 @@ extension MPHomesHeaderView : FSPagerViewDelegate , FSPagerViewDataSource{
 //    func pagerViewDidEndScrollAnimation(_ pagerView: FSPagerView) {
 //        self.pageControl.currentPage = pagerView.currentIndex
 //    }
+    
+    
+    
+    
 }

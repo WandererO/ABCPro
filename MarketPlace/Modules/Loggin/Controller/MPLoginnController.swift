@@ -108,6 +108,9 @@ class MPLoginnController: BaseHiddenNaviController {
         }
         
         
+        nextBtn.setGradMainColor(size: CGSize(width: SCREEN_WIDTH - 30, height: 45))
+        
+        
     }
 
 }

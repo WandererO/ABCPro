@@ -26,80 +26,82 @@ class CCHomeViewController: BaseHiddenNaviController {
                         ["text":"Money service at VNPOST","img":"home_vnpost_ic_Normal"]],
                        
                        
-                       [["text":"Electricity","img":""],
-                        ["text":"Water","img":""],
-                        ["text":"Post-paid mobile bill","img":""],
-                        ["text":"Internet ADSL","img":""],
-                        ["text":"Medical fees payment","img":""],
-                        ["text":"Tuition fee","img":""],
-                        ["text":"Logistic fee","img":""],
-                        ["text":"VCB-Auto debit","img":""],
-                        ["text":"Others","img":""]],
+                       [["text":"Electricity","img":"home_electricitybills_ic_Normal"],
+                        ["text":"Water","img":"home_water_ic_Normal"],
+                        ["text":"Post-paid mobile bill","img":"ic_bill_extend_card_Normal"],
+                        ["text":"Internet ADSL","img":"home_adslinternetfee_ic_Normal"],
+                        ["text":"Medical fees payment","img":"home_hospitalbill_ic_Normal"],
+                        ["text":"Tuition fee","img":"home_schoolfee_ic_Normal"],
+                        ["text":"Logistic fee","img":"home_logisticfee_ic_Normal"],
+                        ["text":"VCB-Auto debit","img":"home_registerautodebit_ic_Normal"],
+                        ["text":"Others","img":"home_more_ic_Normal"]],
                         
                        
                        
-                        [["text":"Top up","img":""],
-                         ["text":"E-wallet topip","img":""],
-                         ["text":"Topup agents","img":""],
-                         ["text":"Topup traffic account","img":""],
-                         ["text":"Auto Topup","img":""]],
+                        [["text":"Top up","img":"home_topup_ic_Normal"],
+                         ["text":"E-wallet topip","img":"home_electronictopup_ic_Normal"],
+                         ["text":"Topup agents","img":"home_topupagent_ic_Normal"],
+                         ["text":"Topup traffic account","img":"home_vetctopup_ic_Normal"],
+                         ["text":"Auto Topup","img":"home_autovetctopup_ic_Normal"]],
                          
                        
                        
-                       [["text":"Card list/Statement","img":""],
-                        ["text":"Debit card renewal","img":""],
-                        ["text":"Card issuance/conversion","img":""],
-                        ["text":"Credit card payment","img":""],
-                        ["text":"Instllment payment","img":""],
-                        ["text":"Other card service","img":""]],
+                       [["text":"Card list/Statement","img":"hime_statement_ic_Normal"],
+                        ["text":"Debit card renewal","img":"home_edc_ic_Normal"],
+                        ["text":"Card issuance/conversion","img":"home_cardchip_ic_Normal"],
+                        ["text":"Credit card payment","img":"home_paycredit_ic_Normal"],
+                        ["text":"Instllment payment","img":"home_installment_Normal"],
+                        ["text":"Other card service","img":"home_more_ic_Normal"]],
                        
                        
-                       [["text":"Loan origination","img":""],
-                        ["text":"Loan repayment","img":""],
-                        ["text":"Loan settlement","img":""]],
+                       [["text":"Loan origination","img":"home_openloan_ic_Normal"],
+                        ["text":"Loan repayment","img":"home_payment_loan_ic_Normal"],
+                        ["text":"Loan settlement","img":"home_closeloan_ic_Normal"]],
                        
                        
-                       [["text":"Online sabings","img":""],
-                        ["text":"Flexible savings","img":""],
-                        ["text":"Cumulative fixed deposit","img":""],
-                        ["text":"Savings account for children","img":""],
-                        ["text":"Automatic founds transfer","img":""]],
+                       [["text":"Online sabings","img":"home_loan_online_ic_Normal"],
+                        ["text":"Flexible savings","img":"home_flex_saving_ic_Normal"],
+                        ["text":"Cumulative fixed deposit","img":"home_deposit_ic_Normal"],
+                        ["text":"Savings account for children","img":"ic_home_kidsaving_Normal"],
+                        ["text":"Automatic founds transfer","img":"home_registerautosaving_ic_Normal"]],
                        
                        
-                       [["text":"Insurance fee","img":""],
-                        ["text":"Bug insurance","img":""],
+                       [["text":"Insurance fee","img":"home_fwdbill_ic_Normal"],
+                        ["text":"Bug insurance","img":"home_buy_insurance_fwd_ic_Normal"],
                         ["text":"Insurance contrace management","img":""]],
                        
                        
-                       [["text":"Securities","img":""],
-                        ["text":"Fund Certificates","img":""] ],
+                       [["text":"Securities","img":"home_stock_ic_Normal"],
+                        ["text":"Fund Certificates","img":"icStockaddWhite38X38_Normal"] ],
                        
-                       [["text":"Social insurance","img":""],
-                        ["text":"Port infrasyruceure fee payment","img":""],
-                        ["text":"Pay registration fees","img":""]],
+                       
+                       
+                       [["text":"Social insurance","img":"home_insurancebill_Normal"],
+                        ["text":"Port infrasyruceure fee payment","img":"home_fee_seaport_ic_Normal"],
+                        ["text":"Pay registration fees","img":"icTax2White38X38_Normal"]],
                        
                         
                        
-                       [["text":"VnShop","img":""],
-                        ["text":"Book fight","img":""],
-                        ["text":"Book hotel","img":""],
-                        ["text":"Book Taxi","img":""],
-                        ["text":"Book bus ticket","img":""],
-                        ["text":"Book flowers","img":""],
-                        ["text":"Book train ticket","img":""],
-                        ["text":"Book movie ticket","img":""]],
+                       [["text":"VnShop","img":"vnshop_ic_Normal"],
+                        ["text":"Book fight","img":"home_bookflight_ic_Normal"],
+                        ["text":"Book hotel","img":"home_hotel_ic_Normal"],
+                        ["text":"Book Taxi","img":"icHomeTaxi17Pt_Normal"],
+                        ["text":"Book bus ticket","img":"icHomeTaxi17Pt_Normal"],
+                        ["text":"Book flowers","img":"home_flower_ic_Normal"],
+                        ["text":"Book train ticket","img":"home_train_ic_Normal"],
+                        ["text":"Book movie ticket","img":"home_film_ic_Normal"]],
                        
-                       [["text":"Clamin request","img":""],
-                        ["text":"Setting Samart OTP","img":""],
-                        ["text":"Set up transfer limit","img":""],
-                        ["text":"VCB rewards","img":""],
-                        ["text":"Promotions","img":""],
-                        ["text":"Friend referral","img":""],
-                        ["text":"VCB Family","img":""],
-                        ["text":"Setup Account nickName","img":""],
-                        ["text":"VCB Booking","img":""],
-                        ["text":"Settings","img":""],
-                        ["text":"Other utilities","img":""]]
+                       [["text":"Clamin request","img":"home_check_online_ic_Normal"],
+                        ["text":"Setting Samart OTP","img":"home_active_soft_ic_Normal"],
+                        ["text":"Set up transfer limit","img":"home_limittrans_ic_Normal"],
+                        ["text":"VCB rewards","img":"ic_home_reward_Normal"],
+                        ["text":"Promotions","img":"home_promotion_ic_Normal"],
+                        ["text":"Friend referral","img":"home_ic_gioithieuban_Normal"],
+                        ["text":"VCB Family","img":"home_ic_gioithieuban_Normal"],
+                        ["text":"Setup Account nickName","img":"home_issuechipcard_ic_Normal"],
+                        ["text":"VCB Booking","img":"home_appointment_ic_Normal"],
+                        ["text":"Settings","img":"home_setting_ic_Normal"],
+                        ["text":"Other utilities","img":"home_more_ic_Normal"]]
                         
                    ]
     

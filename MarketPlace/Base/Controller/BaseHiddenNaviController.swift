@@ -145,7 +145,9 @@ class BaseHiddenNaviController: BaseViewController {
         
         self.view.addSubview(headerView)
         headerView.addSubview(topView)
-        headerView.backgroundColor = kMainBackgroundColor
+        //要有frame后才可以调用
+        headerView.setGradMainColor(size: CGSize(width:SCREEN_WIDTH, height: 48 + STATUSBAR_HIGH))
+        
         headerView.snp.makeConstraints { make in
             
             make.left.right.equalToSuperview()
@@ -157,7 +159,8 @@ class BaseHiddenNaviController: BaseViewController {
         headerBackgroundImage.snp.makeConstraints { make in
             make.left.top.right.bottom.equalToSuperview()
         }
-
+        
+       
         topView.snp.makeConstraints { make in
             
             make.left.right.equalToSuperview()
@@ -220,6 +223,10 @@ class BaseHiddenNaviController: BaseViewController {
             make.centerY.equalToSuperview()
             make.height.width.equalTo(54)
         }
+        
+      
+        
+         
         
     }
     

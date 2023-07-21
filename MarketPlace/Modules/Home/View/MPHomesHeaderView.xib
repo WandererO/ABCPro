@@ -142,6 +142,9 @@
                                     </constraints>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="home_acc_ic_Normal"/>
+                                    <connections>
+                                        <action selector="transferAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="jsJ-9W-dky"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kj-XS-VVW">
                                     <rect key="frame" x="165" y="0.0" width="145" height="50"/>

@@ -174,7 +174,11 @@ Quick transfer 247 is the quick money transfer \(.image(#imageLiteral(resourceNa
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Quick transfer 247"
-        self.headerView.backgroundColor = RGBCOLOR(r: 89, g: 160, b: 59)
+      
+       
+  
+        
+//        self.headerView.backgroundColor = RGBCOLOR(r: 89, g: 160, b: 59)
         self.topViewLeftBtn.setImage(UIImage(named: "ic_back_family_Normal"), for: .normal)
         // Do any additional setup after loading the view.
         
