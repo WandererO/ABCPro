@@ -45,7 +45,15 @@ class MPAccountInfomationVC: BaseHiddenNaviController {
             if index == 2 {
                 //转账
                 print("跳转转账")
-                
+                let transferAlert = MPTransferListAlert.init(nibName: "MPTransferListAlert", bundle: nil)
+                transferAlert.pan_show()
+                transferAlert.didSelectItemBlock = { index in
+                    if index == 1 {
+                        let quickTransferVC = MPQuickTransferController()
+                        self.pushViewController(vc: quickTransferVC)
+                    }
+                   
+                }
                 
             }
         }
