@@ -123,6 +123,14 @@ class MPChoiseAccountController: BaseHiddenNaviController {
             make.top.equalTo(currentV.snp.bottom).offset(10)
             make.bottom.equalTo(-30)
         }
+        accountV.pushBlock = {[weak self] in
+            guard let self = self else{return}
+            self.dismiss(animated: true) {
+                let vc = MPAccountInfomationVC(nibName: "MPAccountInfomationVC", bundle: nil)
+                CommonUtil.getCurrentVC()?.pushViewController(vc: vc, animate: true)
+            }
+        }
+        
     }
 }
 
@@ -222,10 +230,19 @@ class MPCurrentAccountView : BaseView {
 class MPAccountNumView : BaseView {
     
     
-    
+    var pushBlock:NormalBlock?
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
+        self.isUserInteractionEnabled = true
+        
+        self.addTapForView().subscribe(onNext: { [weak self] _ in
+            guard let self = self else{return}
+            print("+++++++++")
+            self.pushBlock?()
+            
+            
+        }).disposed(by: disposeBag)
         
         setUI()
     }
@@ -259,6 +276,37 @@ class MPAccountNumView : BaseView {
             make.top.equalTo(titleLab.snp.bottom).offset(8)
             make.height.width.equalTo(12)
         }
+        
+        let iconBtn = ZQButton()
+        iconBtn.setImage(UIImage(named: "arrow_left_ic_Normal"), for: .normal)
+        iconBtn.backgroundColor = RGBCOLOR(r: 203, g: 225, b: 131)
+        self.addSubview(iconBtn)
+        iconBtn.snp.makeConstraints { make in
+            make.top.bottom.right.equalToSuperview()
+            make.width.equalTo(20)
+        }
+        
+        let amountLab = UILabel()
+        amountLab.text = "480,000 VND"
+        amountLab.textColor = kInputTextColor
+        amountLab.font = FONT_SB(size: 16)
+        self.addSubview(amountLab)
+        amountLab.snp.makeConstraints { make in
+            make.right.equalTo(iconBtn.snp.left).offset(-20)
+            make.bottom.equalTo(-20)
+        }
+        
+        let availableLab = UILabel()
+        availableLab.text = "Available balance"
+        availableLab.textColor = RGBCOLOR(r: 168, g: 168, b: 168)
+        availableLab.font = FONT_M(size: 14)
+        self.addSubview(availableLab)
+        availableLab.snp.makeConstraints { make in
+            make.right.equalTo(iconBtn.snp.left).offset(-20)
+            make.bottom.equalTo(amountLab.snp.top).offset(-5)
+        }
+        
+        
         
     }
     

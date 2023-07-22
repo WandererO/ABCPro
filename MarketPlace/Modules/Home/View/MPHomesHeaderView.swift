@@ -117,9 +117,9 @@ class MPHomesHeaderView: UIView{
         let popVC = MPChoiseAccountController()
         popVC.show(on: CommonUtil.getCurrentVC()!, height: SCREEN_HEIGHT - 100)
         
-//        let vc = MPAccountInfomationVC(nibName: "MPAccountInfomationVC", bundle: nil)
-//        CommonUtil.getCurrentVC()?.pushViewController(vc: vc)
         
+//        let vc = MPAccountInfomationVC(nibName: "MPAccountInfomationVC", bundle: nil)
+//        CommonUtil.getCurrentVC()?.pushViewController(vc: vc, animate: true)
         
         
     }

@@ -134,7 +134,7 @@ let kCardColor : UIColor = .hexColor("#FFD887")
 let kAlipayColor : UIColor = .hexColor("#5171FF")
 let kWechatColor : UIColor = .hexColor("#2EBD85")
 
-let kInputTextColor : UIColor = RGBCOLOR(r: 82, g: 152, b: 59)
+let kInputTextColor : UIColor = RGBCOLOR(r: 132, g: 188, b: 57)
 
 
 let kBtnGreyBackgrondColor : UIColor = .hexColor("#F5F5F5")

@@ -39,6 +39,10 @@ class InputView : UIView{
     var ChoiseCountryNum : NormalBlock?
     var BindToBlock:NormalBlock?
     
+    var inputEnabledBlock:NormalBlock?
+    
+    var isInputEnabled = true
+    
     var isHaveLefeImg : Bool = false
 //    var ishaveCornorColor : Bool = true
     
@@ -321,7 +325,7 @@ class InputView : UIView{
         tf.delegate = self
         tf.autocapitalizationType = .none
         
-        tf.font = FONT_M(size: 14)
+        tf.font = FONT_SB(size: 14)
         return tf
     }()
     
@@ -624,8 +628,9 @@ extension InputView{
 extension InputView : UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        if textField.tag == 111 {
+        if isInputEnabled == false {
             
+            self.inputEnabledBlock?()
             return false
         }
         

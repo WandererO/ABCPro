@@ -25,13 +25,14 @@ Quick transfer 247 is the quick money transfer \(.image(#imageLiteral(resourceNa
     
     lazy var choiseCarInput : InputView = {
         let put = InputView()
-        put.inputTextField.text = "Quick transfer via"
+        put.inputTextField.text = "Quick transfer 24/7 via account"
         put.backgroundColor = .white
         put.corner(cornerRadius: 8)
         put.inputTextField.textColor = kInputTextColor
         put.setInputFieldType(typeI: .ChoiseType)
         put.choiseBtn1.setImage(UIImage(named: "arrow_down_black_ic_Normal"), for: .normal)
         put.inputTextField.tintColor = kInputTextColor
+        put.inputTextField.font = FONT_SB(size: 14)
         return put
     }()
     
@@ -53,13 +54,14 @@ Quick transfer 247 is the quick money transfer \(.image(#imageLiteral(resourceNa
     
     lazy var accountInput : InputView = {
         let put = InputView()
-        put.inputTextField.text = "1089292"
+        put.inputTextField.text = "1039288079"
         put.backgroundColor = .white
         put.corner(cornerRadius: 8)
         put.inputTextField.textColor = kInputTextColor
         put.setInputFieldType(typeI: .ChoiseType)
         put.choiseBtn1.setImage(UIImage(named: "arrow_down_black_ic_Normal"), for: .normal)
         put.inputTextField.tintColor = kInputTextColor
+        put.inputTextField.font = FONT_SB(size: 14)
         return put
     }()
     
@@ -93,6 +95,7 @@ Quick transfer 247 is the quick money transfer \(.image(#imageLiteral(resourceNa
         return btn
     }()
     
+    ///选择银行
     lazy var bankInput : InputView = {
         let put = InputView()
         put.inputTextField.placeholder = "Beneficiary bank"
@@ -102,17 +105,31 @@ Quick transfer 247 is the quick money transfer \(.image(#imageLiteral(resourceNa
         put.setInputFieldType(typeI: .ChoiseType)
         put.choiseBtn1.setImage(UIImage(named: "arrow_down_black_ic_Normal"), for: .normal)
         put.inputTextField.tintColor = kInputTextColor
+        put.inputTextField.font = FONT_SB(size: 14)
+        put.isInputEnabled = false//禁止输入
+        put.inputEnabledBlock = {[weak self] in
+            guard let self = self else{return}
+            
+            let vc = MPBeneficiaryBankController()
+            vc.show(on: self, height: SCREEN_HEIGHT - STATUSBAR_HIGH - SafeAreaTop)
+            vc.didSelectBlock = {[weak self] model in
+                guard let self = self else{return}
+                put.text = model.content
+            }
+            
+        }
         return put
     }()
     lazy var selectVNDInput : InputView = {
         let put = InputView()
-        put.inputTextField.placeholder = "Enter/ select beneficiary account VNDk"
+        put.inputTextField.placeholder = "Enter/ select beneficiary account VND"
         put.backgroundColor = .white
         put.corner(cornerRadius: 8)
         put.inputTextField.textColor = kInputTextColor
         put.setInputFieldType(typeI: .ChoiseType)
         put.choiseBtn1.setImage(UIImage(named: "topup_contact_ic_Normal"), for: .normal)
         put.inputTextField.tintColor = kInputTextColor
+        put.inputTextField.font = FONT_SB(size: 14)
         return put
     }()
     
@@ -144,6 +161,7 @@ Quick transfer 247 is the quick money transfer \(.image(#imageLiteral(resourceNa
         put.setInputFieldType(typeI: .NomalType)
         put.bindBtn.isHidden = false
         put.inputTextField.tintColor = kInputTextColor
+        put.inputTextField.font = FONT_SB(size: 14)
         return put
     }()
     
@@ -156,6 +174,7 @@ Quick transfer 247 is the quick money transfer \(.image(#imageLiteral(resourceNa
         put.setInputFieldType(typeI: .ChoiseType)
         put.choiseBtn1.setImage(UIImage(named: "arrow_down_black_ic_Normal"), for: .normal)
         put.inputTextField.tintColor = kInputTextColor
+        put.inputTextField.font = FONT_SB(size: 14)
         return put
     }()
     lazy var typeInput : InputView = {
@@ -167,6 +186,7 @@ Quick transfer 247 is the quick money transfer \(.image(#imageLiteral(resourceNa
         put.setInputFieldType(typeI: .ChoiseType)
         put.choiseBtn1.setImage(UIImage(named: "edit_black_ic_Normal"), for: .normal)
         put.inputTextField.tintColor = kInputTextColor
+        put.inputTextField.font = FONT_SB(size: 14)
         return put
     }()
     
@@ -247,8 +267,8 @@ Quick transfer 247 is the quick money transfer \(.image(#imageLiteral(resourceNa
         availableV.title = "Available balance"
         availableV.titleFont = FONT_M(size: 14)
         availableV.textColor = RGBCOLOR(r: 140, g: 151, b: 156)
-//        serviceChargeV.valueFont = FONT_R(size: 14)
-        availableV.value = "5000 VND"
+        availableV.valueFont = FONT_M(size: 14)
+        availableV.value = "50,0000 VND"
         self.view.addSubview(availableV)
         availableV.snp.makeConstraints { make in
             make.left.equalTo(20)
@@ -331,6 +351,7 @@ Quick transfer 247 is the quick money transfer \(.image(#imageLiteral(resourceNa
         confirmBtn.titleLabel?.font = FONT_M(size: 14)
         confirmBtn.backgroundColor = kInputTextColor
         confirmBtn.corner(cornerRadius: 8)
+        confirmBtn.setGradMainColor(size: CGSize(width: SCREEN_WIDTH - 40, height: 45))
         scrollV.addSubview(confirmBtn)
         confirmBtn.snp.makeConstraints { make in
             make.left.equalTo(20)
@@ -339,6 +360,10 @@ Quick transfer 247 is the quick money transfer \(.image(#imageLiteral(resourceNa
             make.height.equalTo(45)
             make.bottom.equalTo(-30)
         }
+        confirmBtn.rx.tap.subscribe(onNext: { [weak self] _ in
+            guard let self = self else{return}
+            print("Click Infomation confirmation")
+        }).disposed(by: disposeBag)
         
         
         
