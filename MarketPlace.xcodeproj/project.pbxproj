@@ -123,6 +123,8 @@
 		A9554F5628C3C22700D1CBA4 /* UIlabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9554F5528C3C22700D1CBA4 /* UIlabel+Extension.swift */; };
 		C2847E5C2A6A725A00EDC65E /* MPAccountTotalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2847E5A2A6A725A00EDC65E /* MPAccountTotalCell.swift */; };
 		C2847E5D2A6A725A00EDC65E /* MPAccountTotalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2847E5B2A6A725A00EDC65E /* MPAccountTotalCell.xib */; };
+		C2C49E8E2A6B7CF000F0DCA0 /* MPTransferListAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2C49E8C2A6B7CF000F0DCA0 /* MPTransferListAlert.swift */; };
+		C2C49E8F2A6B7CF000F0DCA0 /* MPTransferListAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2C49E8D2A6B7CF000F0DCA0 /* MPTransferListAlert.xib */; };
 		C2E5348E2A69037C00CEEC00 /* MPHomeSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E5348D2A69037C00CEEC00 /* MPHomeSectionView.swift */; };
 		C2E534902A69038200CEEC00 /* MPHomeSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E5348F2A69038200CEEC00 /* MPHomeSectionView.xib */; };
 		C2E534932A6921E400CEEC00 /* MPHomeSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E534912A6921E400CEEC00 /* MPHomeSectionCell.swift */; };
@@ -317,6 +319,8 @@
 		A9554F5528C3C22700D1CBA4 /* UIlabel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIlabel+Extension.swift"; sourceTree = "<group>"; };
 		C2847E5A2A6A725A00EDC65E /* MPAccountTotalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPAccountTotalCell.swift; sourceTree = "<group>"; };
 		C2847E5B2A6A725A00EDC65E /* MPAccountTotalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPAccountTotalCell.xib; sourceTree = "<group>"; };
+		C2C49E8C2A6B7CF000F0DCA0 /* MPTransferListAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPTransferListAlert.swift; sourceTree = "<group>"; };
+		C2C49E8D2A6B7CF000F0DCA0 /* MPTransferListAlert.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPTransferListAlert.xib; sourceTree = "<group>"; };
 		C2E5348D2A69037C00CEEC00 /* MPHomeSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomeSectionView.swift; sourceTree = "<group>"; };
 		C2E5348F2A69038200CEEC00 /* MPHomeSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPHomeSectionView.xib; sourceTree = "<group>"; };
 		C2E534912A6921E400CEEC00 /* MPHomeSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPHomeSectionCell.swift; sourceTree = "<group>"; };
@@ -924,6 +928,8 @@
 			children = (
 				C2EF81982A6A5ECC00432A2B /* MPAccountInfomationVC.swift */,
 				C2EF81992A6A5ECC00432A2B /* MPAccountInfomationVC.xib */,
+				C2C49E8C2A6B7CF000F0DCA0 /* MPTransferListAlert.swift */,
+				C2C49E8D2A6B7CF000F0DCA0 /* MPTransferListAlert.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1191,6 +1197,7 @@
 				0487E37F2A68379100A79D6C /* MPMobileTopUpController.xib in Resources */,
 				C2F5E30B2A682D330076747F /* HomeTooleCell.xib in Resources */,
 				2260931B299F4BE400B284DB /* demo_index.html in Resources */,
+				C2C49E8F2A6B7CF000F0DCA0 /* MPTransferListAlert.xib in Resources */,
 				C2F5E3052A682BAD0076747F /* MPHomeToolsView.xib in Resources */,
 				C2EF819F2A6A614800432A2B /* MPAccountMainView.xib in Resources */,
 				98AFF794280E979F0035387C /* Main.storyboard in Resources */,
@@ -1299,6 +1306,7 @@
 				585D0DC928561E1A00993291 /* FSPagerViewCell.swift in Sources */,
 				F79E5282282618D300032CAE /* NSObject+Ext.swift in Sources */,
 				96FFAB4D285E1F6F004D321D /* Snapkit+Extension.swift in Sources */,
+				C2C49E8E2A6B7CF000F0DCA0 /* MPTransferListAlert.swift in Sources */,
 				C2E75A372A681A6D005A0BF5 /* MPHomesHeaderView.swift in Sources */,
 				F762CACF2812975500354E9E /* Environment.swift in Sources */,
 				F7361C07280EA47A001DA340 /* NormalConstant.swift in Sources */,
