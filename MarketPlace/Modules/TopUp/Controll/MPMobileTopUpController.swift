@@ -171,6 +171,7 @@ class MPMobileTopUpController: BaseHiddenNaviController {
         confirmBtn.titleLabel?.font = FONT_M(size: 14)
         confirmBtn.backgroundColor = kInputTextColor
         confirmBtn.corner(cornerRadius: 8)
+        confirmBtn.setGradMainColor(size: CGSize(width: SCREEN_WIDTH - 40, height: 40))
         self.view.addSubview(confirmBtn)
         confirmBtn.snp.makeConstraints { make in
             make.left.equalTo(20)

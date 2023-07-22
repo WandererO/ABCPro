@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,21 +16,21 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C8t-d1-puB" customClass="FSPagerView" customModule="MarketPlace" customModuleProvider="target">
-                    <rect key="frame" x="10" y="20" width="370" height="170"/>
+                    <rect key="frame" x="10" y="-14" width="370" height="170"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="170" id="dM0-AV-S5k"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIn-KI-5A4" userLabel="5个按钮工具VIew">
-                    <rect key="frame" x="10" y="200" width="370" height="50"/>
+                    <rect key="frame" x="10" y="166" width="370" height="50"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="vYH-48-9qM"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sch-h9-Xfe">
-                    <rect key="frame" x="10" y="260" width="370" height="290"/>
+                    <rect key="frame" x="10" y="226" width="370" height="290"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CU9-C1-nRP">
                             <rect key="frame" x="14.999999999999996" y="15" width="63.666666666666657" height="21"/>
@@ -51,9 +50,9 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZDA-SO-8Zu" userLabel="头像">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_contact_green_light_Normal" translatesAutoresizingMaskIntoConstraints="NO" id="ZDA-SO-8Zu" userLabel="头像">
                             <rect key="frame" x="15" y="61" width="70" height="70"/>
-                            <color key="backgroundColor" name="babyBlue"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="70" id="AVD-MD-8Ai"/>
                                 <constraint firstAttribute="width" constant="70" id="S1t-kX-UnB"/>
@@ -268,9 +267,7 @@
         <image name="home_acc_ic_Normal" width="27" height="21"/>
         <image name="home_avatar_change_ic_Normal" width="20" height="20"/>
         <image name="home_sochon_ic_Normal" width="24" height="21"/>
-        <namedColor name="babyBlue">
-            <color red="0.30588235294117649" green="1" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="ic_contact_green_light_Normal" width="50" height="50"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

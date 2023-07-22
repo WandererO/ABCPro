@@ -114,9 +114,13 @@ class MPHomesHeaderView: UIView{
         
         print("转账")
         
-        let vc = MPAccountInfomationVC(nibName: "MPAccountInfomationVC", bundle: nil)
+        let popVC = MPChoiseAccountController()
+        popVC.show(on: CommonUtil.getCurrentVC()!, height: SCREEN_HEIGHT - 100)
         
-        CommonUtil.getCurrentVC()?.pushViewController(vc: vc)
+//        let vc = MPAccountInfomationVC(nibName: "MPAccountInfomationVC", bundle: nil)
+//        CommonUtil.getCurrentVC()?.pushViewController(vc: vc)
+        
+        
         
     }
 }
@@ -162,3 +166,5 @@ extension MPHomesHeaderView : FSPagerViewDelegate , FSPagerViewDataSource{
     
     
 }
+
+
