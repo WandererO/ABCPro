@@ -8,6 +8,8 @@
 import UIKit
 
 class MPAccountMainView: UIView  {
+    
+    var searchMoreBlock:NormalBlock?
 
     @IBOutlet weak var lineView: UIView!
   
@@ -19,12 +21,16 @@ class MPAccountMainView: UIView  {
     @IBAction func listBtnAction(_ sender: UIButton) {
          
         print("按钮点击\(sender.tag)")
-        UIView.animate(withDuration: 0.5) {
+        UIView.animate(withDuration: 0.1) {
             self.lineView.centerX = sender.centerX
         }
         
     }
     
+    @IBAction func moreClick(_ sender: Any) {
+        self.searchMoreBlock?()
+        
+    }
     override  func awakeFromNib() {
         super.awakeFromNib()
         
@@ -65,4 +71,52 @@ extension MPAccountMainView : UITableViewDelegate , UITableViewDataSource{
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = MPTransactionDetailController()
+        self.viewContainingController()?.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+}
+
+class MPSelectTimeButton : UIButton {
+    
+    var title : String? {
+        set{
+            timeLab.text = newValue
+        }get{
+            timeLab.text ?? ""
+        }
+    }
+    
+    
+    let timeLab = UILabel()
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        timeLab.text = "22/06/2023"
+        timeLab.textColor = kInputTextColor
+        timeLab.font = FONT_M(size: 14)
+        timeLab.textAlignment = .left
+        self.addSubview(timeLab)
+        timeLab.snp.makeConstraints { make in
+            make.left.equalTo(10)
+            make.centerY.equalToSuperview()
+        }
+        
+        let image = UIImageView()
+        image.image = UIImage(named: "calandar_ic_Normal")
+        self.addSubview(image)
+        image.snp.makeConstraints { make in
+            make.right.equalTo(-10)
+            make.centerY.equalToSuperview()
+            make.height.width.equalTo(24)
+        }
+        
+        
+        
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

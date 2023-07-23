@@ -15,6 +15,8 @@ class MPAccountTotalCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        moeny.text = "10000000".getShowPrice()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -215,7 +215,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcT-ug-gMh">
-                                            <rect key="frame" x="297" y="-2.3333333333333428" width="88" height="25"/>
+                                            <rect key="frame" x="292" y="-2.3333333333333428" width="88" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="cnO-rv-Fqv"/>
                                             </constraints>
@@ -224,6 +224,9 @@
                                             <state key="normal" title="Search more">
                                                 <color key="titleColor" name="apple"/>
                                             </state>
+                                            <connections>
+                                                <action selector="moreClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="2v2-BA-zdD"/>
+                                            </connections>
                                         </button>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcQ-cs-CRD">
                                             <rect key="frame" x="10" y="32.666666666666686" width="370" height="50"/>
@@ -289,7 +292,7 @@
                                         <constraint firstItem="y8B-te-BlI" firstAttribute="leading" secondItem="u1k-ea-MU7" secondAttribute="trailing" constant="8" id="1Oo-o0-Ik0"/>
                                         <constraint firstAttribute="trailing" secondItem="vcQ-cs-CRD" secondAttribute="trailing" constant="10" id="E5d-XV-PRr"/>
                                         <constraint firstItem="u1k-ea-MU7" firstAttribute="top" secondItem="tAf-6X-jwM" secondAttribute="top" constant="5" id="Lu8-19-EjD"/>
-                                        <constraint firstAttribute="trailing" secondItem="vcT-ug-gMh" secondAttribute="trailing" constant="5" id="aKf-pp-jDf"/>
+                                        <constraint firstAttribute="trailing" secondItem="vcT-ug-gMh" secondAttribute="trailing" constant="10" id="aKf-pp-jDf"/>
                                         <constraint firstItem="y8B-te-BlI" firstAttribute="centerY" secondItem="u1k-ea-MU7" secondAttribute="centerY" id="cv3-Mq-R8v"/>
                                         <constraint firstItem="vcQ-cs-CRD" firstAttribute="leading" secondItem="tAf-6X-jwM" secondAttribute="leading" constant="10" id="e9c-Ty-mzP"/>
                                         <constraint firstAttribute="height" constant="100" id="eQx-gf-fYt"/>

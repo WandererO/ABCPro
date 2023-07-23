@@ -60,6 +60,12 @@
 		04A85F472A6BC79800CAAB2D /* MPBeneficiaryBankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A85F452A6BC79800CAAB2D /* MPBeneficiaryBankCell.xib */; };
 		04A85F492A6BCC8000CAAB2D /* MPBankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A85F482A6BCC8000CAAB2D /* MPBankModel.swift */; };
 		04BD7C3729D536B5009480B3 /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BD7C3629D536B5009480B3 /* BaseTextField.swift */; };
+		04E646B22A6D117500F15C8E /* MPTransactionDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E646B02A6D117500F15C8E /* MPTransactionDetailController.swift */; };
+		04E646B32A6D117500F15C8E /* MPTransactionDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E646B12A6D117500F15C8E /* MPTransactionDetailController.xib */; };
+		04E646B62A6D164600F15C8E /* MPTranstionDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E646B42A6D164600F15C8E /* MPTranstionDetailCell.swift */; };
+		04E646B72A6D164600F15C8E /* MPTranstionDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E646B52A6D164600F15C8E /* MPTranstionDetailCell.xib */; };
+		04E646BA2A6D283600F15C8E /* MPTransactionHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E646B82A6D283600F15C8E /* MPTransactionHistoryController.swift */; };
+		04E646BB2A6D283600F15C8E /* MPTransactionHistoryController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04E646B92A6D283600F15C8E /* MPTransactionHistoryController.xib */; };
 		220F5BE12A21D4AE000C02BD /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 220F5BE02A21D4AE000C02BD /* Color.xcassets */; };
 		2248075329F0D7FB00226026 /* StackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248075229F0D7FB00226026 /* StackView+Extension.swift */; };
 		2260931A299F4BE400B284DB /* demo.css in Resources */ = {isa = PBXBuildFile; fileRef = 22609312299F4BE300B284DB /* demo.css */; };
@@ -260,6 +266,12 @@
 		04A85F452A6BC79800CAAB2D /* MPBeneficiaryBankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPBeneficiaryBankCell.xib; sourceTree = "<group>"; };
 		04A85F482A6BCC8000CAAB2D /* MPBankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPBankModel.swift; sourceTree = "<group>"; };
 		04BD7C3629D536B5009480B3 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
+		04E646B02A6D117500F15C8E /* MPTransactionDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPTransactionDetailController.swift; sourceTree = "<group>"; };
+		04E646B12A6D117500F15C8E /* MPTransactionDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPTransactionDetailController.xib; sourceTree = "<group>"; };
+		04E646B42A6D164600F15C8E /* MPTranstionDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPTranstionDetailCell.swift; sourceTree = "<group>"; };
+		04E646B52A6D164600F15C8E /* MPTranstionDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPTranstionDetailCell.xib; sourceTree = "<group>"; };
+		04E646B82A6D283600F15C8E /* MPTransactionHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPTransactionHistoryController.swift; sourceTree = "<group>"; };
+		04E646B92A6D283600F15C8E /* MPTransactionHistoryController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPTransactionHistoryController.xib; sourceTree = "<group>"; };
 		220F5BE02A21D4AE000C02BD /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		2248075229F0D7FB00226026 /* StackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StackView+Extension.swift"; sourceTree = "<group>"; };
 		225F3C8D29A266F000295ED2 /* MarketPlace.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MarketPlace.entitlements; sourceTree = "<group>"; };
@@ -950,6 +962,10 @@
 				C2EF81992A6A5ECC00432A2B /* MPAccountInfomationVC.xib */,
 				C2C49E8C2A6B7CF000F0DCA0 /* MPTransferListAlert.swift */,
 				C2C49E8D2A6B7CF000F0DCA0 /* MPTransferListAlert.xib */,
+				04E646B02A6D117500F15C8E /* MPTransactionDetailController.swift */,
+				04E646B12A6D117500F15C8E /* MPTransactionDetailController.xib */,
+				04E646B82A6D283600F15C8E /* MPTransactionHistoryController.swift */,
+				04E646B92A6D283600F15C8E /* MPTransactionHistoryController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -968,6 +984,8 @@
 				C2EF819E2A6A614800432A2B /* MPAccountMainView.xib */,
 				C2847E5A2A6A725A00EDC65E /* MPAccountTotalCell.swift */,
 				C2847E5B2A6A725A00EDC65E /* MPAccountTotalCell.xib */,
+				04E646B42A6D164600F15C8E /* MPTranstionDetailCell.swift */,
+				04E646B52A6D164600F15C8E /* MPTranstionDetailCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1203,11 +1221,13 @@
 				98AFF796280E97A10035387C /* Assets.xcassets in Resources */,
 				C2EF819B2A6A5ECC00432A2B /* MPAccountInfomationVC.xib in Resources */,
 				C2E534942A6921E400CEEC00 /* MPHomeSectionCell.xib in Resources */,
+				04E646BB2A6D283600F15C8E /* MPTransactionHistoryController.xib in Resources */,
 				2260931C299F4BE400B284DB /* iconfont.js in Resources */,
 				0487E39C2A695ECA00A79D6C /* MPQRServicesController.xib in Resources */,
 				220F5BE12A21D4AE000C02BD /* Color.xcassets in Resources */,
 				C2E534902A69038200CEEC00 /* MPHomeSectionView.xib in Resources */,
 				0487E3702A67AAC900A79D6C /* MPPasswdController.xib in Resources */,
+				04E646B72A6D164600F15C8E /* MPTranstionDetailCell.xib in Resources */,
 				22DDAEF02A35E41B00A1FF3C /* MPCollectionSelectCell.xib in Resources */,
 				229912262A2CDF98006CDDFA /* MPBaseCell.xib in Resources */,
 				2260931E299F4BE400B284DB /* iconfont.css in Resources */,
@@ -1225,6 +1245,7 @@
 				C2EF819F2A6A614800432A2B /* MPAccountMainView.xib in Resources */,
 				98AFF794280E979F0035387C /* Main.storyboard in Resources */,
 				2260931A299F4BE400B284DB /* demo.css in Resources */,
+				04E646B32A6D117500F15C8E /* MPTransactionDetailController.xib in Resources */,
 				22609320299F4BE400B284DB /* iconfont.json in Resources */,
 				0487E3832A6852FC00A79D6C /* MPTopupCell.xib in Resources */,
 				0487E3982A695EB200A79D6C /* MPQuickTransferController.xib in Resources */,
@@ -1323,6 +1344,7 @@
 				96FFAB52285E318F004D321D /* CodeTextField.swift in Sources */,
 				F74A5BEF2816C0B30096AD24 /* UserManager.swift in Sources */,
 				C2EF81912A6A55C900432A2B /* BaseAlertVC.swift in Sources */,
+				04E646B22A6D117500F15C8E /* MPTransactionDetailController.swift in Sources */,
 				9880B467281A673400508DB7 /* TostController.swift in Sources */,
 				962CFFCB287AB4D0001D6A0D /* CCHomeModel.swift in Sources */,
 				04A85F422A6BBE9000CAAB2D /* MPBeneficiaryBankController.swift in Sources */,
@@ -1394,6 +1416,7 @@
 				047FB87829AF6AC000B652F5 /* InputViews.swift in Sources */,
 				9880B463281A667300508DB7 /* TipsExtensions.swift in Sources */,
 				F7BF0990284454B0001AA9CF /* BaseTabBarController.swift in Sources */,
+				04E646BA2A6D283600F15C8E /* MPTransactionHistoryController.swift in Sources */,
 				989923DB2848618200390D57 /* HSWindowAdapter.swift in Sources */,
 				C2F5E30A2A682D330076747F /* HomeTooleCell.swift in Sources */,
 				F77F9C8E281146A6005BEEDF /* BaseViewController.swift in Sources */,
@@ -1404,6 +1427,7 @@
 				F798E9F42828EB1B00C26CF6 /* UIButton+Extension.swift in Sources */,
 				585D0DC828561E1A00993291 /* FSPageViewTransformer.swift in Sources */,
 				0487E3752A67CC7900A79D6C /* MPHomeCell.swift in Sources */,
+				04E646B62A6D164600F15C8E /* MPTranstionDetailCell.swift in Sources */,
 				049CC8DB2A5BFC4600C12E44 /* LXQRCodeConst.swift in Sources */,
 				585D0DCA28561E1A00993291 /* FSPagerViewLayoutAttributes.swift in Sources */,
 				96FFAB3F285DCF25004D321D /* BaseHiddenNaviController.swift in Sources */,

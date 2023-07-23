@@ -59,6 +59,12 @@ class MPAccountInfomationVC: BaseHiddenNaviController {
         }
         view.addSubview(menuToolView)
         
+        mainView.searchMoreBlock = {[weak self] in
+            guard let self = self else{return}
+            let vc = MPTransactionHistoryController()
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
         
         
         menuToolView.snp.makeConstraints { make in
