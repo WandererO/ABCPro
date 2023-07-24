@@ -51,8 +51,8 @@ class MPBeneficiaryBankController: BaseHiddenNaviController {
         
         searchField.rx.controlEvent([.editingChanged]).asObservable().subscribe(onNext: {[weak self] _ in
             guard let self = self else{return}
-            self.isSearch = searchField.text!.isEmpty ? false:true
-            searchResultAry = bankModels.filter { model in
+            self.isSearch = self.searchField.text!.isEmpty ? false:true
+            self.searchResultAry = self.bankModels.filter { model in
                 return model.title.lowercased().contains(self.searchField.text!.lowercased())
             }
             self.tableView.reloadData()

@@ -61,7 +61,8 @@ class MPAccountInfomationVC: BaseHiddenNaviController {
         
         mainView.searchMoreBlock = {[weak self] in
             guard let self = self else{return}
-            let vc = MPTransactionHistoryController()
+//            let vc = MPTransactionHistoryController()
+            let vc = MPTransactionHistoryController.init(nibName: "MPTransactionHistoryController", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         }
         
