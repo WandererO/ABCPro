@@ -133,8 +133,8 @@ extension MPTransactionHistoryController : UITableViewDelegate , UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = MPTransactionDetailController()
-//        self.viewContainingController()?.navigationController?.pushViewController(vc, animated: true)
+        let vc = MPTransactionDetailController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
