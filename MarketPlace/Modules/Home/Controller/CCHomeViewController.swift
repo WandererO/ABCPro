@@ -128,6 +128,11 @@ class CCHomeViewController: BaseHiddenNaviController {
         }
         return table
     }()
+    
+    ///退出登录
+    override func topLeftBtnClick() {
+        UserManager().logout()
+    }
 
 }
 extension CCHomeViewController{
@@ -152,6 +157,7 @@ extension CCHomeViewController{
             tableView.tableHeaderView = header
         }
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -167,6 +173,8 @@ extension CCHomeViewController{
         
         setUI()
     }
+    
+    
     
     func setUI(){
         

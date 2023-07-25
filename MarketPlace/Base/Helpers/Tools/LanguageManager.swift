@@ -8,7 +8,7 @@
 import UIKit
 
 enum languageType {
-    case chinese, english, autoSystem, HongKong
+    case chinese, english, autoSystem, HongKong, Vietnamese
 }
 
 class LanguageManager: NSObject {
@@ -43,6 +43,9 @@ class LanguageManager: NSObject {
        case .HongKong:
            typeStr = "zh-HK"
            Archive.saveLanguage("zh-HK")
+       case .Vietnamese:
+           typeStr = "vi"
+           Archive.saveLanguage("vi")
        default:
            break
        }

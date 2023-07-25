@@ -18,14 +18,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let disposeBag = DisposeBag()
+    
+    let loginVM = MPPublicViewModel()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         setIQKeyboardManager()
         
 
+        requestLogin()
         
         self.setUI()
+        
+        if let languageType = UserDefaults.standard.value(forKey: "language"){
+//            print("进来")
+//            print(languageType)
+            let type = languageType as! String
+            switch type {
+            case "en":
+                LanguageManager.setLanguage(.english)
+            case "zh-Hans":
+                LanguageManager.setLanguage(.chinese)
+            case "zh-HK":
+                LanguageManager.setLanguage(.HongKong)
+            case "vi":
+                LanguageManager.setLanguage(.Vietnamese)
+            default:
+                break
+            }
+        }
 
         
         ///配置数据库
@@ -69,6 +90,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.makeKeyAndVisible()
         }
         
+    }
+    
+    func requestLogin() {
+        let pssword = Archive.getDefaultsForKey(key: "password")
+        let account = Archive.getDefaultsForKey(key: "account")
+        loginVM.requestLogin(account: account, psswd: pssword).subscribe(onNext: {[weak self] _ in
+            guard let self = self else {return}
+            Archive.saveToken(loginVM.loginModel.token)
+            NotificationCenter.default.post(name: loginSuccessNotification, object: self)
+        }).disposed(by: disposeBag)
     }
     
     

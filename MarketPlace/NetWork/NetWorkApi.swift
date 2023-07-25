@@ -41,9 +41,9 @@ private extension String {
 
 public enum RequestEnum {
 
-    ///首页
-    ///用户获取弹窗公告
-    case getPopUpAnnouncement(systemType:String)
+    
+    ///登录
+    case login(account:String, password:String)
 
 }
 
@@ -53,9 +53,9 @@ extension RequestEnum: TargetType {
     //地址
     public var path: String {
         switch self {
-            /// 首页
-        case .getPopUpAnnouncement:
-            return "xxxxx"
+            
+        case .login:
+            return "/api/user/login"
 
         default :
             return ""
@@ -66,8 +66,8 @@ extension RequestEnum: TargetType {
         
         switch self {
             
-        case let .getPopUpAnnouncement(systemType):
-            let dict = ["systemType":systemType] as [String : Any]
+        case let .login(account, password):
+            let dict = ["account":account, "password":password] as [String : Any]
             return .requestParameters(parameters: dict, encoding: URLEncoding.queryString)
 
         default :

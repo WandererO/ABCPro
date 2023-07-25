@@ -358,7 +358,7 @@ func NetWorkRequest<T: HandyJSON>(_ target: TargetType, modelType: T.Type?, succ
                 
                 if target.method == .put{
                     
-                    if response.statusCode == 200 {
+                    if response.statusCode == 1 {
                         
                         successCallback?("success")
                     }else{
@@ -373,7 +373,7 @@ func NetWorkRequest<T: HandyJSON>(_ target: TargetType, modelType: T.Type?, succ
 
                 let jsonData = try JSON(data: response.data , options: [.fragmentsAllowed])
                 print(jsonData)
-                let statusCode = jsonData["success"].boolValue
+                let statusCode = jsonData["code"].boolValue
                 if statusCode {
                     
                     // data里面不返回数据 只是简单的网络请求 无需转模型

@@ -7,9 +7,14 @@
 
 import UIKit
 
-class CCLoginModel: HandyJSON {
+class CCLoginModel: BaseModel {
 
-    required init(){}
+    ///账户余额
+    var money : String = ""
+    ///用户token
+    var token : String = ""
+    
 }
+
 
 

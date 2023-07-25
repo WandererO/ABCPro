@@ -17,7 +17,7 @@ extension Environment {
     var baseUrl: URL {
         switch self {
         case .debug://192.168.0.4:16000
-            return URL(string: "http://172.16.1.250/ex")!//192.168.0.11:80
+            return URL(string: "http://47.98.156.218")!//192.168.0.11:80
         default:
             return URL(string: "https://network.io")!
         }

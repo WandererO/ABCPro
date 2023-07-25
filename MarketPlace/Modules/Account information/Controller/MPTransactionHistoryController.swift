@@ -55,7 +55,7 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
         endTimeLab.text = endTime
         startTimeLab.text = startTime
     }
-    
+
   
     
     //搜索按钮
@@ -92,7 +92,11 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
         pop.show()
         pop.pickerTimeBlock = {[weak self] timeStr in
             guard let self = self else{return}
-            
+            if isStartTime == true {
+                startTimeLab.text = timeStr
+            }else{
+                endTimeLab.text = timeStr
+            }
         }
     }
     

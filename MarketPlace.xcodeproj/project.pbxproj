@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04121E8E29D28ADD00CCC12B /* MPSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04121E8D29D28ADD00CCC12B /* MPSocketManager.swift */; };
+		043448B92A6FD1A500DA41BA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 043448BB2A6FD1A500DA41BA /* Localizable.strings */; };
+		043448BE2A7025C700DA41BA /* MPPublicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043448BD2A7025C700DA41BA /* MPPublicViewModel.swift */; };
 		04396D1229B5CFC900FCFB23 /* ButtonViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04396D1129B5CFC900FCFB23 /* ButtonViews.swift */; };
 		04396D1429B5E4CE00FCFB23 /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04396D1329B5E4CE00FCFB23 /* Views.swift */; };
 		0441C9622A66C3D6007E1715 /* MPLoginnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441C9602A66C3D6007E1715 /* MPLoginnController.swift */; };
@@ -208,6 +210,11 @@
 
 /* Begin PBXFileReference section */
 		04121E8D29D28ADD00CCC12B /* MPSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSocketManager.swift; sourceTree = "<group>"; };
+		043448B72A6FD14C00DA41BA /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		043448B82A6FD15000DA41BA /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		043448BA2A6FD1A500DA41BA /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		043448BC2A6FD2DB00DA41BA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		043448BD2A7025C700DA41BA /* MPPublicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPPublicViewModel.swift; sourceTree = "<group>"; };
 		04396D1129B5CFC900FCFB23 /* ButtonViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViews.swift; sourceTree = "<group>"; };
 		04396D1329B5E4CE00FCFB23 /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		0441C9602A66C3D6007E1715 /* MPLoginnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPLoginnController.swift; sourceTree = "<group>"; };
@@ -218,10 +225,6 @@
 		045278CC29C19D1D00100967 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		0457E9F82A373DE9009527A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		0457E9F92A373DE9009527A2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		0457E9FF2A373EAD009527A2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		0457EA002A373EAE009527A2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		0457EA022A373ED9009527A2 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/Main.strings"; sourceTree = "<group>"; };
-		0457EA032A373EDA009527A2 /* zh-HK */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-HK"; path = "zh-HK.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		0457EA092A374433009527A2 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		0477651429C950330069B4F3 /* NBBottomSheetPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBBottomSheetPresentationController.swift; sourceTree = "<group>"; };
 		0477651529C950330069B4F3 /* NBBottomSheetConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NBBottomSheetConfiguration.swift; sourceTree = "<group>"; };
@@ -638,6 +641,7 @@
 				98AFF792280E979F0035387C /* Main.storyboard */,
 				98AFF797280E97A10035387C /* LaunchScreen.storyboard */,
 				98AFF7D4280E9BC60035387C /* MainController.swift */,
+				043448BB2A6FD1A500DA41BA /* Localizable.strings */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -761,6 +765,7 @@
 			isa = PBXGroup;
 			children = (
 				963C2C2C287998CE00346A05 /* CCLoginRegisterViewModel.swift */,
+				043448BD2A7025C700DA41BA /* MPPublicViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1185,8 +1190,7 @@
 			knownRegions = (
 				en,
 				Base,
-				"zh-Hans",
-				"zh-HK",
+				vi,
 			);
 			mainGroup = 98AFF780280E979F0035387C;
 			packageReferences = (
@@ -1233,6 +1237,7 @@
 				2260931E299F4BE400B284DB /* iconfont.css in Resources */,
 				C2E75A392A681A75005A0BF5 /* MPHomesHeaderView.xib in Resources */,
 				2260931F299F4BE400B284DB /* iconfont.woff in Resources */,
+				043448B92A6FD1A500DA41BA /* Localizable.strings in Resources */,
 				0477652029C952300069B4F3 /* MPBottomSheetCell.xib in Resources */,
 				0441C9632A66C3D6007E1715 /* MPLoginnController.xib in Resources */,
 				C2847E5D2A6A725A00EDC65E /* MPAccountTotalCell.xib in Resources */,
@@ -1342,6 +1347,7 @@
 				98AFF791280E979F0035387C /* ViewController.swift in Sources */,
 				C2E5348E2A69037C00CEEC00 /* MPHomeSectionView.swift in Sources */,
 				96FFAB52285E318F004D321D /* CodeTextField.swift in Sources */,
+				043448BE2A7025C700DA41BA /* MPPublicViewModel.swift in Sources */,
 				F74A5BEF2816C0B30096AD24 /* UserManager.swift in Sources */,
 				C2EF81912A6A55C900432A2B /* BaseAlertVC.swift in Sources */,
 				04E646B22A6D117500F15C8E /* MPTransactionDetailController.swift in Sources */,
@@ -1499,13 +1505,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		043448BB2A6FD1A500DA41BA /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				043448BA2A6FD1A500DA41BA /* vi */,
+				043448BC2A6FD2DB00DA41BA /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		98AFF792280E979F0035387C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				98AFF793280E979F0035387C /* Base */,
 				0457E9F82A373DE9009527A2 /* en */,
-				0457E9FF2A373EAD009527A2 /* zh-Hans */,
-				0457EA022A373ED9009527A2 /* zh-HK */,
+				043448B72A6FD14C00DA41BA /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1515,8 +1529,7 @@
 			children = (
 				98AFF798280E97A10035387C /* Base */,
 				0457E9F92A373DE9009527A2 /* en */,
-				0457EA002A373EAE009527A2 /* zh-Hans */,
-				0457EA032A373EDA009527A2 /* zh-HK */,
+				043448B82A6FD15000DA41BA /* vi */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

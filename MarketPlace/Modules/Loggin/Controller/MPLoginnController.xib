@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPLoginnController" customModule="MarketPlace" customModuleProvider="target">
             <connections>
+                <outlet property="languageBtn" destination="6bA-pT-MrB" id="rgz-8l-abp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="welcomeLab" destination="pql-Pq-phV" id="3kL-bX-U2m"/>
             </connections>
@@ -146,17 +147,31 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bA-pT-MrB">
+                    <rect key="frame" x="343" y="60" width="30" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="8eE-th-euC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="语言"/>
+                    <connections>
+                        <action selector="languageClick:" destination="-1" eventType="touchUpInside" id="Puh-9J-4ed"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="p5m-zb-C2J" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="112" id="1pf-A9-hFJ"/>
                 <constraint firstAttribute="bottom" secondItem="jMB-yh-veg" secondAttribute="bottom" constant="30" id="4no-4a-ezq"/>
+                <constraint firstItem="6bA-pT-MrB" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="BIW-7A-UGp"/>
                 <constraint firstItem="pql-Pq-phV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ely-uX-SiY"/>
                 <constraint firstAttribute="trailing" secondItem="Og3-hq-91s" secondAttribute="trailing" id="Fyx-tE-w12"/>
                 <constraint firstItem="CLq-yh-kae" firstAttribute="top" secondItem="Dcw-tv-QyR" secondAttribute="bottom" constant="30" id="JQd-q7-WGj"/>
                 <constraint firstItem="Dcw-tv-QyR" firstAttribute="top" secondItem="2bY-Tt-UQV" secondAttribute="bottom" constant="30" id="KYd-v2-TpW"/>
                 <constraint firstItem="Og3-hq-91s" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MqS-kr-u8V"/>
+                <constraint firstAttribute="trailing" secondItem="6bA-pT-MrB" secondAttribute="trailing" constant="20" id="T7Z-Lk-FD0"/>
                 <constraint firstItem="dTD-sg-vXt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WJU-l7-5tI"/>
                 <constraint firstItem="jMB-yh-veg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ayt-qJ-Ti9"/>
                 <constraint firstItem="p5m-zb-C2J" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cGq-yj-vU4"/>

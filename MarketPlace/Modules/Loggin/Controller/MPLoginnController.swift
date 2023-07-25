@@ -9,6 +9,7 @@ import UIKit
 
 class MPLoginnController: BaseHiddenNaviController {
     
+    @IBOutlet weak var languageBtn: UIButton!
     @IBOutlet weak var welcomeLab: UILabel!
     lazy var nameInput : MPTextField = {
         let put = MPTextField()
@@ -48,7 +49,14 @@ class MPLoginnController: BaseHiddenNaviController {
         btn.titleLabel?.font = FONT_M(size: 16)
         btn.rx.tap.subscribe(onNext: { [weak self] _ in
             guard let self = self else{return}
+            
+            if nameInput.text?.isEmpty == true {
+                HudManager.showOnlyText("输入账号")
+                return
+            }
+            
             let vc = MPPasswdController()
+            vc.account = self.nameInput.text ?? ""
             self.navigationController?.pushViewController(vc, animated: true)
         }).disposed(by: disposeBag)
         return btn
@@ -113,4 +121,18 @@ class MPLoginnController: BaseHiddenNaviController {
         
     }
 
+    @IBAction func languageClick(_ sender: Any) {
+        let popV = MPBottomPopUpTableController()
+        popV.isShowBottomView = true
+        popV.datas = ["英语","越语"]
+        popV.didselect = {[weak self] row in
+            guard let self = self else{return}
+            if row == 0 {
+                LanguageManager.setLanguage(.english)
+            }else{
+                LanguageManager.setLanguage(.Vietnamese)
+            }
+        }
+        popV.show(on:self)
+    }
 }

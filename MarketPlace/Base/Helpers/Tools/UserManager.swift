@@ -68,9 +68,13 @@ extension UserManager {
     }
     
     func logout(){
+        let token = ""
+        Archive.saveToken(token)
+        Archive.setDefaults(value: "", key: "account")
+        Archive.setDefaults(value: "", key: "password")
         
         let currentVC =  UIApplication.shared.windows.first?.rootViewController
-        let vc = CCLoginController()
+        let vc = MPLoginnController()
         let nav = BaseNavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
         currentVC?.present(nav, animated: true)

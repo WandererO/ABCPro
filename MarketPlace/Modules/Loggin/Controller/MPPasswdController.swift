@@ -11,6 +11,10 @@ class MPPasswdController: BaseHiddenNaviController {
 
     @IBOutlet weak var tipsLab: UILabel!
     
+    let loginVM = MPPublicViewModel()
+    
+    var account = ""
+    
     lazy var nameInput : MPTextField = {
         let put = MPTextField()
         put.keyboardType = .asciiCapable
@@ -42,7 +46,9 @@ class MPPasswdController: BaseHiddenNaviController {
         btn.titleLabel?.font = FONT_M(size: 16)
         btn.rx.tap.subscribe(onNext: { [weak self] _ in
             guard let self = self else{return}
-            NotificationCenter.default.post(name: loginSuccessNotification, object: self)
+            
+            self.requestLogin()
+            
         }).disposed(by: disposeBag)
         return btn
     }()
@@ -58,6 +64,24 @@ class MPPasswdController: BaseHiddenNaviController {
         }).disposed(by: disposeBag)
         return btn
     }()
+    
+    func requestLogin() {
+        
+        if nameInput.text?.isEmpty == true {
+            HudManager.showOnlyText("请输入密码")
+            return
+        }
+        
+        
+        let pssword = nameInput.text ?? ""
+        loginVM.requestLogin(account: account, psswd: pssword).subscribe(onNext: {[weak self] _ in
+            guard let self = self else {return}
+            Archive.setDefaults(value: account, key: "account")
+            Archive.setDefaults(value: pssword, key: "password")
+            Archive.saveToken(loginVM.loginModel.token)
+            NotificationCenter.default.post(name: loginSuccessNotification, object: self)
+        }).disposed(by: disposeBag)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
