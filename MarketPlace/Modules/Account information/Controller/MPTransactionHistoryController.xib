@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,9 +12,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MPTransactionHistoryController" customModule="MarketPlace" customModuleProvider="target">
             <connections>
                 <outlet property="bgView" destination="kCe-hG-vkl" id="odk-jr-bLR"/>
+                <outlet property="endTimeBtn" destination="l2v-QJ-F5K" id="Mt1-pr-MSF"/>
+                <outlet property="endTimeLab" destination="x4C-XL-2hP" id="cvZ-nn-ZCi"/>
                 <outlet property="lineView" destination="yJ4-BG-j56" id="0QE-jI-4p4"/>
                 <outlet property="listTableView" destination="moC-0c-yO3" id="X5P-Et-EhT"/>
                 <outlet property="searchButton" destination="ne2-7A-KAU" id="fiz-sC-QMR"/>
+                <outlet property="startTimeBtn" destination="sQn-Rf-Ta9" id="V3E-4w-Mhl"/>
+                <outlet property="startTimeLab" destination="NFY-MD-OoV" id="xrr-wI-cGo"/>
                 <outlet property="tableViewHeight" destination="kJS-3d-DHH" id="rTI-0U-fy5"/>
                 <outlet property="topHeight" destination="jZ3-sb-7J1" id="afM-JF-UOt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -62,6 +66,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQn-Rf-Ta9">
                                                             <rect key="frame" x="0.0" y="0.0" width="167.66666666666666" height="40"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <connections>
+                                                                <action selector="startTimeClick:" destination="-1" eventType="touchUpInside" id="5yk-c4-KA8"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,6 +114,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2v-QJ-F5K">
                                                             <rect key="frame" x="0.0" y="0.0" width="167.33333333333334" height="40"/>
                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                            <connections>
+                                                                <action selector="endTimeClick:" destination="-1" eventType="touchUpInside" id="f4v-Hl-N3C"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

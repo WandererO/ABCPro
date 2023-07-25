@@ -284,6 +284,29 @@ extension String {
         dformatter.dateFormat = "YYYY-MM-dd"
         return dformatter.string(from: date)
     }
+    
+    static func getCurrentSysDate() -> String {
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "dd/MM/YYYY"// 自定义时间格式
+        // GMT时间 转字符串，直接是系统当前时间
+//        dateformatter.string(from: Date())
+        return dateformatter.string(from: Date())
+    }
+    
+    static func getLastMonth(num : Int) -> String {
+        let curDate = Date()
+        let formater = DateFormatter()
+        formater.dateFormat = "dd/MM/YYYY"
+        
+        let calendar = Calendar(identifier: .gregorian)
+        var lastMonthComps = DateComponents()
+        // year = 1表示1年后的时间 year = -1为1年前的日期，month day 类推
+        lastMonthComps.month = num
+        let newDate = calendar.date(byAdding: lastMonthComps, to: curDate)
+        let dateStr = formater.string(from: newDate!)
+        
+        return dateStr
+    }
 
     
     func getTimeAgoDisplay() ->String{

@@ -11,8 +11,12 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
     
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var startTimeBtn: UIButton!
+    @IBOutlet weak var endTimeBtn: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     
+    @IBOutlet weak var endTimeLab: UILabel!
+    @IBOutlet weak var startTimeLab: UILabel!
     @IBOutlet weak var lineView: UIView!
      
     @IBOutlet weak var listTableView: UITableView!
@@ -21,6 +25,9 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
     
     @IBOutlet weak var topHeight: NSLayoutConstraint!
     
+    var startTime = ""
+    var endTime  = ""
+    var isStartTime = false
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Transaction history"
@@ -40,17 +47,20 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
         //动态高度
         tableViewHeight.constant = 65*20
         searchButton.IB_cornerRadius = 10
+        
+        
+        startTime = String.getLastMonth(num: -1)
+        endTime = String.getCurrentSysDate()
+        
+        endTimeLab.text = endTime
+        startTimeLab.text = startTime
     }
     
   
     
     //搜索按钮
     @IBAction func sarchButtonAction(_ sender: Any) {
-        
-        
-        
-        
-        
+
     }
     
     //菜单选择
@@ -66,7 +76,25 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
         
     }
     
+    @IBAction func startTimeClick(_ sender: Any) {
+        print("开始时间")
+        popDatePicker()
+        isStartTime = true
+    }
     
+    @IBAction func endTimeClick(_ sender: Any) {
+        print("结束时间")
+        isStartTime = false
+    }
+    
+    func popDatePicker() {
+        let pop = MPDatePickView()
+        pop.show()
+        pop.pickerTimeBlock = {[weak self] timeStr in
+            guard let self = self else{return}
+            
+        }
+    }
     
     func setUI(){
 //        self.view.addSubview(fromTimeBtn)
@@ -136,6 +164,109 @@ extension MPTransactionHistoryController : UITableViewDelegate , UITableViewData
         let vc = MPTransactionDetailController()
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+}
+
+class MPDatePickView : BaseView {
+    
+    var pickerTime = ""
+    
+    var pickerTimeBlock:SelectBlockStr?
+    
+    lazy var datePick : UIDatePicker = {
+        let pick = UIDatePicker()
+        pick.maximumDate = Date.init(timeIntervalSinceNow: 0)
+        pick.datePickerMode = .date
+        if #available(iOS 13.4, *) {
+            pick.preferredDatePickerStyle = .wheels
+        }
+        pick.addTarget(self, action: #selector(pickerAction), for: .valueChanged)
+        pick.locale = Locale(identifier:"us")  // 语言设置
+        return pick
+    }()
+    
+    
+    func show() {
+        UIApplication.shared.delegate?.window??.addSubview(self)
+    }
+    func dismiss() {
+        self.removeFromSuperview()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
+        self.backgroundColor = .clear
+        
+        let bgView = UIView()
+        bgView.backgroundColor = .white
+        self.addSubview(bgView)
+        bgView.snp.makeConstraints { make in
+            make.left.right.bottom.equalToSuperview()
+            make.height.equalTo(300)
+        }
+        
+        let btnView = UIView()
+        btnView.backgroundColor = RGBCOLOR(r: 247, g: 247, b: 247)
+        bgView.addSubview(btnView)
+        btnView.snp.makeConstraints { make in
+            make.left.top.right.equalToSuperview()
+            make.height.equalTo(40)
+        }
+        
+        let closeBtn = ZQButton()
+        closeBtn.setTitle("Close", for: .normal)
+        closeBtn.setTitleColor(RGBCOLOR(r: 131, g: 178, b: 70), for: .normal)
+        closeBtn.titleLabel?.font = FONT_M(size: 14)
+        btnView.addSubview(closeBtn)
+        closeBtn.snp.makeConstraints { make in
+            make.left.equalTo(20)
+            make.centerY.equalToSuperview()
+        }
+        closeBtn.rx.tap.subscribe(onNext: { [weak self] _ in
+            guard let self = self else{return}
+            self.dismiss()
+        }).disposed(by: disposeBag)
+        
+        let doneBtn = ZQButton()
+        doneBtn.setTitle("Done", for: .normal)
+        doneBtn.setTitleColor(RGBCOLOR(r: 131, g: 178, b: 70), for: .normal)
+        doneBtn.titleLabel?.font = FONT_M(size: 14)
+        btnView.addSubview(doneBtn)
+        doneBtn.snp.makeConstraints { make in
+            make.right.equalTo(-20)
+            make.centerY.equalToSuperview()
+        }
+        doneBtn.rx.tap.subscribe(onNext: { [weak self] _ in
+            guard let self = self else{return}
+            self.dismiss()
+            
+            self.pickerTimeBlock?(pickerTime)
+            
+        }).disposed(by: disposeBag)
+        
+        bgView.addSubview(datePick)
+        datePick.snp.makeConstraints { make in
+            make.left.equalTo(30)
+            make.right.equalTo(-30)
+            make.top.equalTo(btnView.snp.bottom)
+            make.bottom.equalTo(-20)
+        }
+        
+    }
+    
+    @objc func pickerAction(picker:UIDatePicker) {
+//        print("\(picker.date.timeStamp)")
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/YYYY"
+        print(formatter.string(from: picker.date))
+        
+        pickerTime = formatter.string(from: picker.date)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
 }
 
