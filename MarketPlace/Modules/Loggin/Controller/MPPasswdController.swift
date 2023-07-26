@@ -78,7 +78,15 @@ class MPPasswdController: BaseHiddenNaviController {
             guard let self = self else {return}
             Archive.setDefaults(value: account, key: "account")
             Archive.setDefaults(value: pssword, key: "password")
-            Archive.saveToken(loginVM.loginModel.token)
+            
+            
+            let token = loginVM.loginModel.userinfo?.token ?? ""
+            let money = loginVM.loginModel.userinfo?.money ?? ""
+            let account = loginVM.loginModel.userinfo?.mobile ?? ""
+            Archive.setDefaults(value: account, key: "mobile")
+            Archive.setDefaults(value: money, key: "money")
+            Archive.saveToken(token)
+            
             NotificationCenter.default.post(name: loginSuccessNotification, object: self)
         }).disposed(by: disposeBag)
     }

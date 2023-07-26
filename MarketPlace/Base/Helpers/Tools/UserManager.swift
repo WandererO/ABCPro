@@ -91,7 +91,7 @@ struct Archive {
         UserDefaults.standard.setValue(token, forKey: "token")
         UserDefaults.standard.synchronize()
         userManager.loginStatusChange.onNext(token != "")
-        MPSocketManager.share.socketReconnect(time: 0)
+//        MPSocketManager.share.socketReconnect(time: 0)
     }
     static func getToken() -> (String){
 //        return "093a8a0f-3163-471c-be9f-c4a12a32387d"

@@ -58,7 +58,7 @@ extension HudManager{
         SVProgressHUD.setDefaultStyle(.custom)
         SVProgressHUD.setMaximumDismissTimeInterval(2)
         SVProgressHUD.setBackgroundColor(.clear)
-        SVProgressHUD.setForegroundColor(.white)
+        SVProgressHUD.setForegroundColor(kInputTextColor)
 //        SVProgressHUD.sets
         switch type {
         case .activity:

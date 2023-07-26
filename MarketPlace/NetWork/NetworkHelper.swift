@@ -79,7 +79,7 @@ private let myEndpointClosure = { (target: TargetType) -> Endpoint in
         
 //        task = Task.uploadMultipart(<#T##[MultipartFormData]#>)
         task = Task.requestData(jsonToData(jsonDic: dict)!)
-        setHeaderWithDictionary(dict: (dict as? [String : String]))
+//        setHeaderWithDictionary(dict: (dict as? [String : String]))
         
         let infoDictionary : [String : Any] = Bundle.main.infoDictionary!
         let appVersion = infoDictionary["CFBundleShortVersionString"] as! String // 主程序版本号
@@ -94,14 +94,17 @@ private let myEndpointClosure = { (target: TargetType) -> Endpoint in
         
         //Safari for iOS 14.4 on iPhone: Mozilla/5.0 (iPhone; CPU iPhone OS 14_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Mobile/15E148 Safari/604.1
         
-        let deviceInfo:String = "Safari for iOS \(iosVersion) on iPhone: Mozilla/5.0 (iPhone; CPU iPhone OS \(iosVersion) like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/\(iosVersion) Mobile/15E148 Safari/604.1"//name + deviceModel + systemName + iosVersion
+//        let deviceInfo:String = "Safari for iOS \(iosVersion) on iPhone: Mozilla/5.0 (iPhone; CPU iPhone OS \(iosVersion) like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/\(iosVersion) Mobile/15E148 Safari/604.1"//name + deviceModel + systemName + iosVersion
+//
+//        header["deviceToken"] = "uuid"
+//        header["channel"] = "1"
+//        header["language"] = "zh_cn"
+//        header["version"] = appVersion
+//        header["user-agent"] = deviceInfo
+//        header["deviceModel"] = deviceModel
         
-        header["deviceToken"] = "uuid"
-        header["channel"] = "1"
-        header["language"] = "zh_cn"
-        header["version"] = appVersion
-        header["user-agent"] = deviceInfo
-        header["deviceModel"] = deviceModel
+        let token = Archive.getToken()
+        header["Token"] = token
 
     }
     
@@ -120,14 +123,14 @@ private let myEndpointClosure = { (target: TargetType) -> Endpoint in
     func getExtralHeader() ->String{
         let now = NSDate.now.milliStamp
         let key = "EX-key"
-        let token = Archive.getToken() // 
+        let token = Archive.getToken() 
         let finalStr = "time=\(now)&key=\(key)"
         
         if token.count > 0 {
             header["token"] = token
-            header["key"] = key
-            header["time"] = now
-            return "token=\(token)&\(finalStr)"
+//            header["key"] = key
+//            header["time"] = now
+            return "token=\(token)"
         }else{
             header["key"] = key
             header["time"] = now
@@ -420,6 +423,7 @@ func NetWorkRequest<T: HandyJSON>(_ target: TargetType, modelType: T.Type?, succ
                         
                         if let model =  T.deserialize(from: jsonData["data"].dictionaryObject)  {
                             successCallback?(model)
+                            print(model)
                         } else {
                             print("解析失败")
                             failureCallback?(-1, "解析失败")

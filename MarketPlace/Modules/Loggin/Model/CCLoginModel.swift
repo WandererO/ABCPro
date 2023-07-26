@@ -14,7 +14,21 @@ class CCLoginModel: BaseModel {
     ///用户token
     var token : String = ""
     
+    var userinfo: Userinfo?
+    
+    class Userinfo:BaseModel {
+        ///账户余额
+        var money : String = ""
+        ///用户token
+        var token : String = ""
+        
+        ///账户
+        var mobile : String = ""
+    }
+    
 }
+
+
 
 
 

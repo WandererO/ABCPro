@@ -45,6 +45,7 @@ class MPHomesHeaderView: UIView{
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var firstVie: UIView!
     
+    var amount = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,12 +53,12 @@ class MPHomesHeaderView: UIView{
         self.isUserInteractionEnabled = true
       
         self.pageView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
-        self.pageView.itemSize = CGSize(width: SCREEN_WIDTH - 30, height: 175)
+        self.pageView.itemSize = CGSize(width: SCREEN_WIDTH - 20, height: 175)
         self.pageView.delegate = self
         self.pageView.dataSource = self
         self.pageView.isInfinite = true
         self.pageView.automaticSlidingInterval = 3
-        self.pageView.interitemSpacing = 5
+//        self.pageView.interitemSpacing = 5
         self.pageView.cornerRadius = 8
          
         toolsHeight.constant = toolHeight + 20
@@ -89,6 +90,11 @@ class MPHomesHeaderView: UIView{
                                                 UIColor.white.withAlphaComponent(5).cgColor],
                                  startPoint: CGPoint(x: 0.5, y: 0), endPoint: CGPoint(x: 0.5, y: 1),bounds: CGRect(x: 0, y: 0, width: SCREEN_WIDTH*0.5, height: 50))
                
+        let account = Archive.getDefaultsForKey(key: "mobile")
+        amount = Archive.getDefaultsForKey(key: "money").getShowPrice()
+        
+        accountLable.text = account
+//        balanceLable.text = amount
        
     }
     
@@ -106,7 +112,7 @@ class MPHomesHeaderView: UIView{
         
         sender.isSelected.toggle()
         
-        balanceLable.text = sender.isSelected ? "123456" : "******"
+        balanceLable.text = sender.isSelected ? amount : "******"
     }
     
     @IBAction func transferAction(_ sender: Any) {

@@ -153,7 +153,8 @@ class MPCurrentAccountView : BaseView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        
+        let account = Archive.getDefaultsForKey(key: "mobile")
+        let amount = Archive.getDefaultsForKey(key: "money").getShowPrice()
         
         let bgView = UIView()
         bgView.backgroundColor = RGBCOLOR(r: 46, g: 106, b: 60)
@@ -210,7 +211,7 @@ class MPCurrentAccountView : BaseView {
         }
         
         let amountLab = UILabel()
-        amountLab.text = "480,000 VND"
+        amountLab.text = amount + "VND"
         amountLab.textColor = .white//RGBCOLOR(r: 242, g: 255, b: 236)
         amountLab.font = FONT_M(size: 14)
         self.addSubview(amountLab)
@@ -248,6 +249,10 @@ class MPAccountNumView : BaseView {
     }
     
     func setUI() {
+        
+        let account = Archive.getDefaultsForKey(key: "mobile")
+        let amount = Archive.getDefaultsForKey(key: "money").getShowPrice()
+        
         let titleLab = UILabel()
         titleLab.text = "Account number"
         titleLab.textColor = RGBCOLOR(r: 168, g: 168, b: 168)
@@ -259,7 +264,7 @@ class MPAccountNumView : BaseView {
         }
         
         let numLab = UILabel()
-        numLab.text = "1039388079"
+        numLab.text = account
         numLab.textColor = .black
         numLab.font = FONT_SB(size: 14)
         self.addSubview(numLab)
@@ -287,7 +292,7 @@ class MPAccountNumView : BaseView {
         }
         
         let amountLab = UILabel()
-        amountLab.text = "480,000 VND"
+        amountLab.text = amount + "VND"
         amountLab.textColor = kInputTextColor
         amountLab.font = FONT_SB(size: 16)
         self.addSubview(amountLab)

@@ -344,6 +344,8 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="accountText" destination="yx7-9p-ONm" id="ah0-6g-fM2"/>
+                <outlet property="amountText" destination="r5G-vb-i6b" id="1UR-Tq-zqB"/>
                 <outlet property="lineView" destination="4MN-3O-tNd" id="su8-yP-XBT"/>
                 <outlet property="listTableView" destination="ug3-u6-9gU" id="nyP-1L-N6A"/>
                 <outlet property="tableViewHeight" destination="t4h-JK-oQm" id="ujZ-wT-W5s"/>

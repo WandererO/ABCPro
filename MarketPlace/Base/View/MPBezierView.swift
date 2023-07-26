@@ -27,6 +27,8 @@ class MPBezierView: UIView {
 //        }
 //        self.sendSubviewToBack(grayBgV)
         
+        let avAmount = Archive.getDefaultsForKey(key: "money").getShowPrice()
+        
         let tipLab = UILabel()
         tipLab.text = "Available assets - Converted into V"
         tipLab.textColor = UIColor(21,19,20,1)
@@ -39,7 +41,7 @@ class MPBezierView: UIView {
         }
         
         let amountLab = UILabel()
-        amountLab.text = "580,000"
+        amountLab.text = avAmount
         amountLab.textColor = kInputTextColor
         amountLab.textAlignment = .center
         amountLab.font = FONT_SB(size: 18)
@@ -73,7 +75,7 @@ class MPBezierView: UIView {
         }
         
         let amount = UILabel()
-        amount.text = "580,000"
+        amount.text = avAmount
         amount.textColor = RGBCOLOR(r: 0, g: 0, b: 0)
         amount.textAlignment = .center
         amount.font = FONT_SB(size: 16)

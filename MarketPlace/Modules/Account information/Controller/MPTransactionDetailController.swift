@@ -9,7 +9,20 @@ import UIKit
 
 class MPTransactionDetailController: BaseHiddenNaviController {
     
-    
+    var model = MPAccountModel() {
+        didSet{
+            
+            let str = model.content
+            ///换行
+            let resultStr = str.replacingOccurrences(of: "*", with: "\n")
+            
+            self.dataAry = [["title":"Transaction number","value":model.number],["title":"Transaction date","value":model.date],["title":"Transaction amount", "value":model.amount.getShowPrice()],["title":"Transaction content", "value":resultStr]]
+            
+            
+            
+//            self.tableView.reloadData()
+        }
+    }
     
     
     var dataAry:[[String:String]] = [] {
@@ -62,11 +75,7 @@ class MPTransactionDetailController: BaseHiddenNaviController {
             make.top.equalTo(self.headerView.snp.bottom)
         }
         
-        let str = "MBVCB.3888458237.0*47326.VU DANG TUNG*chuyen tien.CT tu"
-        ///换行
-        let resultStr = str.replacingOccurrences(of: "*", with: "\n")
         
-        self.dataAry = [["title":"Transaction number","value":"5275 - 20678"],["title":"Transaction date","value":"20/07/2023"],["title":"Transaction amount", "value":"100000"],["title":"Transaction content", "value":resultStr]]
 
         
     }

@@ -9,6 +9,12 @@ import UIKit
 
 class MPTranstionDetailCell: UITableViewCell {
     
+//    var model = MPAccountModel() {
+//        didSet{
+//
+//        }
+//    }
+    
     var dict:[String:String]? {
         didSet{
             if let dict {

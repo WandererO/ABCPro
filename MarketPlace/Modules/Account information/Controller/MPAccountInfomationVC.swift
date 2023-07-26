@@ -12,6 +12,14 @@ class MPAccountInfomationVC: BaseHiddenNaviController {
     let mainView = MPAccountMainView.fromNib()
     let menuToolView = MPHomeToolsView.fromNib()
     
+    let publicVM = MPPublicViewModel()
+    
+    var type = "" {
+        didSet{
+            requestData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Account infomation"
@@ -66,6 +74,11 @@ class MPAccountInfomationVC: BaseHiddenNaviController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
         
+        mainView.segmentClickBlock = {[weak self] idx in
+            guard let self = self else{return}
+            self.type = "\(idx)"
+        }
+        
         
         
         menuToolView.snp.makeConstraints { make in
@@ -79,10 +92,20 @@ class MPAccountInfomationVC: BaseHiddenNaviController {
         mainView.snp.makeConstraints { make in
             make.top.equalTo(homeBgImage)
             make.left.right.equalTo(self.view)
-            make.bottom.equalTo(menuToolView.snp_topMargin)
-             
+            make.bottom.equalTo(menuToolView.snp.top)
         }
         
+        
+        type = "0"//全部
+        
+    }
+    
+    func requestData() {
+        HudManager.show()
+        publicVM.requestTransferRecord(token: "", type: type, startTime: "", endTime: "").subscribe(onNext: {[weak self] _ in
+            guard let self = self else {return}
+            self.mainView.recordeModel = self.publicVM.recordeModel
+        }).disposed(by: disposeBag)
     }
 
 }

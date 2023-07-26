@@ -10,9 +10,12 @@ import UIKit
 class MPAccountMainView: UIView  {
     
     var searchMoreBlock:NormalBlock?
+    var segmentClickBlock:SelectBlock?
 
     @IBOutlet weak var lineView: UIView!
   
+    @IBOutlet weak var accountText: UITextField!
+    @IBOutlet weak var amountText: UITextField!
     //数据源 * 行高
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     //数据列表
@@ -25,12 +28,26 @@ class MPAccountMainView: UIView  {
             self.lineView.centerX = sender.centerX
         }
         
+        self.segmentClickBlock?(sender.tag)
+        
     }
     
     @IBAction func moreClick(_ sender: Any) {
         self.searchMoreBlock?()
         
     }
+    
+    
+    
+    var recordeModel:[MPAccountModel] = [] {
+        didSet{
+            
+            
+            self.listTableView.reloadData()
+        }
+    }
+    
+    
     override  func awakeFromNib() {
         super.awakeFromNib()
         
@@ -45,6 +62,12 @@ class MPAccountMainView: UIView  {
         
         self.tableViewHeight.constant = 20 * 65
         
+        let account = Archive.getDefaultsForKey(key: "mobile")
+        let amount = Archive.getDefaultsForKey(key: "money")
+        
+        accountText.text = account
+        amountText.text = amount.getShowPrice() + "VND"
+        
     }
 }
 extension MPAccountMainView : UITableViewDelegate , UITableViewDataSource{
@@ -52,7 +75,7 @@ extension MPAccountMainView : UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 20
+        return self.recordeModel.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -65,14 +88,14 @@ extension MPAccountMainView : UITableViewDelegate , UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withType: MPAccountTotalCell.self, for: indexPath)
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
-        
-        cell.moeny.textColor = indexPath.row == 0 ? .red: UIColor(173, 208, 65, 1)
+        cell.model = self.recordeModel[indexPath.row]
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = MPTransactionDetailController()
+        vc.model = self.recordeModel[indexPath.row]
         self.viewContainingController()?.navigationController?.pushViewController(vc, animated: true)
     }
     

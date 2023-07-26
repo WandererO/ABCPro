@@ -44,6 +44,9 @@ public enum RequestEnum {
     
     ///登录
     case login(account:String, password:String)
+    
+    ///转账记录
+    case getTransferRecord(type:String, startTime:String, endTime:String)
 
 }
 
@@ -56,6 +59,9 @@ extension RequestEnum: TargetType {
             
         case .login:
             return "/api/user/login"
+        case .getTransferRecord:
+            return "/api/user/changeList"
+            
 
         default :
             return ""
@@ -69,6 +75,12 @@ extension RequestEnum: TargetType {
         case let .login(account, password):
             let dict = ["account":account, "password":password] as [String : Any]
             return .requestParameters(parameters: dict, encoding: URLEncoding.queryString)
+            
+        case let .getTransferRecord(type, startTime, endTime):
+            let dict = ["type":type , "startTime":startTime, "endTime":endTime] as [String : Any]
+            return .requestParameters(parameters: dict, encoding: URLEncoding.queryString)
+            
+            
 
         default :
             return .requestParameters(parameters: [:], encoding: URLEncoding.queryString)
