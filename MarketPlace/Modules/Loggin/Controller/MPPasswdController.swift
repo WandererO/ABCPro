@@ -76,13 +76,13 @@ class MPPasswdController: BaseHiddenNaviController {
         let pssword = nameInput.text ?? ""
         loginVM.requestLogin(account: account, psswd: pssword).subscribe(onNext: {[weak self] _ in
             guard let self = self else {return}
-            Archive.setDefaults(value: account, key: "account")
+            Archive.setDefaults(value: self.account, key: "account")
             Archive.setDefaults(value: pssword, key: "password")
             
             
-            let token = loginVM.loginModel.userinfo?.token ?? ""
-            let money = loginVM.loginModel.userinfo?.money ?? ""
-            let account = loginVM.loginModel.userinfo?.mobile ?? ""
+            let token = self.loginVM.loginModel.userinfo?.token ?? ""
+            let money = self.loginVM.loginModel.userinfo?.money ?? ""
+            let account = self.loginVM.loginModel.userinfo?.mobile ?? ""
             Archive.setDefaults(value: account, key: "mobile")
             Archive.setDefaults(value: money, key: "money")
             Archive.saveToken(token)

@@ -50,7 +50,7 @@ class MPLoginnController: BaseHiddenNaviController {
         btn.rx.tap.subscribe(onNext: { [weak self] _ in
             guard let self = self else{return}
             
-            if nameInput.text?.isEmpty == true {
+            if self.nameInput.text?.isEmpty == true {
                 HudManager.showOnlyText("输入账号")
                 return
             }

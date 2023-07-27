@@ -27,6 +27,9 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
     
     @IBOutlet weak var topHeight: NSLayoutConstraint!
 
+    @IBOutlet weak var scrollViewContentViewTop: NSLayoutConstraint!
+    
+    
     var type = "" {
         didSet{
             requestData()
@@ -40,7 +43,12 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
         self.title = "Transaction history"
         self.topViewLeftBtn.setImage(UIImage(named: "ic_back_family_Normal"), for: .normal)
         
-        topHeight.constant = NAV_HIGH + 20
+//        topHeight.constant = NAV_HIGH + 20
+        
+//        self.automaticallyAdjustsScrollViewInsets = false
+        
+        
+        scrollViewContentViewTop.constant = 48 + STATUSBAR_HIGH
         
         bgView.backgroundColor = UIColor(17, 34, 42, 0).withAlphaComponent(0.8)
        //渐变背景
@@ -73,7 +81,7 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
         publicVM.requestTransferRecord(token: "", type: type, startTime: startTime, endTime: endTime).subscribe(onNext: {[weak self] _ in
             guard let self = self else {return}
             //动态高度
-            tableViewHeight.constant = CGFloat(self.publicVM.recordeModel.count * 65)//65*20
+            self.tableViewHeight.constant = CGFloat(self.publicVM.recordeModel.count * 2 * 65)//65*20
 
             self.listTableView.reloadData()
         }).disposed(by: disposeBag)
@@ -118,10 +126,10 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
         pop.show()
         pop.pickerTimeBlock = {[weak self] timeStr in
             guard let self = self else{return}
-            if isStartTime == true {
-                startTimeLab.text = timeStr
+            if self.isStartTime == true {
+                self.startTimeLab.text = timeStr
             }else{
-                endTimeLab.text = timeStr
+                self.endTimeLab.text = timeStr
             }
         }
     }
@@ -273,7 +281,7 @@ class MPDatePickView : BaseView {
             guard let self = self else{return}
             self.dismiss()
             
-            self.pickerTimeBlock?(pickerTime)
+            self.pickerTimeBlock?(self.pickerTime)
             
         }).disposed(by: disposeBag)
         
