@@ -74,7 +74,6 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
             guard let self = self else {return}
             //动态高度
             tableViewHeight.constant = CGFloat(self.publicVM.recordeModel.count * 65)//65*20
-
             self.listTableView.reloadData()
         }).disposed(by: disposeBag)
     }
