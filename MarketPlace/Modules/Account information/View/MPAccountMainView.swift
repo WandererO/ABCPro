@@ -60,7 +60,7 @@ class MPAccountMainView: UIView  {
         self.listTableView.register(MPAccountTotalCell.self)
         self.listTableView.backgroundColor =  .clear
         
-        self.tableViewHeight.constant = 20 * 65
+        self.tableViewHeight.constant = 4 * 65
         
         let account = Archive.getDefaultsForKey(key: "mobile")
         let amount = Archive.getDefaultsForKey(key: "money")

@@ -9,6 +9,8 @@ import UIKit
 
 class MPTransactionHistoryController: BaseHiddenNaviController {
     
+    let publicVM = MPPublicViewModel()
+    
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var startTimeBtn: UIButton!
@@ -24,7 +26,12 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
     @IBOutlet weak var bgView: UIView!
     
     @IBOutlet weak var topHeight: NSLayoutConstraint!
-    
+
+    var type = "" {
+        didSet{
+            requestData()
+        }
+    }
     var startTime = ""
     var endTime  = ""
     var isStartTime = false
@@ -44,8 +51,8 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
         self.listTableView.dataSource = self
         self.listTableView.register(MPAccountTotalCell.self)
         self.listTableView.backgroundColor =  .clear
-        //动态高度
-        tableViewHeight.constant = 65*20
+        
+        
         searchButton.IB_cornerRadius = 10
         
         
@@ -54,6 +61,22 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
         
         endTimeLab.text = endTime
         startTimeLab.text = startTime
+        
+        startTime = ""
+        endTime = ""
+        
+        type = "0"
+    }
+    
+    func requestData() {
+        HudManager.show()
+        publicVM.requestTransferRecord(token: "", type: type, startTime: startTime, endTime: endTime).subscribe(onNext: {[weak self] _ in
+            guard let self = self else {return}
+            //动态高度
+            tableViewHeight.constant = CGFloat(self.publicVM.recordeModel.count * 65)//65*20
+
+            self.listTableView.reloadData()
+        }).disposed(by: disposeBag)
     }
 
   
@@ -61,11 +84,14 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
     //搜索按钮
     @IBAction func sarchButtonAction(_ sender: Any) {
 
+        startTime = startTimeLab.text ?? ""
+        endTime = endTimeLab.text ?? ""
+        requestData()
     }
     
     //菜单选择
     @IBAction func buttonAction(_ sender: UIButton) {
-        
+        type = "\(sender.tag)"
         
         UIView.animate(withDuration: 0.1) {
             self.lineView.centerX = sender.centerX
@@ -99,6 +125,8 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
             }
         }
     }
+    
+    
     
     func setUI(){
 //        self.view.addSubview(fromTimeBtn)
@@ -145,7 +173,7 @@ extension MPTransactionHistoryController : UITableViewDelegate , UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 20
+        return self.publicVM.recordeModel.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -158,14 +186,15 @@ extension MPTransactionHistoryController : UITableViewDelegate , UITableViewData
         let cell = tableView.dequeueReusableCell(withType: MPAccountTotalCell.self, for: indexPath)
         cell.selectionStyle = .none
         cell.backgroundColor = .clear
-        
-        cell.moeny.textColor = indexPath.row == 0 ? .red: UIColor(173, 208, 65, 1)
+        cell.model = self.publicVM.recordeModel[indexPath.row]
+//        cell.moeny.textColor = indexPath.row == 0 ? .red: UIColor(173, 208, 65, 1)
         return cell
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = MPTransactionDetailController()
+        vc.model = self.publicVM.recordeModel[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
