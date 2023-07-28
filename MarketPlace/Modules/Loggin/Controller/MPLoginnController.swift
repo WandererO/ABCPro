@@ -101,6 +101,7 @@ class MPLoginnController: BaseHiddenNaviController {
         }
         
         self.view.addSubview(nextBtn)
+        nextBtn.setGradMainColor(size: CGSize(width: SCREEN_WIDTH - 30, height: 45))
         nextBtn.snp.makeConstraints { make in
             make.left.equalTo(15)
             make.right.equalTo(-15)

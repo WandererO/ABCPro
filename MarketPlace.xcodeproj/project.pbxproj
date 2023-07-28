@@ -1673,7 +1673,7 @@
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarketPlace/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ACB;
+				INFOPLIST_KEY_CFBundleDisplayName = "VCB Digibank";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "face ID";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "本地网络";
@@ -1719,7 +1719,7 @@
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarketPlace/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ACB;
+				INFOPLIST_KEY_CFBundleDisplayName = "VCB Digibank";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "face ID";
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "本地网络";

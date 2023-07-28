@@ -76,8 +76,8 @@ class BaseHiddenNaviController: BaseViewController {
                 topViewRightBtn.snp.remakeConstraints { make in
 
                     make.right.equalToSuperview()
-                    make.height.equalTo(54)
-                    make.width.greaterThanOrEqualTo(54)
+                    make.height.equalTo(32)
+                    make.width.greaterThanOrEqualTo(32)
                     make.centerY.equalToSuperview()
                 }
                 
@@ -206,7 +206,7 @@ class BaseHiddenNaviController: BaseViewController {
             
             make.right.equalTo(-10)
 //            make.right.equalToSuperview()
-            make.height.width.equalTo(54)
+            make.height.width.equalTo(32)
             make.centerY.equalToSuperview()
         }
 
@@ -219,9 +219,9 @@ class BaseHiddenNaviController: BaseViewController {
         topView.addSubview(topRightTwoBtn)
         topRightTwoBtn.isHidden = true
         topRightTwoBtn.snp.makeConstraints { make in
-            make.right.equalTo(topViewRightBtn.snp.left)
+            make.right.equalTo(topViewRightBtn.snp.left).offset(-10)
             make.centerY.equalToSuperview()
-            make.height.width.equalTo(54)
+            make.height.width.equalTo(24)
         }
         
       
