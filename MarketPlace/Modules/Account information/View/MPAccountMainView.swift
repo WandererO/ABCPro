@@ -20,6 +20,10 @@ class MPAccountMainView: UIView  {
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     //数据列表
     @IBOutlet weak var listTableView: UITableView!
+    @IBOutlet weak var moreBtn: UIButton!
+    @IBOutlet weak var totalBtn: UIButton!
+    @IBOutlet weak var inBtn: UIButton!
+    @IBOutlet weak var outBtn: UIButton!
     
     @IBAction func listBtnAction(_ sender: UIButton) {
          
@@ -48,6 +52,15 @@ class MPAccountMainView: UIView  {
     }
     
     
+    
+    
+    @IBOutlet weak var accountLab: UILabel!
+    @IBOutlet weak var numberLab: UILabel!
+    @IBOutlet weak var balanceLab: UILabel!
+    
+    @IBOutlet weak var detailBtn: UIButton!
+    @IBOutlet weak var historyLab: UILabel!
+    
     override  func awakeFromNib() {
         super.awakeFromNib()
         
@@ -68,6 +81,17 @@ class MPAccountMainView: UIView  {
         accountText.text = account
         amountText.text = amount.getShowPrice() + "VND"
         
+        
+        accountLab.text = "Current account".localString()
+        numberLab.text = "Account number".localString()
+        balanceLab.text = "Available balance".localString()
+        detailBtn.setTitle("Account details".localString(), for: .normal)
+        historyLab.text = "Transaction history".localString()
+        moreBtn.setTitle("Search more".localString(), for: .normal)
+        totalBtn.setTitle("Total".localString(), for: .normal)
+        inBtn.setTitle("Cash in".localString(), for: .normal)
+        outBtn.setTitle("Cash out".localString(), for: .normal)
+        
     }
 }
 extension MPAccountMainView : UITableViewDelegate , UITableViewDataSource{
@@ -80,7 +104,7 @@ extension MPAccountMainView : UITableViewDelegate , UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 65
+        return 70
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

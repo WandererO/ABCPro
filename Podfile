@@ -8,6 +8,7 @@ target "MarketPlace" do
 use_frameworks! :linkage => :static
 
 #布局
+pod 'ESTabBarController-swift'
 pod 'AttributedString'
 #pod 'SnapKit'
 #pod 'RxSwift'

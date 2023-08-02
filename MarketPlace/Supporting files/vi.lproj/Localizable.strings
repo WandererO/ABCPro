@@ -6,3 +6,60 @@
   
 */
 "Home"="Trang chủ";
+"Mobile topup"="Nạp tiền điện thoại";
+"QR Services"="Dịch vụ QR";
+"Internal transfer"="Chuyển tiền trong VCB";
+"Quick transfer247"="Chuyển tiền nhanh 247";
+
+
+"Accounts and cards"="Danh sách tài khoản và thẻ";
+"Open favorite account number"="Mở tài khoản số chọn";
+"Exit"="Thoát";
+"Promotions"="Ưu đãi";
+"Lock card"="khóa thẻ";
+"Settings"="Cài đặt";
+"CURRENT ACCOUNT"="TÀI KHOẢN THANH TOÁN";
+"Balance"="Số dư";
+"Welcome"="Xin chào";
+
+"Account"="Tài khoản";
+"Card"="Thẻ";
+"Available assets - Converted into VND"="Tổng tài sản khả dụng - Quy đổi VND";
+"(Cafrentaccount & Deposit/ savings account)"="Tài khoản thán & Tài khoản tiền gửi/ tiết kiệm";
+"Total current account-VND"="Tổng tài khoản thanh toán-VND";
+"Accounts list"="Danh sách tài khoản";
+"Total liabilities - Converted into VND"="Tổng tài sản nợ - Quy đổi VND";
+"(Loan account)"="Tài khoản vay";
+"Update balance"="Cặp nhất số dư";
+"Current account"="Tài khoản thanh toán";
+"Total available balance"="Tổng số dư khả dụng";
+"Account number"="Số tài khoản";
+"Available balance"="Số dư khả dụng";
+
+"Account infomation"="Thông tin tài khoản";
+"Current account"="Tài khoản thanh toán";
+"Account number"="Số tài khoản";
+"Available balance"="Số dư khả dụng";
+"Account details"="Chi tiết tài khoản";
+"Transaction history"="Lịch sử giao dịch";
+"Search more"="Tìm kiếm thêm";
+"Total"="Toàn bộ";
+"Cash in"="Tiền vào";
+"Cash out"="Tiền ra";
+"Generate QR nickname"="Tạo mã QR nickname";
+"Open savings account"="Mở tiết kiệm";
+"Transfer"="Chuyện tiền";
+"Top up"="Nạp tiền điện thoại";
+
+"Transaction details"="Chi tiết giao dịch";
+"Transaction number"="Số giao dịch";
+"Transaction date"="Ngày giao dịch";
+"Transaction amount"="Số tiền giao dịch";
+"Transaction content"="Nội dung giao dịch";
+
+"Transaction history"="Lịch sử giao dịch";
+"Note: You can query transaction history within 1 year, with a maximum search period of 31 days."="Lưu ý: Quý khách có thể truy vấn xem lịch sử giao dịch trong vòng 1 năm với khoảng thời gian tới đa trong một lần tìm kiếm là 31 ngày.";
+"Search"="Tìm kiếm";
+"Transaction history"="Lịch sử giao dịch";
+
+

@@ -233,16 +233,16 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yB-If-7ig">
                                                     <rect key="frame" x="0.0" y="0.0" width="123.33333333333333" height="50"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="Toal"/>
+                                                    <state key="normal" title="Total"/>
                                                     <connections>
                                                         <action selector="listBtnAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="YZa-Od-2Bj"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0f1-hf-zfj">
                                                     <rect key="frame" x="123.33333333333334" y="0.0" width="123.33333333333334" height="50"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="Cash in"/>
                                                     <connections>
@@ -251,7 +251,7 @@
                                                 </button>
                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5y-Nn-N1S">
                                                     <rect key="frame" x="246.66666666666671" y="0.0" width="123.33333333333334" height="50"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal" title="Cash out"/>
                                                     <connections>
@@ -344,11 +344,20 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="accountLab" destination="nAe-gb-JGG" id="fVY-Fe-4fy"/>
                 <outlet property="accountText" destination="yx7-9p-ONm" id="ah0-6g-fM2"/>
                 <outlet property="amountText" destination="r5G-vb-i6b" id="1UR-Tq-zqB"/>
+                <outlet property="balanceLab" destination="tdr-gd-b5D" id="E2B-bO-xdg"/>
+                <outlet property="detailBtn" destination="gwR-Td-ERS" id="j38-SS-4oo"/>
+                <outlet property="historyLab" destination="y8B-te-BlI" id="ssp-Jw-S18"/>
+                <outlet property="inBtn" destination="0f1-hf-zfj" id="cyV-ZF-uET"/>
                 <outlet property="lineView" destination="4MN-3O-tNd" id="su8-yP-XBT"/>
                 <outlet property="listTableView" destination="ug3-u6-9gU" id="nyP-1L-N6A"/>
+                <outlet property="moreBtn" destination="vcT-ug-gMh" id="d44-na-rjb"/>
+                <outlet property="numberLab" destination="wVM-dZ-dqG" id="P0V-cw-o0f"/>
+                <outlet property="outBtn" destination="d5y-Nn-N1S" id="dus-zQ-qYk"/>
                 <outlet property="tableViewHeight" destination="t4h-JK-oQm" id="ujZ-wT-W5s"/>
+                <outlet property="totalBtn" destination="6yB-If-7ig" id="AHC-tQ-N1G"/>
             </connections>
             <point key="canvasLocation" x="7.6923076923076916" y="20.616113744075829"/>
         </view>

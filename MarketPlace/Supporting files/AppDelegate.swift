@@ -12,6 +12,7 @@ import IQKeyboardManagerSwift
 
 import ZendeskSDK
 import ZendeskSDKMessaging
+import ESTabBarController_swift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -84,10 +85,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         ///登录成功通知
         NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: loginSuccessNotification.rawValue), object: nil,  queue: nil) { (notification) in
-                        
-            let tabbr = BaseTabBarController()
-            self.window?.rootViewController = tabbr
-            self.window?.makeKeyAndVisible()
+                     
+            self.setTabbarController()
+            
+//            let tabbr = BaseTabBarController()
+//            self.window?.rootViewController = tabbr
+//            self.window?.makeKeyAndVisible()
         }
         
     }
@@ -109,6 +112,70 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }).disposed(by: disposeBag)
     }
     
+    func setTabbarController() {//自定义tabbar
+        let tabbar = ESTabBarController()
+        
+        let homeVC = CCHomeViewController()
+        let topUpVC = MPMobileTopUpController()
+        let QRVc = MPQRServicesController()
+        let internalVC = MPInternalTransferController()
+        let quickVC = MPQuickTransferController()
+        
+        
+        tabbar.shouldHijackHandler = { tabbar, viewContro, idx in
+            
+            if idx != 0 {
+                return true
+            }
+            return false
+        }
+        tabbar.didHijackHandler = {tabbar, viewContro, idx in
+            
+            let selectNav = viewContro as? BaseNavigationController
+            let pushVC = MPMobileTopUpController()
+            selectNav?.pushViewController(pushVC, animated: true)
+            
+            print("=========")
+        }
+        
+        UITabBar.appearance().backgroundColor = RGBCOLOR(r: 24, g: 39, b: 44)
+        
+        
+        
+        homeVC.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "Home", image: UIImage(named: "tab_home_unselect_Normal"), selectedImage: UIImage(named: "tabBar_home_ic_Normal"))
+        topUpVC.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "Mobile topup", image: UIImage(named: "tabBar_topup_ic_Normal"), selectedImage: UIImage(named: ""))
+        QRVc.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "QR Services", image: UIImage(named: "tabBar_qr_ic_Normal"), selectedImage: UIImage(named: ""))
+        internalVC.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "Internal transfer", image: UIImage(named: "tabBar_transIn_ic_Normal"), selectedImage: UIImage(named: ""))
+        quickVC.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "Quick transfer247", image: UIImage(named: "tabBar_trans247_ic_Normal"), selectedImage: UIImage(named: ""))
+        
+        lazy var baseHomeNav = BaseNavigationController.init(rootViewController: homeVC)
+        lazy var topUpNav = BaseNavigationController.init(rootViewController: topUpVC)
+        lazy var QRNav = BaseNavigationController.init(rootViewController: QRVc)
+        lazy var internalNav = BaseNavigationController.init(rootViewController: internalVC)
+        lazy var quickNav = BaseNavigationController.init(rootViewController: quickVC)
+        
+        tabbar.viewControllers = [baseHomeNav, topUpNav, QRNav, internalNav,quickNav]
+        
+        self.window?.rootViewController = tabbar
+        self.window?.makeKeyAndVisible()
+    }
+}
+
+class BaseTabbarItemView:ESTabBarItemContentView {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        
+        
+        textColor = RGBCOLOR(r: 135, g: 147, b: 152)//UIColor.init(white: 175.0 / 255.0, alpha: 1.0)
+        highlightTextColor = kInputTextColor//UIColor.init(red: 254/255.0, green: 73/255.0, blue: 42/255.0, alpha: 1.0)
+        iconColor = RGBCOLOR(r: 135, g: 147, b: 152)//UIColor.init(white: 175.0 / 255.0, alpha: 1.0)
+        highlightIconColor = kInputTextColor//UIColor.init(red: 254/255.0, green: 73/255.0, blue: 42/255.0, alpha: 1.0)
+    }
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
 }
 
@@ -118,7 +185,7 @@ extension AppDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         
-        var handled: Bool
+//        var handled: Bool
 
 //          handled = GIDSignIn.sharedInstance.handle(url)
 //          if handled {
@@ -139,10 +206,10 @@ extension AppDelegate {
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
-        if MPSocketManager.share.isConnected {
-            MPSocketManager.share.reConnectTime = 5
-            MPSocketManager.share.socketDisConnect()
-            }
+//        if MPSocketManager.share.isConnected {
+//            MPSocketManager.share.reConnectTime = 5
+//            MPSocketManager.share.socketDisConnect()
+//            }
      }
 
     //进入前台模式，主动连接socket

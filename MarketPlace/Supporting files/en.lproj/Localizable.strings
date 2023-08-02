@@ -6,3 +6,58 @@
   
 */
 "Home"="Home";
+"Mobile topup"="Mobile topup";
+"QR Services"="QR Services";
+"Internal transfer"="Internal transfer";
+"Quick transfer247"="Quick transfer247";
+
+
+"Accounts and cards"="Accounts and cards";
+"Open favorite account number"="Open favorite account number";
+"Exit"="Exit";
+"Promotions"="Promotions";
+"Lock card"="Lock card";
+"Settings"="Settings";
+"CURRENT ACCOUNT"="CURRENT ACCOUNT";
+"Balance"="Balance";
+"Welcome"="Welcome";
+
+"Account"="Account";
+"Card"="Card";
+"Available assets - Converted into VND"="Available assets - Converted into VND";
+"(Cafrentaccount & Deposit/ savings account)"="(Cafrentaccount & Deposit/ savings account)";
+"Total current account-VND"="Total current account-VND";
+"Accounts list"="Account list";
+"Total liabilities - Converted into VND"="Total liabilities - Converted into VND";
+"(Loan account)"="(Loan account)";
+"Update balance"="Update balance";
+"Current account"="Current account";
+"Total available balance"="Total available balance";
+"Account number"="Account number";
+"Available balance"="Available balance";
+
+"Account infomation"="Account infomation";
+"Current account"="Current account";
+"Account number"="Account number";
+"Available balance"="Available balance";
+"Account details"="Account details";
+"Transaction history"="Transaction history";
+"Search more"="Search more";
+"Total"="Total";
+"Cash in"="Cash in";
+"Cash out"="Cash out";
+"Generate QR nickname"="Generate QR nickname";
+"Open savings account"="Open savings account";
+"Transfer"="Transfer";
+"Top up"="Top up";
+
+"Transaction details"="Transaction details";
+"Transaction number"="Transaction number";
+"Transaction date"="Transaction date";
+"Transaction amount"="Transaction amount";
+"Transaction content"="Transaction content";
+
+"Transaction history"="Transaction history";
+"Note: You can query transaction history within 1 year, with a maximum search period of 31 days."="Note: You can query transaction history within 1 year, with a maximum search period of 31 days.";
+"Search"="Search";
+"Transaction history"="Transaction history";

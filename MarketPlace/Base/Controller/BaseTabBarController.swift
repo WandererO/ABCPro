@@ -163,6 +163,18 @@ extension BaseTabBarController {
         if #available(iOS 13.0, *) {
             self.tabBar.tintColor = kInputTextColor//UIColor.hexColor("5171FF")
             self.tabBar.unselectedItemTintColor = RGBCOLOR(r: 135, g: 147, b: 152)
+            
+            
+//            let viewTabBar = self.tabBarItem.value(forKey: "view") as? UIView
+//    //        //            let imageView = viewTabBar?.subviews[0] as? UIImageView
+//            let label = viewTabBar?.subviews[1] as? UILabel
+//            label?.backgroundColor = .red
+//            label?.numberOfLines = 2
+//            label?.textAlignment = .center
+//            label?.lineBreakMode = .byWordWrapping
+//            label?.frame = CGRectMake(0, 0, (viewTabBar?.frame.size.width ?? 0),10)
+//            label?.sizeToFit()
+            
             //MARK: fifa
 //            self.tabBar.tintColor = .hexColor("FFC619")
 //            self.tabBar.unselectedItemTintColor = .white
@@ -256,6 +268,9 @@ extension BaseTabBarController {
         let frame = self.tabBar.frame
         let height = frame.size.height
         let offsetY = (visible ? -height : height)
+        
+        
+        
 
         // animation
         UIViewPropertyAnimator(duration: duration, curve: .linear) {

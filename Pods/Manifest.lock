@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.6.4)
   - AttributedString (3.3.5)
   - EmptyDataSet-Swift (5.0.0)
+  - ESTabBarController-swift (2.8.0)
   - HandyJSON (5.0.2)
   - HSStockChart (1.3.0)
   - HWPanModal (0.8.9)
@@ -67,6 +68,7 @@ PODS:
 DEPENDENCIES:
   - AttributedString
   - EmptyDataSet-Swift
+  - ESTabBarController-swift
   - HandyJSON
   - HSStockChart
   - HWPanModal (= 0.8.9)
@@ -95,6 +97,7 @@ SPEC REPOS:
     - Alamofire
     - AttributedString
     - EmptyDataSet-Swift
+    - ESTabBarController-swift
     - HandyJSON
     - HSStockChart
     - HWPanModal
@@ -131,6 +134,7 @@ SPEC CHECKSUMS:
   Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
   AttributedString: 6d2d9d65310119556c3b5c6e4ea8d1ca339b703c
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
+  ESTabBarController-swift: 05593a6ad64700b03c0eb60ff625916370aa4136
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   HSStockChart: 2c6e0e3bcb2e5a345bf62c18d955bbc231d2f466
   HWPanModal: 259f6916c706b3f63003a325ad1bdfbe913b0fdc
@@ -163,6 +167,6 @@ SPEC CHECKSUMS:
   ZendeskSDKStorage: cc4fcbfd50544d8fe26d5cfdc63f5c6455152e5e
   ZendeskSDKUIComponents: e2bc335781ae57c13fddb1512dc3c0c56403c0aa
 
-PODFILE CHECKSUM: 368782841361cf0409d51b75add471a47bdeefa1
+PODFILE CHECKSUM: 6747c1471b382bf1cfe76cfe15b86e5f834da406
 
 COCOAPODS: 1.11.3

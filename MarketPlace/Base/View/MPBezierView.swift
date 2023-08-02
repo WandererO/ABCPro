@@ -30,7 +30,7 @@ class MPBezierView: UIView {
         let avAmount = Archive.getDefaultsForKey(key: "money").getShowPrice()
         
         let tipLab = UILabel()
-        tipLab.text = "Available assets - Converted into V"
+        tipLab.text = "Available assets - Converted into VND".localString()
         tipLab.textColor = UIColor(21,19,20,1)
         tipLab.textAlignment = .center
         tipLab.font = FONT_M(size: 14)
@@ -53,7 +53,7 @@ class MPBezierView: UIView {
         
         //(Cafrentaccount & Deposit/ savings account)
         let tipLab2 = UILabel()
-        tipLab2.text = "(Cafrentaccount & Deposit/ savings account)"
+        tipLab2.text = "(Cafrentaccount & Deposit/ savings account)".localString()
         tipLab2.textColor = RGBCOLOR(r: 146, g: 146, b: 146)
         tipLab2.textAlignment = .center
         tipLab2.font = FONT_M(size: 14)
@@ -64,7 +64,7 @@ class MPBezierView: UIView {
         }
         
         let tipLab3 = UILabel()
-        tipLab3.text = "Total current account-YND"
+        tipLab3.text = "Total current account-YND".localString()
         tipLab3.textColor = RGBCOLOR(r: 23, g: 23, b: 23)
         tipLab3.textAlignment = .center
         tipLab3.font = FONT_R(size: 12)
@@ -86,22 +86,22 @@ class MPBezierView: UIView {
         }
         
         let listBtn = ZQButton()
-        listBtn.setTitle("Accounts list", for: .normal)
+        listBtn.setTitle("Accounts list".localString(), for: .normal)
         listBtn.setTitleColor(kInputTextColor, for: .normal)
-        listBtn.titleLabel?.font = FONT_R(size: 12)
+        listBtn.titleLabel?.font = FONT_R(size: 10)
         listBtn.corner(cornerRadius: 12 , borderColor: kInputTextColor, borderWidth: 1)
         self.addSubview(listBtn)
         listBtn.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.top.equalTo(amount.snp.bottom).offset(10)
-            make.width.equalTo(110)
+            make.width.equalTo(120)
             make.height.equalTo(25)
         }
         
         //Total liabilities - Converted into VND
         
         let loanLab = UILabel()
-        loanLab.text = "(Loan account)"
+        loanLab.text = "(Loan account)".localString()
         loanLab.textColor = RGBCOLOR(r: 146, g: 146, b: 146)
         loanLab.textAlignment = .center
         loanLab.font = FONT_M(size: 14)
@@ -123,7 +123,7 @@ class MPBezierView: UIView {
         }
         
         let totalTip = UILabel()
-        totalTip.text = "Total liabilities - Converted into VND"
+        totalTip.text = "Total liabilities - Converted into VND".localString()
         totalTip.textColor = UIColor(21,19,20,1)
         totalTip.textAlignment = .center
         totalTip.font = FONT_M(size: 14)

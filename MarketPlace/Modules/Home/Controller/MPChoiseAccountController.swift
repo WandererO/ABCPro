@@ -87,7 +87,7 @@ class MPChoiseAccountController: BaseHiddenNaviController {
         }
         
         let updateBtn = ZQButton()
-        updateBtn.setImageAndTitle(NormalImageName: "group_Normal", SelectImageName: "", title: "Update balance", type: .Positionleft, Space: 5)
+        updateBtn.setImageAndTitle(NormalImageName: "group_Normal", SelectImageName: "", title: "Update balance".localString(), type: .Positionleft, Space: 5)
         updateBtn.titleLabel?.font = FONT_M(size: 12)
         updateBtn.backgroundColor = RGBCOLOR(r: 244, g: 248, b: 237)
         updateBtn.setTitleColor(kInputTextColor, for: .normal)
@@ -167,7 +167,7 @@ class MPCurrentAccountView : BaseView {
         }
         
         let currentLab = UILabel()
-        currentLab.text = "Current account"
+        currentLab.text = "Current account".localString()
         currentLab.textColor = .white
         currentLab.font = FONT_M(size: 14)
         bgView.addSubview(currentLab)
@@ -192,7 +192,7 @@ class MPCurrentAccountView : BaseView {
         }
         
         let totalTip = UILabel()
-        totalTip.text = "Total available balance"
+        totalTip.text = "Total available balance".localString()
         totalTip.textColor = RGBCOLOR(r: 242, g: 255, b: 236)
         totalTip.font = FONT_M(size: 14)
         self.addSubview(totalTip)
@@ -254,7 +254,7 @@ class MPAccountNumView : BaseView {
         let amount = Archive.getDefaultsForKey(key: "money").getShowPrice()
         
         let titleLab = UILabel()
-        titleLab.text = "Account number"
+        titleLab.text = "Account number".localString()
         titleLab.textColor = RGBCOLOR(r: 168, g: 168, b: 168)
         titleLab.font = FONT_M(size: 14)
         self.addSubview(titleLab)
@@ -302,7 +302,7 @@ class MPAccountNumView : BaseView {
         }
         
         let availableLab = UILabel()
-        availableLab.text = "Available balance"
+        availableLab.text = "Available balance".localString()
         availableLab.textColor = RGBCOLOR(r: 168, g: 168, b: 168)
         availableLab.font = FONT_M(size: 14)
         self.addSubview(availableLab)

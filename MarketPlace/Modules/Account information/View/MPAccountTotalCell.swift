@@ -20,7 +20,7 @@ class MPAccountTotalCell: UITableViewCell {
                 moeny.text = "- " + model.amount.getShowPrice()
                 moeny.textColor = .red
             }else{
-                moeny.text = model.amount.getShowPrice()
+                moeny.text = "+ " + model.amount.getShowPrice()
                 moeny.textColor = UIColor(173, 208, 65, 1)
             }
         }

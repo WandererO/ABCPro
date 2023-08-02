@@ -22,7 +22,7 @@ class MPAccountInfomationVC: BaseHiddenNaviController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Account infomation"
+        self.title = "Account infomation".localString()
         self.topViewLeftBtn.setImage(UIImage(named: "ic_back_family_Normal"), for: .normal)
         //添加底部背景图
         let homeBgImage = UIImageView(frame: .zero)
