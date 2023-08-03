@@ -24,6 +24,8 @@ class CCLoginModel: BaseModel {
         
         ///账户
         var mobile : String = ""
+        ///用户名
+        var nickname : String = ""
     }
     
 }

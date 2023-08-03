@@ -29,6 +29,11 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
 
     @IBOutlet weak var scrollViewContentViewTop: NSLayoutConstraint!
     
+    @IBOutlet weak var notesLab: UILabel!
+    @IBOutlet weak var historyTipLab: UILabel!
+    @IBOutlet weak var totalBtn: UIButton!
+    @IBOutlet weak var inBtn: UIButton!
+    @IBOutlet weak var outBtn: UIButton!
     
     var type = "" {
         didSet{
@@ -40,7 +45,7 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
     var isStartTime = false
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Transaction history"
+        self.title = "Transaction history".localString()
         self.topViewLeftBtn.setImage(UIImage(named: "ic_back_family_Normal"), for: .normal)
         
 //        topHeight.constant = NAV_HIGH + 20
@@ -74,6 +79,14 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
         endTime = ""
         
         type = "0"
+        
+        notesLab.text = "Note: You can query transaction history within 1 year, with a maximum search period of 31 days.".localString()
+        historyTipLab.text = "Transaction history".localString()
+        searchButton.setTitle("Search".localString(), for: .normal)
+        totalBtn.setTitle("Total".localString(), for: .normal)
+        inBtn.setTitle("Cash in".localString(), for: .normal)
+        outBtn.setTitle("Cash out".localString(), for: .normal)
+        
     }
     
     func requestData() {
@@ -255,7 +268,7 @@ class MPDatePickView : BaseView {
         }
         
         let closeBtn = ZQButton()
-        closeBtn.setTitle("Close", for: .normal)
+        closeBtn.setTitle("Close".localString(), for: .normal)
         closeBtn.setTitleColor(RGBCOLOR(r: 131, g: 178, b: 70), for: .normal)
         closeBtn.titleLabel?.font = FONT_M(size: 14)
         btnView.addSubview(closeBtn)
@@ -269,7 +282,7 @@ class MPDatePickView : BaseView {
         }).disposed(by: disposeBag)
         
         let doneBtn = ZQButton()
-        doneBtn.setTitle("Done", for: .normal)
+        doneBtn.setTitle("Done".localString(), for: .normal)
         doneBtn.setTitleColor(RGBCOLOR(r: 131, g: 178, b: 70), for: .normal)
         doneBtn.titleLabel?.font = FONT_M(size: 14)
         btnView.addSubview(doneBtn)

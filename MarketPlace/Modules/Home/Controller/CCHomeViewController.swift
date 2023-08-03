@@ -129,6 +129,14 @@ class CCHomeViewController: BaseHiddenNaviController {
         return table
     }()
     
+    
+    lazy var scrollBtn : ZQButton = {
+        let btn = ZQButton()
+        btn.setImage(UIImage(named: "btnpick_Normal"), for: .normal)
+        return btn
+    }()
+    
+    
     ///退出登录
     override func topLeftBtnClick() {
         UserManager().logout()
@@ -150,7 +158,7 @@ extension CCHomeViewController{
             /// 前提是xib中设置好约束  设置tableView.tableHeaderView高度
             let height = tableView.tableHeaderView?.systemLayoutSizeFitting(UIView.layoutFittingCompressedSize).height
             var frame = tableView.tableHeaderView?.frame
-            frame?.size.height = height!
+            frame?.size.height = height! + 80
             print(height ?? 0)
             
             tableView.tableHeaderView?.frame = frame!
@@ -165,7 +173,7 @@ extension CCHomeViewController{
         self.headerView.backgroundColor = RGBCOLOR(r: 89, g: 160, b: 59)
         
         self.topViewLeftBtn.titleLabel?.font = FONT_M(size: 16)
-        self.topViewLeftBtn.setImageAndTitle(NormalImageName: "home_nav_logout_ic_Normal", SelectImageName: "", title: "Exit", type: .Positionleft, Space: 5)
+        self.topViewLeftBtn.setImageAndTitle(NormalImageName: "home_nav_logout_ic_Normal", SelectImageName: "", title: "Exit".localString(), type: .Positionleft, Space: 5)
         
         self.topViewRightBtn.setImage(UIImage(named: "login_notify_ic_Normal"), for: .normal)
         self.topRightTwoBtn.setImage(UIImage(named: "ic_home_search_Normal"), for: .normal)
@@ -211,6 +219,14 @@ extension CCHomeViewController{
             make.left.right.equalTo(tableView)
             make.height.equalTo(itemWidth+20)
             
+        }
+        
+        view.addSubview(scrollBtn)
+        scrollBtn.snp.makeConstraints { make in
+            make.right.equalToSuperview()
+            make.width.equalTo(23)
+            make.height.equalTo(45)
+            make.centerY.equalToSuperview().offset(50)
         }
         
     }

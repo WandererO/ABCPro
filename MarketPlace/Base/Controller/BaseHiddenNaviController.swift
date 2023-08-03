@@ -174,7 +174,7 @@ class BaseHiddenNaviController: BaseViewController {
         titleLab.textAlignment = .center
         topView.addSubview(titleLab)
         titleLab.snp.makeConstraints { make in
-            make.center.equalToSuperview()
+            make.center.equalToSuperview().offset(-5)
             make.left.equalTo(60)
             make.right.equalTo(-60)
         }
@@ -183,7 +183,7 @@ class BaseHiddenNaviController: BaseViewController {
         headerImage.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.height.equalTo(20)
-            make.centerY.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-5)
         }
 
         topViewLeftBtn.setImage(UIImage(named: ""), for: .normal)
@@ -191,8 +191,8 @@ class BaseHiddenNaviController: BaseViewController {
         topViewLeftBtn.snp.makeConstraints { make in
             
             make.left.equalTo(15)
-            make.height.width.equalTo(54)
-            make.centerY.equalToSuperview()
+            make.height.equalTo(54)
+            make.centerY.equalToSuperview().offset(-5)
         }
         
         topViewLeftBtn.rx.tap.subscribe {[weak self] _ in
@@ -207,7 +207,7 @@ class BaseHiddenNaviController: BaseViewController {
             make.right.equalTo(-10)
 //            make.right.equalToSuperview()
             make.height.width.equalTo(32)
-            make.centerY.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-5)
         }
 
         topViewRightBtn.rx.tap.subscribe {[weak self]  _ in
@@ -220,7 +220,7 @@ class BaseHiddenNaviController: BaseViewController {
         topRightTwoBtn.isHidden = true
         topRightTwoBtn.snp.makeConstraints { make in
             make.right.equalTo(topViewRightBtn.snp.left).offset(-10)
-            make.centerY.equalToSuperview()
+            make.centerY.equalToSuperview().offset(-5)
             make.height.width.equalTo(24)
         }
         

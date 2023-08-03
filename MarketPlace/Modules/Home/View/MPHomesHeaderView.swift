@@ -21,6 +21,12 @@ class MPHomesHeaderView: UIView{
     
     @IBOutlet weak var toolsHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var welcomeLab: UILabel!
+    @IBOutlet weak var balanceTip: UILabel!
+    @IBOutlet weak var cardsLab: UILabel!
+    @IBOutlet weak var openLab: UILabel!
+    @IBOutlet weak var currentLab: UILabel!
+    @IBOutlet weak var nickNameLab: UILabel!
     //工具item 高度
     let toolHeight = (SCREEN_WIDTH - 4*20 - 20)/5
     //轮播图高度
@@ -51,6 +57,17 @@ class MPHomesHeaderView: UIView{
         super.awakeFromNib()
         
         self.isUserInteractionEnabled = true
+        
+        
+        welcomeLab.text = "Welcome".localString()
+        balanceTip.text = "Balance".localString()
+        cardsLab.text = "Accounts and cards".localString()
+        openLab.text = "Open favorite account number".localString()
+        currentLab.text = "CURRENT ACCOUNT".localString()
+        
+        let name = Archive.getDefaultsForKey(key: "nickName")
+        nickNameLab.text = name
+        
       
         self.pageView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
         self.pageView.itemSize = CGSize(width: SCREEN_WIDTH - 20, height: 175)

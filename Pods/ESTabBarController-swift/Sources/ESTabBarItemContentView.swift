@@ -211,6 +211,8 @@ open class ESTabBarItemContentView: UIView {
         let w = self.bounds.size.width
         let h = self.bounds.size.height
         
+        let wh = UIScreen.main.bounds.size.width
+        
         imageView.isHidden = (imageView.image == nil)
         titleLabel.isHidden = (titleLabel.text == nil)
 
@@ -243,8 +245,16 @@ open class ESTabBarItemContentView: UIView {
                                                   width: s,
                                                   height: s)
                 } else {
+                    
+                    var titleY = 0.0
+                    if titleLabel.bounds.size.height > 20 {///处理title多行
+                        titleY = h - titleLabel.bounds.size.height + 11.0
+                    }else{
+                        titleY = h - titleLabel.bounds.size.height - 1.0
+                    }
+                    
                     titleLabel.frame = CGRect.init(x: (w - titleLabel.bounds.size.width) / 2.0,
-                                                   y: h - titleLabel.bounds.size.height - 1.0,
+                                                   y: titleY,
                                                    width: titleLabel.bounds.size.width,
                                                    height: titleLabel.bounds.size.height)
                     imageView.frame = CGRect.init(x: (w - s) / 2.0,
@@ -257,12 +267,15 @@ open class ESTabBarItemContentView: UIView {
                                               y: (h - s) / 2.0,
                                               width: s,
                                               height: s)
-            } else if !titleLabel.isHidden {
+            } else if !titleLabel.isHidden {//(h - titleLabel.bounds.size.height) / 2.0
                 titleLabel.font = UIFont.systemFont(ofSize: f)
-                titleLabel.sizeToFit()
+                titleLabel.sizeToFit()//titleLabel.bounds.size.width
+                
+                
+                
                 titleLabel.frame = CGRect.init(x: (w - titleLabel.bounds.size.width) / 2.0,
-                                               y: (h - titleLabel.bounds.size.height) / 2.0,
-                                               width: titleLabel.bounds.size.width,
+                                               y: 0,
+                                               width: wh / 5,
                                                height: titleLabel.bounds.size.height)
             }
             
@@ -302,6 +315,8 @@ open class ESTabBarItemContentView: UIView {
                 badgeView.setNeedsLayout()
             }
         }
+        
+        print(imageView.bounds.size.height)
     }
 
     // MARK: - INTERNAL METHODS

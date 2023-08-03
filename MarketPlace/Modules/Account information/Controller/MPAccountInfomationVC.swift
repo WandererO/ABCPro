@@ -41,11 +41,11 @@ class MPAccountInfomationVC: BaseHiddenNaviController {
         
         
         //添加底部菜单
-        menuToolView.accountData = [["text":"Generate QR nickname","img":"create_qr_ic_Normal"],
-                                    ["text":"Open savings account","img":"home_opensaving_ic_Normal"],
-                                    ["text":"Transfer","img":"shot_transfer_selected_Normal"],
-                                    ["text":"Top up","img":"ntdt_Normal"],
-                                    ["text":"Bill payment","img":"shot_bill_selected_Normal"]]
+        menuToolView.accountData = [["text":"Generate QR nickname".localString(),"img":"create_qr_ic_Normal"],
+                                    ["text":"Open savings account".localString(),"img":"home_opensaving_ic_Normal"],
+                                    ["text":"Transfer".localString(),"img":"shot_transfer_selected_Normal"],
+                                    ["text":"Top up".localString(),"img":"ntdt_Normal"],
+                                    ["text":"Bill payment".localString(),"img":"shot_bill_selected_Normal"]]
         menuToolView.backgroundColor = UIColor(17, 34, 42, 0).withAlphaComponent(0.8)
         menuToolView.isInfomationVC = true
         menuToolView.collecView.reloadData()

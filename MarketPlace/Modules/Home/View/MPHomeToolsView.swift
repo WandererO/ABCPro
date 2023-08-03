@@ -17,12 +17,12 @@ class MPHomeToolsView: UIView,UICollectionViewDelegate,UICollectionViewDataSourc
     var isHiddenTitle = false{
         didSet{
             if isHiddenTitle == true {
-                self.flow.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
+                self.flow.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 10)
             }
         }
     }
     let flow = UICollectionViewFlowLayout()
-    let titles = ["VCB Fanily","Promotions","VCB Rewards","Lock card","Settings"]
+    let titles = ["VCB Family".localString(),"Promotions".localString(),"VCB Rewards".localString(),"Lock card".localString(),"Settings".localString()]
     let images = ["fav_family_ic_Normal","fav_promote_Normal","fav_loyalty_ic_Normal","fav_lockcard_ic_Normal","fav_setting_ic_Normal"]
     
     
@@ -31,10 +31,10 @@ class MPHomeToolsView: UIView,UICollectionViewDelegate,UICollectionViewDataSourc
     var isInfomationVC = false{
         didSet{
             if isInfomationVC == true{
-                self.flow.sectionInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 0)
-                let itemWidth : CGFloat =  CGFloat(SCREEN_WIDTH - 4*10 - 20)/5
-                self.flow.itemSize = CGSize(width: itemWidth, height: itemWidth + 30)
-                
+                self.flow.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+                let itemWidth : CGFloat =  CGFloat(SCREEN_WIDTH / 5 + 10)
+                self.flow.itemSize = CGSize(width: itemWidth, height: itemWidth + 20)
+                self.flow.minimumLineSpacing = 10
             }
         }
     }
@@ -46,8 +46,8 @@ class MPHomeToolsView: UIView,UICollectionViewDelegate,UICollectionViewDataSourc
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let itemWidth : CGFloat =  CGFloat(SCREEN_WIDTH - 4*20 - 20)/5
-        flow.itemSize = CGSize(width: itemWidth, height: itemWidth + 20)
+        let itemWidth : CGFloat =  CGFloat(SCREEN_WIDTH / 5)
+        flow.itemSize = CGSize(width: itemWidth, height: itemWidth)
         flow.minimumLineSpacing = 20
         flow.minimumInteritemSpacing = 0
         flow.scrollDirection = .horizontal

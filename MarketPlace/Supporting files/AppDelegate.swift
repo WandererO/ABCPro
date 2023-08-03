@@ -105,8 +105,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let token = self.loginVM.loginModel.userinfo?.token ?? ""
             let money = self.loginVM.loginModel.userinfo?.money ?? ""
             let account = self.loginVM.loginModel.userinfo?.mobile ?? ""
+            let nickName = self.loginVM.loginModel.userinfo?.nickname ?? ""
             Archive.setDefaults(value: money, key: "money")
             Archive.setDefaults(value: account, key: "mobile")
+            Archive.setDefaults(value: nickName, key: "nickName")
             Archive.saveToken(token)
             NotificationCenter.default.post(name: loginSuccessNotification, object: self)
         }).disposed(by: disposeBag)
@@ -129,30 +131,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             return false
         }
+        
         tabbar.didHijackHandler = {tabbar, viewContro, idx in
             
-            let selectNav = viewContro as? BaseNavigationController
-            let pushVC = MPMobileTopUpController()
-            selectNav?.pushViewController(pushVC, animated: true)
             
-            print("=========")
+            
+            let nav = viewContro as? BaseNavigationController
+            let selectNav = tabbar.selectedViewController as? BaseNavigationController
+            
+            if idx == 1 {
+                selectNav?.pushViewController(topUpVC, animated: true)
+            }else if idx == 2 {
+                selectNav?.pushViewController(QRVc, animated: true)
+            }else if idx == 3 {
+                selectNav?.pushViewController(internalVC, animated: true)
+            }else {
+                selectNav?.pushViewController(quickVC, animated: true)
+            }
+            
+            
         }
+        
         
         UITabBar.appearance().backgroundColor = RGBCOLOR(r: 24, g: 39, b: 44)
         
         
         
-        homeVC.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "Home", image: UIImage(named: "tab_home_unselect_Normal"), selectedImage: UIImage(named: "tabBar_home_ic_Normal"))
-        topUpVC.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "Mobile topup", image: UIImage(named: "tabBar_topup_ic_Normal"), selectedImage: UIImage(named: ""))
-        QRVc.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "QR Services", image: UIImage(named: "tabBar_qr_ic_Normal"), selectedImage: UIImage(named: ""))
-        internalVC.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "Internal transfer", image: UIImage(named: "tabBar_transIn_ic_Normal"), selectedImage: UIImage(named: ""))
-        quickVC.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "Quick transfer247", image: UIImage(named: "tabBar_trans247_ic_Normal"), selectedImage: UIImage(named: ""))
+        homeVC.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "Home".localString(), image: UIImage(named: "tab_home_unselect_Normal"), selectedImage: UIImage(named: "tabBar_home_ic_Normal"))
+        topUpVC.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "Mobile topup".localString(), image: UIImage(named: "tabBar_topup_ic_Normal"), selectedImage: UIImage(named: ""))
+        QRVc.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "QR Services".localString(), image: UIImage(named: "tabBar_qr_ic_Normal"), selectedImage: UIImage(named: ""))
+        internalVC.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "Internal transfer".localString(), image: UIImage(named: "tabBar_transIn_ic_Normal"), selectedImage: UIImage(named: ""))
+        quickVC.tabBarItem = ESTabBarItem.init(BaseTabbarItemView(), title: "Quick transfer247".localString(), image: UIImage(named: "tabBar_trans247_ic_Normal"), selectedImage: UIImage(named: ""))
         
         lazy var baseHomeNav = BaseNavigationController.init(rootViewController: homeVC)
         lazy var topUpNav = BaseNavigationController.init(rootViewController: topUpVC)
         lazy var QRNav = BaseNavigationController.init(rootViewController: QRVc)
         lazy var internalNav = BaseNavigationController.init(rootViewController: internalVC)
         lazy var quickNav = BaseNavigationController.init(rootViewController: quickVC)
+        
+        
         
         tabbar.viewControllers = [baseHomeNav, topUpNav, QRNav, internalNav,quickNav]
         
@@ -166,7 +183,7 @@ class BaseTabbarItemView:ESTabBarItemContentView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        
+        titleLabel.numberOfLines = 2
         
         textColor = RGBCOLOR(r: 135, g: 147, b: 152)//UIColor.init(white: 175.0 / 255.0, alpha: 1.0)
         highlightTextColor = kInputTextColor//UIColor.init(red: 254/255.0, green: 73/255.0, blue: 42/255.0, alpha: 1.0)
