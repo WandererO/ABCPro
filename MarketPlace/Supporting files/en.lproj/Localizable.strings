@@ -5,6 +5,9 @@
   Created by mac on 2023/7/25.
   
 */
+
+
+
 "Home"="Home";
 "Mobile topup"="Mobile topup";
 "QR Services"="QR Services";
@@ -67,3 +70,12 @@
 "Transfer"="Transfer";
 "Top up"="Top up";
 "Bill payment"="Bill payment";
+
+"Internal transfer"="Internal transfer";
+"Quick transfer 247"="Quick transfer 247";
+"Overseas remittance"="Overseas remittance";
+"External transfer"="External transfer";
+"Cash transfer"="Cash transfer";
+"Lucky gift"="Lucky gift";
+"Tranfer transaction status"="Tranfer transaction status";
+"Money service at VNPOST"="Money service at VNPOST";

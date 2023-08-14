@@ -16,14 +16,14 @@ class CCHomeViewController: BaseHiddenNaviController {
     
     let dataSource = [
         
-                       [["text":"internal transfer","img":"home_transferin_ic_Normal"],
-                        ["text":"Quick transfer 247","img":"home_transferfast_ic_Normal"],
-                        ["text":"Overseas remittance","img":"icTransfermoneyInternational_Normal"],
-                        ["text":"External transfer","img":"home_transferout_ic_Normal"],
-                        ["text":"Cash transfer","img":"home_transferreceivevcb_ic_Normal"],
-                        ["text":"Lucky gift","img":"home_gift_ic_Normal"],
-                        ["text":"Tranfer transaction status","img":"home_statusmoneyoder_ic_Normal"],
-                        ["text":"Money service at VNPOST","img":"home_vnpost_ic_Normal"]],
+        [["text":"Internal transfer".localString(),"img":"home_transferin_ic_Normal"],
+         ["text":"Quick transfer 247".localString(),"img":"home_transferfast_ic_Normal"],
+         ["text":"Overseas remittance".localString(),"img":"icTransfermoneyInternational_Normal"],
+         ["text":"External transfer".localString(),"img":"home_transferout_ic_Normal"],
+         ["text":"Cash transfer".localString(),"img":"home_transferreceivevcb_ic_Normal"],
+         ["text":"Lucky gift".localString(),"img":"home_gift_ic_Normal"],
+         ["text":"Tranfer transaction status".localString(),"img":"home_statusmoneyoder_ic_Normal"],
+         ["text":"Money service at VNPOST".localString(),"img":"home_vnpost_ic_Normal"]],
                        
                        
                        [["text":"Electricity","img":"home_electricitybills_ic_Normal"],
@@ -288,7 +288,7 @@ extension CCHomeViewController : UITableViewDataSource , UITableViewDelegate{
         setionView.bottomV.backgroundColor = UIColor.white.withAlphaComponent(0.2)
         setionView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 23)
         
-        let titleArray = ["Transfer","Bill payment","Topup","Card services","Credit","Savings","Insurance service","Investment","State budget","Shopping","Utilities"]
+        let titleArray = ["Transfer".localString(),"Bill payment".localString(),"Topup".localString(),"Card services".localString(),"Credit".localString(),"Savings".localString(),"Insurance service".localString(),"Investment".localString(),"State budget".localString(),"Shopping".localString(),"Utilities".localString()]
         setionView.titleName.text = titleArray[section]
         return setionView
     }

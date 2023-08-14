@@ -72,7 +72,7 @@ class MPHomeCell: UITableViewCell,UICollectionViewDelegate,UICollectionViewDataS
                 cell.locaImage.image = image
             }
             
-            cell.nameLable.text = text
+            cell.nameLable.text = text.localString()
         }
          
       

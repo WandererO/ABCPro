@@ -5,6 +5,9 @@
   Created by mac on 2023/7/25.
   
 */
+
+
+
 "Home"="Trang chủ";
 "Mobile topup"="Nạp tiền điện thoại";
 "QR Services"="Dịch vụ QR";
@@ -67,6 +70,15 @@
 "Transfer"="Chuyển tiền";
 "Top up"="Nạp tiền điện thoại";
 "Bill payment"="Thanh toán hóa đơn";
+
+"Internal transfer"="Chuyển tiền trong VCB";
+"Quick transfer 247"="Chuyển tiền nhanh 24/7 ngoài VCB";
+"Overseas remittance"="Chuyển tiền đi nước ngoài";
+"External transfer"="Chuyển tiền ngoài VCB";
+"Cash transfer"="Chuyển tiền mặt";
+"Lucky gift"="Quà tặng";
+"Tranfer transaction status"="Trạng thái chuyển tiền";
+"Money service at VNPOST"="Rút/ chuyển tiền mặt tại VNPOST";
 
 
 

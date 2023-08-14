@@ -32,7 +32,7 @@ class MPHomesHeaderView: UIView{
     //轮播图高度
     let bannerHeight = (SCREEN_WIDTH * 0.4)
     
-    let pagerData:[String] = ["VCB-mb-thuong-1_Normal","VCB-mb-vip-1_Normal","VCB-mb-vip-1_Normal"]
+    let pagerData:[String] = ["banner1","banner2","banner3","banner4"]
    
     @IBOutlet weak var headIMage: UIImageView!
     
