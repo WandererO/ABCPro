@@ -270,6 +270,8 @@
 		04A85F442A6BC79800CAAB2D /* MPBeneficiaryBankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPBeneficiaryBankCell.swift; sourceTree = "<group>"; };
 		04A85F452A6BC79800CAAB2D /* MPBeneficiaryBankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPBeneficiaryBankCell.xib; sourceTree = "<group>"; };
 		04A85F482A6BCC8000CAAB2D /* MPBankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPBankModel.swift; sourceTree = "<group>"; };
+		04AE61F82A8BEA230052CAF9 /* MarketPlaceDebug.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MarketPlaceDebug.entitlements; sourceTree = "<group>"; };
+		04AE61F92A8BEF6F0052CAF9 /* MarketPlace.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MarketPlace.entitlements; sourceTree = "<group>"; };
 		04BD7C3629D536B5009480B3 /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		04E646B02A6D117500F15C8E /* MPTransactionDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPTransactionDetailController.swift; sourceTree = "<group>"; };
 		04E646B12A6D117500F15C8E /* MPTransactionDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPTransactionDetailController.xib; sourceTree = "<group>"; };
@@ -279,8 +281,6 @@
 		04E646B92A6D283600F15C8E /* MPTransactionHistoryController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPTransactionHistoryController.xib; sourceTree = "<group>"; };
 		220F5BE02A21D4AE000C02BD /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		2248075229F0D7FB00226026 /* StackView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StackView+Extension.swift"; sourceTree = "<group>"; };
-		225F3C8D29A266F000295ED2 /* MarketPlace.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MarketPlace.entitlements; sourceTree = "<group>"; };
-		225F3D0129A2686100295ED2 /* MarketPlaceDebug.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MarketPlaceDebug.entitlements; sourceTree = "<group>"; };
 		225F3D0229A2691200295ED2 /* MarketPlace-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MarketPlace-Bridging-Header.h"; sourceTree = "<group>"; };
 		22609312299F4BE300B284DB /* demo.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = demo.css; sourceTree = "<group>"; };
 		22609313299F4BE300B284DB /* demo_index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo_index.html; sourceTree = "<group>"; };
@@ -848,8 +848,8 @@
 		98AFF78B280E979F0035387C /* MarketPlace */ = {
 			isa = PBXGroup;
 			children = (
-				225F3D0129A2686100295ED2 /* MarketPlaceDebug.entitlements */,
-				225F3C8D29A266F000295ED2 /* MarketPlace.entitlements */,
+				04AE61F82A8BEA230052CAF9 /* MarketPlaceDebug.entitlements */,
+				04AE61F92A8BEF6F0052CAF9 /* MarketPlace.entitlements */,
 				98AFF79A280E97A10035387C /* Info.plist */,
 				F7361C08280EA4F9001DA340 /* Header */,
 				F7361C1B280EA6C8001DA340 /* Base */,
@@ -1693,7 +1693,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hades.avbbank;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vcb.hades;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1713,9 +1713,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = MarketPlace/MarketPlace.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = V9Q6K72XS5;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = U7FR69QKAU;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MarketPlace/Info.plist;
@@ -1739,9 +1741,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.hades.marketplace;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vcb.hades;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = vcbPro;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "MarketPlace/Header/MarketPlace-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

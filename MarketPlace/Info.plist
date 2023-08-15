@@ -19,15 +19,14 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
-		<key>NSAllowsArbitraryLoadsInWebContent</key>
-		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>172.16.1.250</key>
-			<dict>
-				<key> NSExceptionAllowsInsecureHTTPLoads</key>
-				<true/>
-			</dict>
+			<key>143.92.60.55</key>
+			<string></string>
+			<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+			<true/>
+			<key>www.flord.top</key>
+			<string></string>
 		</dict>
 	</dict>
 	<key>UIAppFonts</key>
