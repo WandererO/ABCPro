@@ -18,14 +18,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2U-pL-q8K">
-                        <rect key="frame" x="20" y="20" width="133" height="17"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                        <rect key="frame" x="20" y="20" width="140.66666666666666" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" priority="700" id="ew7-vH-pqn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                         <color key="textColor" red="0.80000000000000004" green="0.83137254901960778" blue="0.85098039215686272" alpha="1" colorSpace="deviceRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTN-C6-Acj">
-                        <rect key="frame" x="263.33333333333331" y="20" width="36.666666666666686" height="22"/>
-                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTN-C6-Acj">
+                        <rect key="frame" x="180.66666666666666" y="20" width="119.33333333333334" height="22"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -44,6 +47,7 @@
                     <constraint firstItem="pTN-C6-Acj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="cWq-Jh-MQ4"/>
                     <constraint firstAttribute="trailing" secondItem="pTN-C6-Acj" secondAttribute="trailing" constant="20" id="eAk-Jc-ELY"/>
                     <constraint firstAttribute="bottom" secondItem="EJn-Tc-JgB" secondAttribute="bottom" id="eqp-Nl-HfM"/>
+                    <constraint firstItem="pTN-C6-Acj" firstAttribute="leading" secondItem="M2U-pL-q8K" secondAttribute="trailing" constant="20" id="lMp-R8-wli"/>
                     <constraint firstAttribute="trailing" secondItem="EJn-Tc-JgB" secondAttribute="trailing" constant="20" id="wZe-LI-mIE"/>
                     <constraint firstItem="M2U-pL-q8K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="yoe-1V-jAM"/>
                 </constraints>

@@ -20,6 +20,7 @@ class MPTranstionDetailCell: UITableViewCell {
             if let dict {
                 titleLab.text = dict["title"]
                 valueLab.text = dict["value"]
+
             }
         }
     }

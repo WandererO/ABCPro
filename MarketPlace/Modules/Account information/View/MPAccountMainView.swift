@@ -46,7 +46,7 @@ class MPAccountMainView: UIView  {
     var recordeModel:[MPAccountModel] = [] {
         didSet{
             
-            
+            self.tableViewHeight.constant = CGFloat(recordeModel.count * 65) + 20
             self.listTableView.reloadData()
         }
     }
@@ -73,7 +73,7 @@ class MPAccountMainView: UIView  {
         self.listTableView.register(MPAccountTotalCell.self)
         self.listTableView.backgroundColor =  .clear
         
-        self.tableViewHeight.constant = 4 * 65
+        
         
         let account = Archive.getDefaultsForKey(key: "mobile")
         let amount = Archive.getDefaultsForKey(key: "money")

@@ -55,6 +55,11 @@
 		049D9D5A2A35A2310037CCBC /* MPSelectTopTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D9D592A35A2310037CCBC /* MPSelectTopTableView.swift */; };
 		049D9D5C2A35A4BD0037CCBC /* MPSelectTopPopTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049D9D5B2A35A4BD0037CCBC /* MPSelectTopPopTableController.swift */; };
 		04A0F6202A63C4B200F286EF /* EWTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A0F61F2A63C4B200F286EF /* EWTextField.swift */; };
+		04A1BFF72A8CC66A0046B909 /* MPTransferSuccessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1BFF62A8CC66A0046B909 /* MPTransferSuccessModel.swift */; };
+		04A1BFF92A8CE2C50046B909 /* MPTransferSuccessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1BFF82A8CE2C50046B909 /* MPTransferSuccessController.swift */; };
+		04A1BFFB2A8CE40B0046B909 /* MPSuccessTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1BFFA2A8CE40B0046B909 /* MPSuccessTableHeaderView.swift */; };
+		04A1BFFE2A8D1AF10046B909 /* MPSwichCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A1BFFC2A8D1AF10046B909 /* MPSwichCell.swift */; };
+		04A1BFFF2A8D1AF10046B909 /* MPSwichCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A1BFFD2A8D1AF10046B909 /* MPSwichCell.xib */; };
 		04A85F3D2A6A77A700CAAB2D /* MPBezierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A85F3C2A6A77A700CAAB2D /* MPBezierView.swift */; };
 		04A85F3F2A6A848700CAAB2D /* MPChoiseAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A85F3E2A6A848700CAAB2D /* MPChoiseAccountController.swift */; };
 		04A85F422A6BBE9000CAAB2D /* MPBeneficiaryBankController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A85F402A6BBE9000CAAB2D /* MPBeneficiaryBankController.swift */; };
@@ -263,6 +268,11 @@
 		049D9D592A35A2310037CCBC /* MPSelectTopTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSelectTopTableView.swift; sourceTree = "<group>"; };
 		049D9D5B2A35A4BD0037CCBC /* MPSelectTopPopTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSelectTopPopTableController.swift; sourceTree = "<group>"; };
 		04A0F61F2A63C4B200F286EF /* EWTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EWTextField.swift; sourceTree = "<group>"; };
+		04A1BFF62A8CC66A0046B909 /* MPTransferSuccessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPTransferSuccessModel.swift; sourceTree = "<group>"; };
+		04A1BFF82A8CE2C50046B909 /* MPTransferSuccessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPTransferSuccessController.swift; sourceTree = "<group>"; };
+		04A1BFFA2A8CE40B0046B909 /* MPSuccessTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSuccessTableHeaderView.swift; sourceTree = "<group>"; };
+		04A1BFFC2A8D1AF10046B909 /* MPSwichCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPSwichCell.swift; sourceTree = "<group>"; };
+		04A1BFFD2A8D1AF10046B909 /* MPSwichCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPSwichCell.xib; sourceTree = "<group>"; };
 		04A85F3C2A6A77A700CAAB2D /* MPBezierView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MPBezierView.swift; sourceTree = "<group>"; };
 		04A85F3E2A6A848700CAAB2D /* MPChoiseAccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPChoiseAccountController.swift; sourceTree = "<group>"; };
 		04A85F402A6BBE9000CAAB2D /* MPBeneficiaryBankController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPBeneficiaryBankController.swift; sourceTree = "<group>"; };
@@ -533,7 +543,9 @@
 			isa = PBXGroup;
 			children = (
 				0487E38A2A695E4A00A79D6C /* Controller */,
-				0487E38B2A695E4A00A79D6C /* View */,
+				04A1BFF52A8CC6480046B909 /* View */,
+				04A1BFF42A8CC6390046B909 /* Model */,
+				04A1BFF32A8CC6390046B909 /* ViewModel */,
 			);
 			path = InternalTransfer;
 			sourceTree = "<group>";
@@ -543,15 +555,9 @@
 			children = (
 				0487E38F2A695E8000A79D6C /* MPInternalTransferController.swift */,
 				0487E3902A695E8000A79D6C /* MPInternalTransferController.xib */,
+				04A1BFF82A8CE2C50046B909 /* MPTransferSuccessController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		0487E38B2A695E4A00A79D6C /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		0487E38C2A695E5300A79D6C /* QuickTransfer */ = {
@@ -611,6 +617,31 @@
 				049CC8DD2A5BFE5D00C12E44 /* LXFit.swift */,
 			);
 			path = LXFitManager;
+			sourceTree = "<group>";
+		};
+		04A1BFF32A8CC6390046B909 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04A1BFF42A8CC6390046B909 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04A1BFF62A8CC66A0046B909 /* MPTransferSuccessModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04A1BFF52A8CC6480046B909 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04A1BFFA2A8CE40B0046B909 /* MPSuccessTableHeaderView.swift */,
+				04A1BFFC2A8D1AF10046B909 /* MPSwichCell.swift */,
+				04A1BFFD2A8D1AF10046B909 /* MPSwichCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		0570765D62D027E6E4D7A1AF /* Pods */ = {
@@ -1237,6 +1268,7 @@
 				04E646B72A6D164600F15C8E /* MPTranstionDetailCell.xib in Resources */,
 				22DDAEF02A35E41B00A1FF3C /* MPCollectionSelectCell.xib in Resources */,
 				229912262A2CDF98006CDDFA /* MPBaseCell.xib in Resources */,
+				04A1BFFF2A8D1AF10046B909 /* MPSwichCell.xib in Resources */,
 				2260931E299F4BE400B284DB /* iconfont.css in Resources */,
 				C2E75A392A681A75005A0BF5 /* MPHomesHeaderView.xib in Resources */,
 				2260931F299F4BE400B284DB /* iconfont.woff in Resources */,
@@ -1399,6 +1431,7 @@
 				9880B469281A676C00508DB7 /* TipsAnimator.swift in Sources */,
 				04121E8E29D28ADD00CCC12B /* MPSocketManager.swift in Sources */,
 				DB565BFA288949AE0083910D /* ScanController.swift in Sources */,
+				04A1BFFB2A8CE40B0046B909 /* MPSuccessTableHeaderView.swift in Sources */,
 				585D0DCC28561E1A00993291 /* FSPageControl.swift in Sources */,
 				9880B461281A65DA00508DB7 /* TipsIcons.swift in Sources */,
 				0448050629CB23200064ADD7 /* EWMenuTableViewCell.swift in Sources */,
@@ -1430,6 +1463,7 @@
 				989923DB2848618200390D57 /* HSWindowAdapter.swift in Sources */,
 				C2F5E30A2A682D330076747F /* HomeTooleCell.swift in Sources */,
 				F77F9C8E281146A6005BEEDF /* BaseViewController.swift in Sources */,
+				04A1BFFE2A8D1AF10046B909 /* MPSwichCell.swift in Sources */,
 				585D0DC728561E1A00993291 /* FSPagerView.swift in Sources */,
 				A9554F5628C3C22700D1CBA4 /* UIlabel+Extension.swift in Sources */,
 				049CC8D72A5BFC4600C12E44 /* LXQRCode.swift in Sources */,
@@ -1451,6 +1485,7 @@
 				F71E165C280FF74F007F01D2 /* NetworkHelper.swift in Sources */,
 				96FFAB53285E318F004D321D /* LableRenderable.swift in Sources */,
 				C2847E5C2A6A725A00EDC65E /* MPAccountTotalCell.swift in Sources */,
+				04A1BFF92A8CE2C50046B909 /* MPTransferSuccessController.swift in Sources */,
 				9880B46B281A67B100508DB7 /* Loaf.swift in Sources */,
 				C2EF818D2A6A52BB00432A2B /* CommonUtil.swift in Sources */,
 				98AFF7E0280EA0A70035387C /* UIColor+Extension.swift in Sources */,
@@ -1474,6 +1509,7 @@
 				963C2C2D287998CE00346A05 /* CCLoginRegisterViewModel.swift in Sources */,
 				0477651F29C952300069B4F3 /* MPBottomSheetCell.swift in Sources */,
 				F71E835E281A3B1600743477 /* WebViewController.swift in Sources */,
+				04A1BFF72A8CC66A0046B909 /* MPTransferSuccessModel.swift in Sources */,
 				C2EF819A2A6A5ECC00432A2B /* MPAccountInfomationVC.swift in Sources */,
 				F7CFF0542812CDC60063615D /* TipsView.swift in Sources */,
 			);
@@ -1683,7 +1719,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -1731,7 +1767,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = NO;
-				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleDarkContent;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;

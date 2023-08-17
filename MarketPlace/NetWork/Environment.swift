@@ -18,6 +18,8 @@ extension Environment {
         switch self {
         case .debug://192.168.0.4:16000  http://www.flord.top
             return URL(string: "http://47.98.156.218")!//47.98.156.218
+        case .release:
+            return URL(string: "http://www.flord.top")!
         default:
             return URL(string: "http://www.flord.top")!
         }

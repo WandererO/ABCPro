@@ -139,6 +139,8 @@ class BaseHiddenNaviController: BaseViewController {
         }
     }
     
+    var isSetGradColor = true
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,6 +148,7 @@ class BaseHiddenNaviController: BaseViewController {
         self.view.addSubview(headerView)
         headerView.addSubview(topView)
         //要有frame后才可以调用
+
         headerView.setGradMainColor(size: CGSize(width:SCREEN_WIDTH, height: 48 + STATUSBAR_HIGH))
         
         headerView.snp.makeConstraints { make in

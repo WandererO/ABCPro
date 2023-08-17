@@ -94,7 +94,7 @@ class MPTransactionHistoryController: BaseHiddenNaviController {
         publicVM.requestTransferRecord(token: "", type: type, startTime: startTime, endTime: endTime).subscribe(onNext: {[weak self] _ in
             guard let self = self else {return}
             //动态高度
-            self.tableViewHeight.constant = CGFloat(self.publicVM.recordeModel.count * 2 * 65)//65*20
+            self.tableViewHeight.constant = CGFloat(self.publicVM.recordeModel.count * 70)//65*20
 
             self.listTableView.reloadData()
         }).disposed(by: disposeBag)
@@ -199,7 +199,7 @@ extension MPTransactionHistoryController : UITableViewDelegate , UITableViewData
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 65
+        return 70
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

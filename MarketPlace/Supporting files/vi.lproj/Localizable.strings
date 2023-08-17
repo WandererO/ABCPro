@@ -80,5 +80,25 @@
 "Tranfer transaction status"="Trạng thái chuyển tiền";
 "Money service at VNPOST"="Rút/ chuyển tiền mặt tại VNPOST";
 
+"SUCCESSFUL TRANSFER"="CHUYỂN KHÔNG THÀNH CÔNG";
+"Beneficiary name"="Tên người thụ hưởng";
+"Beneficiary account"="Tài khoản thụ hưởng";
+"Beneficiary bank"="Ngân hàng thụ hưởng";
+"Transaction code"="Mã giao dịch";
+"Content"="Nội dung";
+"Save transfer template"="Lưu mẫu chuyển tiền";
+"Share"="Chia sẻ";
+"Save picture"="Lưu ảnh";
+"Save beneficiary"="Lưu thụ hưởng";
+"New transaction"="Thực hiện giao dịch mới";
+
+"Sunday"="Chủ Nhật";
+"Monday"="Thứ hai";
+"Tuesday"="Thứ ba";
+"Wednesday"="Thứ tư";
+"Thursday"="Thứ năm";
+"Friday"="Thứ sáu";
+"Saturday"="Thứ bảy";
+
 
 

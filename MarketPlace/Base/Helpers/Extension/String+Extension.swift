@@ -307,6 +307,34 @@ extension String {
         
         return dateStr
     }
+    
+    ///获取当天星期几
+    static func featureWeekday() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale.current
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        guard let formatDate = dateFormatter.date(from: dateFormatter.string(from: Date())) else { return "" }
+        let calendar = Calendar.current
+        let weekDay = calendar.component(.weekday, from: formatDate)
+        switch weekDay {
+        case 1:
+            return "Sunday".localString()
+        case 2:
+            return "Monday".localString()
+        case 3:
+            return "Tuesday".localString()
+        case 4:
+            return "Wednesday".localString()
+        case 5:
+            return "Thursday".localString()
+        case 6:
+            return "Friday".localString()
+        case 7:
+            return "Saturday".localString()
+        default:
+            return ""
+        }
+    }
 
     
     func getTimeAgoDisplay() ->String{
